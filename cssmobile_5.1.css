@@ -1905,6 +1905,570 @@ ion-header ion-toolbar{
 }
 
 /* =====================================================
+05.22 DASHBOARD APP — REFINOS FINAIS
+Modais + PDF + horários + ícones + vídeo
+===================================================== */
+
+
+/* =====================================================
+MODAIS PEQUENOS
+===================================================== */
+
+#asces-dashboard-v2
+.asces-modal-small{
+    width:calc(100vw - 28px) !important;
+    max-width:420px !important;
+
+    max-height:72dvh !important;
+
+    padding:
+        42px
+        16px
+        18px !important;
+
+    border-radius:18px !important;
+}
+
+
+/* =====================================================
+ITENS DOS MODAIS
+===================================================== */
+
+#asces-dashboard-v2
+.asces-dashboard-modal-item{
+    appearance:none;
+    -webkit-appearance:none;
+
+    width:100%;
+
+    min-height:50px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:12px;
+
+    padding:
+        11px
+        15px !important;
+
+    border:
+        1px solid
+        rgba(12,78,156,.12) !important;
+
+    border-radius:
+        12px !important;
+
+    background:
+        #F5F8FC !important;
+
+    color:
+        #0C4E9C !important;
+
+    font-size:
+        13px !important;
+
+    font-weight:
+        700 !important;
+
+    line-height:
+        1.3;
+
+    text-align:left;
+
+    box-shadow:none !important;
+}
+
+
+/* Ícone externo real */
+
+#asces-dashboard-v2
+.asces-external-icon{
+    width:16px;
+    height:16px;
+
+    flex:0 0 auto;
+
+    fill:none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+
+/* =====================================================
+MODAL DE DOCUMENTO — COMPACTO NO APP
+===================================================== */
+
+#asces-dashboard-v2
+#modal-documento
+.asces-modal-documento,
+
+#asces-dashboard-v2
+#modal-documento
+.asces-dashboard-modal-box{
+    width:
+        calc(100vw - 20px) !important;
+
+    max-width:
+        620px !important;
+
+    height:
+        min(72dvh,620px) !important;
+
+    max-height:
+        calc(100dvh - 40px) !important;
+
+    padding:
+        45px
+        12px
+        14px !important;
+
+    border-radius:
+        18px !important;
+}
+
+
+/* =====================================================
+PRÉVIA PDF
+===================================================== */
+
+#asces-dashboard-v2
+#modal-documento
+.asces-documento-container{
+    flex:
+        1 1 auto;
+
+    width:100%;
+
+    min-width:0;
+    min-height:0;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        #D9E6F5;
+
+    border-radius:
+        12px;
+
+    background:
+        #EEF3F8;
+}
+
+
+#asces-dashboard-v2
+#modal-documento
+#iframe-documento{
+    display:block;
+
+    width:100% !important;
+
+    height:100% !important;
+
+    min-width:0;
+    min-height:0;
+
+    border:0 !important;
+
+    border-radius:
+        11px;
+
+    background:
+        #EEF3F8;
+}
+
+
+/* =====================================================
+ABRIR DOCUMENTO COMPLETO
+===================================================== */
+
+#asces-dashboard-v2
+.asces-documento-abrir-completo{
+    appearance:none;
+    -webkit-appearance:none;
+
+    flex:
+        0 0 auto;
+
+    display:flex !important;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:
+        9px;
+
+    width:100%;
+
+    min-height:
+        46px;
+
+    margin-top:
+        10px;
+
+    padding:
+        10px
+        16px;
+
+    border:0;
+
+    border-radius:
+        12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0C4E9C,
+            #1565C0
+        );
+
+    color:
+        #FFFFFF !important;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.2;
+
+    text-decoration:none !important;
+
+    box-shadow:
+        0 6px 16px
+        rgba(12,78,156,.16);
+}
+
+
+#asces-dashboard-v2
+.asces-documento-abrir-completo
+.asces-external-icon{
+    width:
+        15px;
+
+    height:
+        15px;
+}
+
+
+/* =====================================================
+HORÁRIOS — SELETOR
+===================================================== */
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-select-wrapper{
+    position:relative;
+
+    width:100%;
+
+    margin-top:
+        8px;
+}
+
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-select-trigger{
+    appearance:none;
+    -webkit-appearance:none;
+
+    width:100%;
+
+    min-height:
+        50px;
+
+    padding:
+        0
+        15px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:
+        12px;
+
+    border:
+        1px solid
+        rgba(12,78,156,.20);
+
+    border-radius:
+        13px;
+
+    background:
+        #F7FAFD;
+
+    color:
+        #0C4E9C;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    text-align:left;
+
+    box-shadow:none;
+}
+
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-select-trigger i{
+    flex:
+        0 0 auto;
+
+    font-style:
+        normal;
+
+    font-size:
+        14px;
+
+    transition:
+        transform
+        .2s ease;
+}
+
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-select-trigger.active i{
+    transform:
+        rotate(180deg);
+}
+
+
+/* =====================================================
+LISTA DOS CURSOS
+===================================================== */
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-select-options{
+    position:relative !important;
+
+    top:auto !important;
+    left:auto !important;
+
+    width:100% !important;
+
+    max-height:
+        280px;
+
+    margin-top:
+        8px;
+
+    overflow-y:auto;
+
+    border:
+        1px solid
+        rgba(12,78,156,.14);
+
+    border-radius:
+        13px;
+
+    background:
+        #FFFFFF;
+
+    box-shadow:
+        0 10px 28px
+        rgba(0,0,0,.10);
+}
+
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-select-option{
+    appearance:none;
+    -webkit-appearance:none;
+
+    display:block;
+
+    width:100%;
+
+    min-height:
+        44px;
+
+    padding:
+        10px
+        13px;
+
+    border:0;
+
+    border-bottom:
+        1px solid
+        #EDF2F7;
+
+    background:
+        #FFFFFF;
+
+    color:
+        #334155;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.3;
+
+    text-align:left;
+}
+
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-select-option:last-child{
+    border-bottom:0;
+}
+
+
+/* =====================================================
+INFORME EM VÍDEO
+Não usa iframe no App
+===================================================== */
+
+#asces-dashboard-v2
+.asces-informe-video-card{
+    appearance:none;
+    -webkit-appearance:none;
+
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    min-height:
+        200px;
+
+    margin:0;
+    padding:0;
+
+    overflow:hidden;
+
+    border:0;
+
+    border-radius:
+        13px;
+
+    background:
+        #0B1726;
+}
+
+
+#asces-dashboard-v2
+.asces-informe-video-card img{
+    display:block;
+
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:
+        cover !important;
+
+    opacity:
+        .88;
+}
+
+
+#asces-dashboard-v2
+.asces-informe-video-play{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.94);
+
+    color:
+        #0C4E9C;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,0,0,.25);
+
+    transform:
+        translate(-50%,-50%);
+}
+
+
+#asces-dashboard-v2
+.asces-informe-video-play svg{
+    width:
+        27px;
+
+    height:
+        27px;
+
+    fill:
+        currentColor;
+
+    stroke:none;
+}
+
+
+/* =====================================================
+TELAS MOBILE MAIS BAIXAS
+===================================================== */
+
+@media(max-height:720px){
+
+    #asces-dashboard-v2
+    #modal-documento
+    .asces-modal-documento,
+
+    #asces-dashboard-v2
+    #modal-documento
+    .asces-dashboard-modal-box{
+        height:
+            calc(100dvh - 24px) !important;
+    }
+
+    #asces-dashboard-v2
+    #modal-horarios
+    .asces-select-options{
+        max-height:
+            220px;
+    }
+}
+
+
+/* =====================================================
 📚 06. COURSES
 ASCES | MOODLE APP 5.1
 ===================================================== */
