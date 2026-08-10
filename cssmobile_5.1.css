@@ -55,136 +55,188 @@ Compatível com:
 Identidade base do Moodle App
 ===================================================== */
 
-
 /* =====================================================
-02.1 COR PRIMÁRIA
+02.1 PALETA NATIVA
 ===================================================== */
 
 :root:not(.dark) {
 
-    --ion-color-primary:
-        var(--asces-primary);
+    /* Cor principal Ionic */
+    --ion-color-primary: #0C4E9C;
+    --ion-color-primary-rgb: 12, 78, 156;
+    --ion-color-primary-contrast: #FFFFFF;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #0A4589;
+    --ion-color-primary-tint: #245FA6;
 
-    --ion-color-primary-rgb:
-        12,78,156;
+    /*
+    O Moodle App utiliza "success" em vários estados
+    que não representam necessariamente sucesso.
+    Institucionalizamos esses estados em azul.
+    */
+    --ion-color-success: #0C4E9C;
+    --ion-color-success-rgb: 12, 78, 156;
+    --ion-color-success-contrast: #FFFFFF;
+    --ion-color-success-contrast-rgb: 255, 255, 255;
+    --ion-color-success-shade: #0A4589;
+    --ion-color-success-tint: #245FA6;
 
-    --ion-color-primary-shade:
-        #0A3F7D;
+    /* Destaque institucional */
+    --ion-color-warning: #FF8400;
+    --ion-color-warning-rgb: 255, 132, 0;
 
-    --ion-color-primary-tint:
-        #245FA6;
-
-
-    /* Moodle utiliza success em diversos componentes
-       que visualmente fazem parte da identidade. */
-
-    --ion-color-success:
-        var(--asces-primary);
-
-    --ion-color-success-rgb:
-        12,78,156;
-
-    --ion-color-success-shade:
-        #0A3F7D;
-
-    --ion-color-success-tint:
-        var(--asces-primary-light);
-
-
-    /* Barra de progresso */
-
-    --core-progressbar-color:
-        var(--asces-primary);
-
-    --core-progressbar-background:
-        var(--asces-primary-light);
+    /* Moodle */
+    --core-progressbar-color: #0C4E9C;
+    --core-progressbar-background: #E3F2FD;
 }
 
 
 /* =====================================================
-02.2 BOTÕES IONIC
+02.2 BOTÕES
 ===================================================== */
 
 :root:not(.dark)
 ion-button[color="success"] {
 
-    --background:
-        var(--asces-primary);
+    --background: #0C4E9C;
+    --color: #FFFFFF;
 
-    --color:
-        var(--asces-white);
-
-    --background-activated:
-        #0A3F7D;
-
-    --background-focused:
-        #0A3F7D;
-
-    --background-hover:
-        var(--asces-primary);
+    --background-activated: #0A4589;
+    --background-focused: #0A4589;
+    --background-hover: #1565C0;
 }
 
 
 :root:not(.dark)
 ion-fab-button {
 
-    --background:
-        var(--asces-primary);
+    --background: #0C4E9C;
+    --color: #FFFFFF;
 
-    --background-activated:
-        #0A3F7D;
+    --background-activated: #0A4589;
 }
 
 
 /* =====================================================
-02.3 CONTROLE WEB / APP
+02.3 TABS
+Curso | Participantes | Notas
 ===================================================== */
 
-/*
-O conteúdo Web é padrão.
+:root:not(.dark)
+core-tabs,
 
-No Moodle App, identificado por html.ionic,
-exibimos a versão específica do App.
-*/
+:root:not(.dark)
+core-tabs-outlet {
 
-.asces-web {
-    display:block;
-}
-
-.asces-app {
-    display:none;
-}
-
-
-html.ionic .asces-web,
-html.ionic #asces-web {
-    display:none !important;
-}
-
-
-html.ionic .asces-app,
-html.ionic #asces-app {
-    display:block !important;
+    --core-tab-color-active: #0C4E9C !important;
+    --core-tab-border-color-active: #0C4E9C !important;
 }
 
 
 /* =====================================================
-02.4 SEGURANÇA DE LAYOUT
+02.4 ESTADOS ATIVOS / SELECIONADOS
 ===================================================== */
 
-html.ionic *,
-html.ionic *::before,
-html.ionic *::after {
-    box-sizing:border-box;
+:root:not(.dark)
+ion-item.item-current,
+
+:root:not(.dark)
+ion-item[aria-current="true"] {
+
+    --ion-color-success: #0C4E9C !important;
+
+    border-left-color: #0C4E9C !important;
+    border-inline-start-color: #0C4E9C !important;
 }
 
 
-html.ionic img,
-html.ionic video,
-html.ionic iframe {
-    max-width:100%;
+/* =====================================================
+02.5 ÍNDICE DA DISCIPLINA
+===================================================== */
+
+:root:not(.dark)
+core-course-course-index
+.item-current {
+
+    --background: #E3F2FD !important;
+    --ion-item-background: #E3F2FD !important;
+
+    --color: #0C4E9C !important;
+
+    color: #0C4E9C !important;
 }
 
+
+/* =====================================================
+02.6 BADGES NATIVAS
+===================================================== */
+
+:root:not(.dark)
+ion-badge[color="success"] {
+
+    --background: #0C4E9C !important;
+    --color: #FFFFFF !important;
+
+    background: #0C4E9C !important;
+    color: #FFFFFF !important;
+}
+
+
+/* =====================================================
+02.7 ÍCONES DE ESTADOS SUCCESS
+===================================================== */
+
+:root:not(.dark)
+ion-icon[color="success"] {
+
+    color: #0C4E9C !important;
+}
+
+
+/* =====================================================
+02.8 LINKS
+===================================================== */
+
+:root:not(.dark) {
+
+    --ion-color-secondary: #0C4E9C;
+    --ion-color-secondary-rgb: 12, 78, 156;
+    --ion-color-secondary-contrast: #FFFFFF;
+    --ion-color-secondary-shade: #0A4589;
+    --ion-color-secondary-tint: #245FA6;
+}
+
+
+/* =====================================================
+02.9 FOCO
+===================================================== */
+
+:root:not(.dark)
+ion-searchbar {
+
+    --ion-color-primary: #0C4E9C !important;
+    --highlight-color-focused: #0C4E9C !important;
+    --highlight-color: #0C4E9C !important;
+}
+
+
+/* =====================================================
+02.10 BARRA INFERIOR
+===================================================== */
+
+body:not(.theme-dark)
+ion-tab-bar.mainmenu-tabs {
+
+    --core-bottom-tabs-color-selected: #0C4E9C !important;
+}
+
+
+body:not(.theme-dark)
+ion-tab-bar.mainmenu-tabs
+ion-tab-button.tab-selected {
+
+    border-top-color: #0C4E9C !important;
+}
 
 /* =====================================================
 🎯 03. HEADER
