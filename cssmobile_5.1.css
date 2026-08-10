@@ -238,6 +238,76 @@ ion-tab-button.tab-selected {
     border-top-color: #0C4E9C !important;
 }
 
+
+/* =====================================================
+02.11 HEADER PRINCIPAL DO APP
+===================================================== */
+
+:root:not(.dark) {
+
+    /* Header / toolbar */
+    --core-header-toolbar-background: #0C4E9C;
+    --core-header-toolbar-color: #FFFFFF;
+
+    /* Algumas telas usam diretamente as variáveis Ionic */
+    --ion-toolbar-background: #0C4E9C;
+    --ion-toolbar-color: #FFFFFF;
+}
+
+
+:root:not(.dark)
+ion-header ion-toolbar {
+
+    --background: #0C4E9C !important;
+    --color: #FFFFFF !important;
+}
+
+
+/* =====================================================
+02.12 BARRA PRINCIPAL INFERIOR
+===================================================== */
+
+body:not(.theme-dark)
+ion-tab-bar.mainmenu-tabs {
+
+    --background: #0C4E9C !important;
+
+    background: #0C4E9C !important;
+
+    --color: rgba(255,255,255,.75) !important;
+
+    --core-bottom-tabs-background:
+        #0C4E9C !important;
+
+    --core-bottom-tabs-color:
+        rgba(255,255,255,.78) !important;
+
+    --core-bottom-tabs-color-selected:
+        #FFFFFF !important;
+}
+
+
+body:not(.theme-dark)
+ion-tab-bar.mainmenu-tabs
+ion-tab-button {
+
+    --color:
+        rgba(255,255,255,.78) !important;
+
+    --color-selected:
+        #FFFFFF !important;
+}
+
+
+body:not(.theme-dark)
+ion-tab-bar.mainmenu-tabs
+ion-tab-button.tab-selected {
+
+    border-top:
+        4px solid #FF8400 !important;
+}
+
+
 /* =====================================================
 🎯 03. HEADER
 ===================================================== */
