@@ -3094,6 +3094,144 @@ DO MODAL DE HORÁRIOS.
 }
 
 /* =====================================================
+06.15 DISCIPLINA — ÍCONES DO HEADER
+===================================================== */
+
+/*
+Voltar, download/offline, informações e demais
+ações exibidas sobre o header azul.
+*/
+
+:root:not(.dark)
+page-core-course
+ion-header ion-toolbar ion-button,
+
+:root:not(.dark)
+page-core-course
+ion-header ion-toolbar ion-back-button,
+
+:root:not(.dark)
+page-core-course
+ion-header ion-toolbar ion-icon,
+
+:root:not(.dark)
+core-course-course
+ion-header ion-toolbar ion-button,
+
+:root:not(.dark)
+core-course-course
+ion-header ion-toolbar ion-icon{
+    --color:#FFFFFF !important;
+
+    color:#FFFFFF !important;
+
+    fill:#FFFFFF !important;
+
+    stroke:#FFFFFF !important;
+}
+
+
+/* SVGs internos */
+
+:root:not(.dark)
+page-core-course
+ion-header svg,
+
+:root:not(.dark)
+page-core-course
+ion-header svg path,
+
+:root:not(.dark)
+core-course-course
+ion-header svg,
+
+:root:not(.dark)
+core-course-course
+ion-header svg path{
+    color:#FFFFFF !important;
+
+    fill:currentColor !important;
+
+    stroke:currentColor !important;
+}
+
+
+/* =====================================================
+06.16 CATEGORIA DA DISCIPLINA
+===================================================== */
+
+/*
+Exemplo do print:
+"TCC I"
+
+Mantém o badge azul e garante contraste.
+*/
+
+:root:not(.dark)
+core-courses-course-list-item
+.core-course-category,
+
+:root:not(.dark)
+core-courses-course-list-item
+.core-course-category *,
+
+:root:not(.dark)
+core-courses-course-list-item
+ion-badge,
+
+:root:not(.dark)
+core-courses-course-list-item
+ion-badge *{
+    --background:#0C4E9C !important;
+    --color:#FFFFFF !important;
+
+    background-color:#0C4E9C !important;
+
+    color:#FFFFFF !important;
+
+    fill:#FFFFFF !important;
+}
+
+
+/* Caso o App renderize a categoria como texto/link interno */
+
+:root:not(.dark)
+core-courses-course-list-item
+.core-course-category a,
+
+:root:not(.dark)
+core-courses-course-list-item
+.core-course-category span{
+    color:#FFFFFF !important;
+
+    opacity:1 !important;
+}
+
+
+/* =====================================================
+06.17 BADGE — ACABAMENTO
+===================================================== */
+
+:root:not(.dark)
+core-courses-course-list-item
+.core-course-category,
+
+:root:not(.dark)
+core-courses-course-list-item
+ion-badge{
+    border-radius:999px !important;
+
+    font-size:12px !important;
+
+    font-weight:700 !important;
+
+    line-height:1.2 !important;
+
+    padding:7px 14px !important;
+}
+
+
+/* =====================================================
 📚 06. COURSES
 ASCES | MOODLE APP 5.1
 ===================================================== */
