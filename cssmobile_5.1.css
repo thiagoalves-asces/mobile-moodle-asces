@@ -942,6 +942,21 @@ Aguardando teste no App 5.1.
 🛠️ 10. HOTFIXES
 ===================================================== */
 
-/*
-Somente correções confirmadas no App 5.1.
-*/
+/* =====================================================
+TESTE ASCES — DETECÇÃO DO HTML DA DISCIPLINA
+===================================================== */
+
+.asces-painel-disciplina{
+    background:red !important;
+    border:8px solid lime !important;
+    padding:30px !important;
+}
+
+.asces-menu-recursos{
+    background:yellow !important;
+}
+
+.asces-item-menu{
+    background:purple !important;
+    color:#fff !important;
+}
