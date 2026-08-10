@@ -3773,6 +3773,289 @@ DROPDOWN
     }
 }
 
+/* =====================================================
+05.24 DASHBOARD APP — ACABAMENTO FINAL
+Indicadores + imagem + barra do modal
+===================================================== */
+
+
+/* =====================================================
+05.24.1 INDICADORES DO CARROSSEL
+Menores e mais discretos
+===================================================== */
+
+#asces-dashboard-v2
+.asces-carousel-dots{
+
+    bottom:
+        15px !important;
+
+    gap:
+        6px !important;
+
+    width:auto !important;
+
+    height:
+        14px !important;
+}
+
+
+#asces-dashboard-v2
+.asces-carousel-dots span{
+
+    display:block !important;
+
+    width:
+        7px !important;
+
+    min-width:
+        7px !important;
+
+    max-width:
+        7px !important;
+
+    height:
+        7px !important;
+
+    min-height:
+        7px !important;
+
+    max-height:
+        7px !important;
+
+    flex:
+        0 0 7px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    border:0 !important;
+
+    border-radius:
+        50% !important;
+
+    background:
+        rgba(255,255,255,.48) !important;
+
+    box-shadow:
+        0 1px 4px
+        rgba(0,0,0,.16) !important;
+
+    transform:none !important;
+}
+
+
+#asces-dashboard-v2
+.asces-carousel-dots span.active{
+
+    width:
+        20px !important;
+
+    min-width:
+        20px !important;
+
+    max-width:
+        20px !important;
+
+    flex:
+        0 0 20px !important;
+
+    height:
+        7px !important;
+
+    min-height:
+        7px !important;
+
+    border-radius:
+        10px !important;
+
+    background:
+        #FFFFFF !important;
+}
+
+
+/* =====================================================
+05.24.2 IMAGEM DO CARROSSEL
+Fotografia visível no card inteiro
+===================================================== */
+
+#asces-dashboard-v2
+.asces-slide,
+
+#asces-dashboard-v2
+.asces-slide.active{
+
+    background:
+        #0D47A1 !important;
+}
+
+
+#asces-dashboard-v2
+.asces-slide > img,
+
+#asces-dashboard-v2
+.asces-slide > img.img-fluid{
+
+    position:absolute !important;
+
+    inset:0 !important;
+
+    width:
+        100% !important;
+
+    height:
+        100% !important;
+
+    min-width:
+        100% !important;
+
+    min-height:
+        100% !important;
+
+    object-fit:
+        cover !important;
+
+    object-position:
+        center center !important;
+
+    opacity:
+        1 !important;
+
+    filter:
+        none !important;
+
+    transform:
+        none !important;
+}
+
+
+/*
+Antes o azul chegava muito opaco.
+Agora funciona como camada de leitura,
+mas preserva a fotografia.
+*/
+
+#asces-dashboard-v2
+.asces-overlay{
+
+    background:
+        linear-gradient(
+            90deg,
+
+            rgba(5,32,66,.76)
+            0%,
+
+            rgba(5,32,66,.54)
+            48%,
+
+            rgba(5,32,66,.12)
+            100%
+
+        ) !important;
+}
+
+
+/* =====================================================
+05.24.3 BARRA DO MODAL
+Fica dentro do card
+===================================================== */
+
+#asces-dashboard-v2
+.asces-dashboard-modal-box::before{
+
+    top:
+        0 !important;
+
+    left:
+        0 !important;
+
+    right:
+        0 !important;
+
+    width:
+        100% !important;
+
+    height:
+        6px !important;
+
+    margin:
+        0 !important;
+
+    border-radius:
+        18px
+        18px
+        0
+        0 !important;
+
+    transform:
+        none !important;
+
+    box-sizing:
+        border-box !important;
+
+    z-index:
+        5 !important;
+}
+
+
+/* =====================================================
+CORREÇÃO ESPECÍFICA HORÁRIOS
+===================================================== */
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-dashboard-modal-box,
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-modal-small{
+
+    position:
+        relative !important;
+
+    border-radius:
+        20px !important;
+}
+
+
+/*
+O modal precisa continuar com overflow visível
+para o dropdown, então recortamos apenas
+a própria barra institucional.
+*/
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-dashboard-modal-box::before,
+
+#asces-dashboard-v2
+#modal-horarios
+.asces-modal-small::before{
+
+    top:
+        0 !important;
+
+    left:
+        0 !important;
+
+    width:
+        100% !important;
+
+    height:
+        6px !important;
+
+    border-radius:
+        20px
+        20px
+        0
+        0 !important;
+
+    overflow:
+        hidden !important;
+
+    transform:
+        translateY(0) !important;
+}
 
 /* =====================================================
 📚 06. COURSES
