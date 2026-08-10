@@ -1806,20 +1806,14 @@ ASCES-UNITA | Moodle App 5.1
 }
 
 
-/*
-IMPORTANTE:
-Não usa mais "> img".
-
-Assim funciona mesmo se o Moodle App
-adicionar wrappers ao HTML.
-*/
+/* =====================================================
+IMAGEM DO SLIDE
+Não força position:absolute no <img>,
+pois o Moodle App pode inserir wrappers.
+===================================================== */
 
 #asces-dashboard-v2
 .asces-slide img{
-    position:absolute !important;
-
-    inset:0 !important;
-
     display:block !important;
 
     width:100% !important;
@@ -1839,7 +1833,59 @@ adicionar wrappers ao HTML.
 
     opacity:1 !important;
 
+    filter:none !important;
     transform:none !important;
+}
+
+
+/* =====================================================
+WRAPPERS QUE O MOODLE APP PODE CRIAR
+Eles passam a ocupar todo o slide.
+===================================================== */
+
+#asces-dashboard-v2
+.asces-slide > core-format-text,
+
+#asces-dashboard-v2
+.asces-slide > .core-format-text,
+
+#asces-dashboard-v2
+.asces-slide > .no-overflow,
+
+#asces-dashboard-v2
+.asces-slide > div:has(> img){
+    position:absolute !important;
+
+    inset:0 !important;
+
+    display:block !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    min-width:100% !important;
+    min-height:100% !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    overflow:hidden !important;
+
+    z-index:1 !important;
+}
+
+
+/* Caso a imagem continue sendo filha direta,
+ainda funciona normalmente. */
+
+#asces-dashboard-v2
+.asces-slide > img{
+    position:absolute !important;
+
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
 
     z-index:1 !important;
 }
