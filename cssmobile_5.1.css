@@ -1,15 +1,17 @@
 /* =====================================================
-     🎓  ASCES-UNITA | SCSS INSTITUCIONAL
-           DOCUMENTAÇÃO IMPORTANTE !
-       📱🎨 CSS MOBILE 5.1 + MOODLE APP
+     🎓 ASCES-UNITA | CSS INSTITUCIONAL
+          📱 MOODLE APP 5.1
 
 Objetivo:
-Padronizar o Moodle App com a identidade visual oficial da ASCES-UNITA.
+Padronizar o Moodle App com a identidade visual
+oficial da ASCES-UNITA.
 
 Compatível com:
-✔ Android | iOS
 ✔ Moodle App
+✔ Android
+✔ iOS
 ===================================================== */
+
 
 /* =====================================================
 🎨 01. TOKENS INSTITUCIONAIS
@@ -17,88 +19,240 @@ Compatível com:
 
 :root {
 
-  --asces-primary: #0C4E9C;
-  --asces-primary-light: #E3F2FD;
+    /* Identidade */
+    --asces-primary: #0C4E9C;
+    --asces-primary-light: #E3F2FD;
+    --asces-accent: #FF8400;
 
-  --asces-accent: #FF8400;
+    /* Base */
+    --asces-white: #FFFFFF;
 
-  --asces-white: #FFFFFF;
+    /* Texto */
+    --asces-text: #212529;
+    --asces-text-muted: #6C757D;
 
-  --asces-text: #212529;
-  --asces-text-muted: #6C757D;
+    /* Estados */
+    --asces-success: #0C4E9C;
+    --asces-warning: #FF8400;
+    --asces-danger: #DC2626;
 
+    /* Bordas */
+    --asces-radius-sm: 6px;
+    --asces-radius-md: 10px;
+    --asces-radius-lg: 16px;
+
+    /* Sombras */
+    --asces-shadow-sm:
+        0 2px 6px rgba(0,0,0,.08);
+
+    --asces-shadow-md:
+        0 4px 12px rgba(0,0,0,.12);
 }
 
 
 /* =====================================================
 ⚙️ 02. IONIC CORE
+Identidade base do Moodle App
+===================================================== */
+
+
+/* =====================================================
+02.1 COR PRIMÁRIA
+===================================================== */
+
+:root:not(.dark) {
+
+    --ion-color-primary:
+        var(--asces-primary);
+
+    --ion-color-primary-rgb:
+        12,78,156;
+
+    --ion-color-primary-shade:
+        #0A3F7D;
+
+    --ion-color-primary-tint:
+        #245FA6;
+
+
+    /* Moodle utiliza success em diversos componentes
+       que visualmente fazem parte da identidade. */
+
+    --ion-color-success:
+        var(--asces-primary);
+
+    --ion-color-success-rgb:
+        12,78,156;
+
+    --ion-color-success-shade:
+        #0A3F7D;
+
+    --ion-color-success-tint:
+        var(--asces-primary-light);
+
+
+    /* Barra de progresso */
+
+    --core-progressbar-color:
+        var(--asces-primary);
+
+    --core-progressbar-background:
+        var(--asces-primary-light);
+}
+
+
+/* =====================================================
+02.2 BOTÕES IONIC
+===================================================== */
+
+:root:not(.dark)
+ion-button[color="success"] {
+
+    --background:
+        var(--asces-primary);
+
+    --color:
+        var(--asces-white);
+
+    --background-activated:
+        #0A3F7D;
+
+    --background-focused:
+        #0A3F7D;
+
+    --background-hover:
+        var(--asces-primary);
+}
+
+
+:root:not(.dark)
+ion-fab-button {
+
+    --background:
+        var(--asces-primary);
+
+    --background-activated:
+        #0A3F7D;
+}
+
+
+/* =====================================================
+02.3 CONTROLE WEB / APP
 ===================================================== */
 
 /*
-EM CONSTRUÇÃO
+O conteúdo Web é padrão.
+
+No Moodle App, identificado por html.ionic,
+exibimos a versão específica do App.
 */
+
+.asces-web {
+    display:block;
+}
+
+.asces-app {
+    display:none;
+}
+
+
+html.ionic .asces-web,
+html.ionic #asces-web {
+    display:none !important;
+}
+
+
+html.ionic .asces-app,
+html.ionic #asces-app {
+    display:block !important;
+}
+
+
+/* =====================================================
+02.4 SEGURANÇA DE LAYOUT
+===================================================== */
+
+html.ionic *,
+html.ionic *::before,
+html.ionic *::after {
+    box-sizing:border-box;
+}
+
+
+html.ionic img,
+html.ionic video,
+html.ionic iframe {
+    max-width:100%;
+}
+
 
 /* =====================================================
 🎯 03. HEADER
 ===================================================== */
 
 /*
-EM CONSTRUÇÃO
+Aguardando mapeamento do Moodle App 5.1.
 */
+
 
 /* =====================================================
 🧭 04. NAVIGATION
 ===================================================== */
 
 /*
-EM CONSTRUÇÃO
+Aguardando mapeamento do Moodle App 5.1.
 */
+
 
 /* =====================================================
 🏠 05. DASHBOARD
 ===================================================== */
 
 /*
-EM CONSTRUÇÃO
+Aguardando teste no App 5.1.
 */
+
 
 /* =====================================================
 📚 06. COURSES
 ===================================================== */
 
 /*
-EM CONSTRUÇÃO
+Aguardando teste no App 5.1.
 */
+
 
 /* =====================================================
 📝 07. ACTIVITIES
 ===================================================== */
 
 /*
-EM CONSTRUÇÃO
+Aguardando teste no App 5.1.
 */
+
 
 /* =====================================================
 📊 08. GRADEBOOK
 ===================================================== */
 
 /*
-EM CONSTRUÇÃO
+Aguardando teste no App 5.1.
 */
+
 
 /* =====================================================
 👤 09. PROFILE
 ===================================================== */
 
 /*
-EM CONSTRUÇÃO
+Aguardando teste no App 5.1.
 */
+
 
 /* =====================================================
 🛠️ 10. HOTFIXES
 ===================================================== */
 
 /*
-Correções temporárias
-serão documentadas aqui.
+Somente correções confirmadas no App 5.1.
 */
