@@ -330,58 +330,6 @@ ion-tab-button.tab-selected {
 
 
 /* =====================================================
-BARRA INSTITUCIONAL
-===================================================== */
-
-:root:not(.dark)
-ion-header{
-    position:relative !important;
-}
-
-
-/*
-Faixa institucional ASCES
-na base do cabeçalho.
-*/
-:root:not(.dark)
-ion-header::after{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    width:100%;
-    height:6px;
-
-    background:
-        linear-gradient(
-            to right,
-
-            #1976d2 0%,
-            #1976d2 28%,
-
-            #1565c0 28%,
-            #1565c0 50%,
-
-            #0d47a1 50%,
-            #0d47a1 65%,
-
-            #ff9800 65%,
-            #ff9800 82%,
-
-            #ff6f00 82%,
-            #ff6f00 100%
-        );
-
-    z-index:20;
-
-    pointer-events:none;
-}
-
-/* =====================================================
 🧭 04. NAVIGATION
 ===================================================== */
 
@@ -1794,6 +1742,166 @@ a{
 #asces-dashboard-v2
 iframe{
     max-width:100% !important;
+}
+
+
+/* =====================================================
+05.21 REFINAMENTOS APP
+Largura + Carrossel + Header institucional
+===================================================== */
+
+/* =====================================================
+DASHBOARD — MELHOR APROVEITAMENTO DA LARGURA
+===================================================== */
+
+/*
+O Moodle App já adiciona espaçamento externo ao conteúdo.
+Compensamos parte dele para o Dashboard ficar mais amplo.
+*/
+
+#asces-dashboard-v2{
+    width:calc(100% + 20px) !important;
+    max-width:none !important;
+
+    margin-left:-10px !important;
+    margin-right:-10px !important;
+
+    padding:
+        6px !important;
+}
+
+
+/* Hero e carrossel ocupam toda a área disponível */
+
+#asces-dashboard-v2 .asces-hero,
+#asces-dashboard-v2 .asces-carousel{
+    width:100% !important;
+    max-width:none !important;
+}
+
+
+/* =====================================================
+CARROSSEL — IMAGEM PREENCHENDO TODO O CARD
+===================================================== */
+
+#asces-dashboard-v2
+.asces-slide{
+    position:absolute !important;
+
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    overflow:hidden !important;
+
+    background:#0D47A1 !important;
+}
+
+
+/*
+Força a imagem a funcionar como background visual
+do slide inteiro.
+*/
+
+#asces-dashboard-v2
+.asces-slide > img,
+#asces-dashboard-v2
+.asces-slide > img.img-fluid{
+    position:absolute !important;
+
+    inset:0 !important;
+
+    display:block !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    min-width:100% !important;
+    min-height:100% !important;
+
+    max-width:none !important;
+    max-height:none !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    object-fit:cover !important;
+    object-position:center center !important;
+}
+
+
+/* Overlay sempre ocupa a imagem inteira */
+
+#asces-dashboard-v2
+.asces-overlay{
+    position:absolute !important;
+
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    z-index:2 !important;
+}
+
+
+/* Conteúdo fica acima da imagem */
+
+#asces-dashboard-v2
+.asces-slide-content{
+    z-index:5 !important;
+}
+
+
+/* =====================================================
+HEADER — BARRA INSTITUCIONAL
+SEM PSEUDO-ELEMENTO
+===================================================== */
+
+/*
+O ::after do ion-header não apareceu no App.
+
+Em vez disso usamos o próprio fundo do ion-header
+e reservamos 6px na base para revelar a faixa.
+*/
+
+:root:not(.dark)
+ion-header{
+    padding-bottom:6px !important;
+
+    background:
+        linear-gradient(
+            to right,
+
+            #1976d2 0%,
+            #1976d2 28%,
+
+            #1565c0 28%,
+            #1565c0 50%,
+
+            #0d47a1 50%,
+            #0d47a1 65%,
+
+            #ff9800 65%,
+            #ff9800 82%,
+
+            #ff6f00 82%,
+            #ff6f00 100%
+        )
+        left bottom / 100% 6px
+        no-repeat !important;
+}
+
+
+/* Toolbar continua azul */
+
+:root:not(.dark)
+ion-header ion-toolbar{
+    --background:#0C4E9C !important;
+    --color:#FFFFFF !important;
+
+    background:#0C4E9C !important;
 }
 
 /* =====================================================
