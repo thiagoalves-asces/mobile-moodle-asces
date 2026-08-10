@@ -3261,3 +3261,10 @@ Aguardando teste no App 5.1.
 🛠️ 10. HOTFIXES
 ===================================================== */
 
+/* =====================================================
+ASCES MOBILE — bootstrap técnico do plugin
+===================================================== */
+
+.asces-mobile-bootstrap{
+    display:none !important;
+}
