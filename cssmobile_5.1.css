@@ -394,9 +394,1407 @@ Aguardando mapeamento do Moodle App 5.1.
 🏠 05. DASHBOARD
 ===================================================== */
 
-/*
-Aguardando teste no App 5.1.
-*/
+/* =====================================================
+🏠 05. DASHBOARD
+ASCES DASHBOARD V2 | MOODLE APP 5.1
+===================================================== */
+
+
+/* =====================================================
+05.1 REMOVE DASHBOARD APP ANTIGO
+Mantemos somente o Dashboard V2 atual
+===================================================== */
+
+#asces-dashboard-v2 > .asces-app{
+    display:none !important;
+}
+
+
+/* =====================================================
+05.2 BASE
+===================================================== */
+
+#asces-dashboard-v2{
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 auto !important;
+
+    padding:
+        10px !important;
+
+    box-sizing:border-box !important;
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif !important;
+
+    color:#333;
+
+    line-height:1.5;
+}
+
+
+#asces-dashboard-v2 *,
+#asces-dashboard-v2 *::before,
+#asces-dashboard-v2 *::after{
+    box-sizing:border-box !important;
+}
+
+
+#asces-dashboard-v2 img{
+    display:block;
+
+    max-width:100% !important;
+}
+
+
+/* =====================================================
+05.3 HERO
+===================================================== */
+
+#asces-dashboard-v2
+.asces-hero{
+    position:relative;
+
+    width:100%;
+
+    margin:
+        0 0 16px !important;
+
+    padding:
+        34px
+        18px !important;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #167AC6 0%,
+            #0C4E9C 100%
+        ) !important;
+
+    border-radius:
+        18px !important;
+
+    color:#fff !important;
+
+    text-align:center !important;
+
+    box-shadow:
+        0 8px 25px
+        rgba(12,78,156,.22) !important;
+}
+
+
+/* Barra institucional */
+
+#asces-dashboard-v2
+.asces-hero::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:6px;
+
+    background:
+        linear-gradient(
+            to right,
+
+            #1976d2 0%,
+            #1976d2 28%,
+
+            #1565c0 28%,
+            #1565c0 50%,
+
+            #0d47a1 50%,
+            #0d47a1 65%,
+
+            #ff9800 65%,
+            #ff9800 82%,
+
+            #ff6f00 82%,
+            #ff6f00 100%
+        );
+}
+
+
+/* Badge */
+
+#asces-dashboard-v2
+.asces-hero-badge{
+    display:inline-flex !important;
+
+    align-items:center;
+    justify-content:center;
+
+    max-width:100%;
+
+    margin:
+        0 auto 16px !important;
+
+    padding:
+        10px
+        16px !important;
+
+    background:
+        rgba(255,255,255,.14) !important;
+
+    border:
+        1px solid
+        rgba(255,255,255,.28) !important;
+
+    border-radius:
+        30px !important;
+
+    color:#fff !important;
+
+    font-size:
+        12px !important;
+
+    font-weight:
+        700 !important;
+
+    line-height:
+        1.3 !important;
+
+    text-align:center;
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+}
+
+
+/* Saudação */
+
+#asces-dashboard-v2
+.asces-user-greeting{
+    width:100%;
+
+    margin:
+        0 0 9px !important;
+
+    color:#fff !important;
+
+    font-size:
+        25px !important;
+
+    font-weight:
+        750 !important;
+
+    line-height:
+        1.2 !important;
+
+    text-align:center;
+}
+
+
+/* Texto */
+
+#asces-dashboard-v2
+.asces-hero p{
+    width:100%;
+
+    max-width:680px;
+
+    margin:
+        0 auto 22px !important;
+
+    color:
+        rgba(255,255,255,.94) !important;
+
+    font-size:
+        14px !important;
+
+    line-height:
+        1.55 !important;
+
+    text-align:center;
+}
+
+
+/* Botão */
+
+#asces-dashboard-v2
+.asces-btn-primary{
+    display:inline-flex !important;
+
+    align-items:center;
+    justify-content:center;
+
+    min-height:
+        44px;
+
+    padding:
+        11px
+        22px !important;
+
+    background:#fff !important;
+
+    border-radius:
+        30px !important;
+
+    color:#0C4E9C !important;
+
+    text-decoration:none !important;
+
+    font-size:
+        13px !important;
+
+    font-weight:
+        700 !important;
+
+    box-shadow:
+        0 5px 16px
+        rgba(0,0,0,.16);
+}
+
+
+/* =====================================================
+05.4 CARROSSEL
+===================================================== */
+
+#asces-dashboard-v2
+.asces-carousel{
+    position:relative !important;
+
+    width:100% !important;
+
+    height:
+        380px !important;
+
+    margin:
+        0 0 18px !important;
+
+    overflow:hidden !important;
+
+    border-radius:
+        18px !important;
+
+    background:
+        #0D47A1;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,0,0,.12) !important;
+}
+
+
+/* Slides */
+
+#asces-dashboard-v2
+.asces-slide{
+    position:absolute !important;
+
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    overflow:hidden;
+
+    transition:
+        opacity .4s ease,
+        visibility .4s ease;
+}
+
+
+#asces-dashboard-v2
+.asces-slide.active{
+    opacity:1 !important;
+
+    visibility:visible !important;
+}
+
+
+#asces-dashboard-v2
+.asces-slide img{
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:cover !important;
+}
+
+
+/* Overlay */
+
+#asces-dashboard-v2
+.asces-overlay{
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,32,66,.90) 0%,
+            rgba(5,32,66,.72) 48%,
+            rgba(5,32,66,.18) 100%
+        );
+
+    z-index:2;
+}
+
+
+/* Conteúdo do slide */
+
+#asces-dashboard-v2
+.asces-slide-content{
+    position:absolute !important;
+
+    left:24px !important;
+    right:24px !important;
+
+    top:50% !important;
+
+    max-width:
+        520px !important;
+
+    transform:
+        translateY(-50%) !important;
+
+    color:#fff !important;
+
+    z-index:5 !important;
+}
+
+
+#asces-dashboard-v2
+.asces-slide-tag{
+    display:inline-flex;
+
+    align-items:center;
+
+    margin:
+        0 0 14px !important;
+
+    padding:
+        7px
+        13px !important;
+
+    background:
+        rgba(255,255,255,.14);
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
+
+    border-radius:
+        30px;
+
+    color:#fff !important;
+
+    font-size:
+        10px !important;
+
+    font-weight:
+        700;
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+#asces-dashboard-v2
+.asces-slide-content h2{
+    margin:
+        0 0 12px !important;
+
+    color:#fff !important;
+
+    font-size:
+        30px !important;
+
+    font-weight:
+        800 !important;
+
+    line-height:
+        1.08 !important;
+}
+
+
+#asces-dashboard-v2
+.asces-slide-content p{
+    margin:
+        0 0 17px !important;
+
+    color:
+        rgba(255,255,255,.94) !important;
+
+    font-size:
+        13px !important;
+
+    line-height:
+        1.45 !important;
+}
+
+
+/* Botões internos do carrossel */
+
+#asces-dashboard-v2
+.asces-carousel-button{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-height:40px;
+
+    padding:
+        9px
+        17px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.32);
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(255,255,255,.16);
+
+    color:#fff !important;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+/* =====================================================
+05.5 SETAS DO CARROSSEL
+===================================================== */
+
+#asces-dashboard-v2
+.asces-carousel-prev,
+
+#asces-dashboard-v2
+.asces-carousel-next{
+    position:absolute;
+
+    top:50%;
+
+    width:
+        38px !important;
+
+    height:
+        38px !important;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:0;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.17);
+
+    color:#fff !important;
+
+    font-size:
+        18px;
+
+    transform:
+        translateY(-50%);
+
+    backdrop-filter:
+        blur(8px);
+
+    z-index:10;
+}
+
+
+#asces-dashboard-v2
+.asces-carousel-prev{
+    left:
+        8px !important;
+}
+
+
+#asces-dashboard-v2
+.asces-carousel-next{
+    right:
+        8px !important;
+}
+
+
+/* =====================================================
+05.6 INDICADORES
+===================================================== */
+
+#asces-dashboard-v2
+.asces-carousel-dots{
+    position:absolute;
+
+    left:50%;
+
+    bottom:
+        14px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:
+        7px;
+
+    width:auto;
+
+    transform:
+        translateX(-50%);
+
+    z-index:10;
+}
+
+
+#asces-dashboard-v2
+.asces-carousel-dots span{
+    width:
+        8px;
+
+    height:
+        8px;
+
+    flex:
+        0 0 auto;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.48);
+}
+
+
+#asces-dashboard-v2
+.asces-carousel-dots span.active{
+    width:
+        24px;
+
+    border-radius:
+        10px;
+
+    background:#fff;
+}
+
+
+/* =====================================================
+05.7 TÍTULO DAS SEÇÕES
+===================================================== */
+
+#asces-dashboard-v2
+.asces-section-title{
+    margin:
+        24px 0 14px;
+
+    text-align:center;
+}
+
+
+#asces-dashboard-v2
+.asces-section-title h2{
+    margin:
+        0 0 5px;
+
+    color:#0C4E9C;
+
+    font-size:
+        22px;
+
+    font-weight:
+        800;
+}
+
+
+#asces-dashboard-v2
+.asces-section-title p{
+    margin:0;
+
+    color:#64748B;
+
+    font-size:
+        13px;
+}
+
+
+/* =====================================================
+05.8 ÁREA MINHAS DISCIPLINAS
+===================================================== */
+
+#asces-dashboard-v2
+.asces-course-placeholder{
+    width:100%;
+
+    margin:
+        0 0 18px;
+
+    padding:
+        25px
+        18px;
+
+    background:
+        #F3F7FB;
+
+    border:
+        1px solid
+        #E1EAF3;
+
+    border-radius:
+        16px;
+
+    color:#64748B;
+
+    font-size:
+        13px;
+
+    text-align:center;
+}
+
+
+/* =====================================================
+05.9 TUTORIAL
+===================================================== */
+
+#asces-dashboard-v2
+.asces-tutorial{
+    width:100%;
+
+    margin:
+        18px 0;
+
+    padding:
+        24px
+        18px;
+
+    background:
+        #FFFBEB;
+
+    border:
+        1px solid
+        #FDE7BA;
+
+    border-radius:
+        16px;
+
+    text-align:center;
+}
+
+
+#asces-dashboard-v2
+.asces-tutorial h2{
+    margin:
+        0 0 8px;
+
+    color:
+        #92400E;
+
+    font-size:
+        20px;
+
+    font-weight:
+        800;
+}
+
+
+#asces-dashboard-v2
+.asces-tutorial p{
+    margin:
+        0 0 15px;
+
+    color:
+        #66420F;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
+}
+
+
+#asces-dashboard-v2
+.asces-tutorial a{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-height:
+        42px;
+
+    padding:
+        10px
+        20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0C4E9C,
+            #1565C0
+        );
+
+    border-radius:
+        30px;
+
+    color:#fff !important;
+
+    text-decoration:none !important;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+}
+
+
+/* =====================================================
+05.10 MODAIS
+===================================================== */
+
+#asces-dashboard-v2
+.asces-dashboard-modal{
+    position:fixed !important;
+
+    inset:0 !important;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    width:100%;
+
+    padding:
+        8px;
+
+    background:
+        rgba(5,20,40,.74);
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+    z-index:
+        999999 !important;
+}
+
+
+#asces-dashboard-v2
+.asces-dashboard-modal.active{
+    display:flex !important;
+}
+
+
+/* =====================================================
+05.11 CAIXA DOS MODAIS
+===================================================== */
+
+#asces-dashboard-v2
+.asces-dashboard-modal-box{
+    position:relative;
+
+    width:
+        calc(100vw - 16px) !important;
+
+    max-width:
+        520px !important;
+
+    max-height:
+        calc(100dvh - 20px) !important;
+
+    padding:
+        40px
+        16px
+        18px !important;
+
+    overflow:auto;
+
+    background:#fff;
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.30);
+}
+
+
+/* Barra institucional */
+
+#asces-dashboard-v2
+.asces-dashboard-modal-box::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:6px;
+
+    background:
+        linear-gradient(
+            to right,
+
+            #1976d2 0%,
+            #1976d2 28%,
+
+            #1565c0 28%,
+            #1565c0 50%,
+
+            #0d47a1 50%,
+            #0d47a1 65%,
+
+            #ff9800 65%,
+            #ff9800 82%,
+
+            #ff6f00 82%,
+            #ff6f00 100%
+        );
+}
+
+
+/* =====================================================
+05.12 MODAL DE INFORMES / DOCUMENTOS
+===================================================== */
+
+#asces-dashboard-v2
+.asces-modal-viewer,
+
+#asces-dashboard-v2
+.asces-modal-documento{
+    width:
+        calc(100vw - 12px) !important;
+
+    max-width:
+        100% !important;
+
+    height:
+        calc(100dvh - 18px) !important;
+
+    max-height:
+        calc(100dvh - 18px) !important;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    padding:
+        45px
+        10px
+        14px !important;
+}
+
+
+/* =====================================================
+05.13 BOTÃO FECHAR
+===================================================== */
+
+#asces-dashboard-v2
+.asces-dashboard-modal-close{
+    position:absolute;
+
+    top:
+        12px;
+
+    right:
+        12px;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:0;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(12,78,156,.10);
+
+    color:#0C4E9C;
+
+    font-size:
+        22px;
+
+    font-weight:
+        700;
+
+    line-height:1;
+
+    z-index:30;
+}
+
+
+/* Fullscreen */
+
+#asces-dashboard-v2
+.asces-modal-fullscreen{
+    position:absolute;
+
+    top:
+        12px;
+
+    right:
+        54px;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:0;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(12,78,156,.10);
+
+    color:#0C4E9C;
+
+    z-index:30;
+}
+
+
+/* =====================================================
+05.14 TÍTULO MODAL
+===================================================== */
+
+#asces-dashboard-v2
+.asces-dashboard-modal-title{
+    flex:
+        0 0 auto;
+
+    margin:
+        0 75px 14px 2px;
+
+    color:#0C4E9C;
+
+    font-size:
+        18px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.2;
+}
+
+
+/* =====================================================
+05.15 CONTEÚDO MODAL
+===================================================== */
+
+#asces-dashboard-v2
+.asces-dashboard-modal-content{
+    display:grid;
+
+    gap:
+        10px;
+
+    width:100%;
+
+    margin-top:
+        14px;
+}
+
+
+#asces-dashboard-v2
+.asces-dashboard-modal-item,
+
+#asces-dashboard-v2
+.asces-resource-grid a{
+    display:flex;
+
+    align-items:center;
+
+    width:100%;
+
+    min-height:
+        48px;
+
+    padding:
+        12px
+        14px;
+
+    background:
+        #F5F8FC;
+
+    border-radius:
+        11px;
+
+    color:#0C4E9C !important;
+
+    text-decoration:none !important;
+
+    font-size:
+        13px;
+
+    font-weight:
+        650;
+}
+
+
+/* =====================================================
+05.16 INFORMES
+===================================================== */
+
+#asces-dashboard-v2
+.asces-informes-carousel{
+    position:relative;
+
+    flex:
+        1 1 auto;
+
+    display:block;
+
+    width:100%;
+
+    min-width:0;
+    min-height:0;
+
+    overflow:hidden;
+}
+
+
+#asces-dashboard-v2
+#informes-container{
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    min-width:0;
+    min-height:0;
+
+    overflow:hidden;
+}
+
+
+#asces-dashboard-v2
+.asces-informe-slide{
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    grid-template-rows:
+        minmax(180px,1fr)
+        auto;
+
+    gap:
+        10px;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    opacity:0;
+}
+
+
+#asces-dashboard-v2
+.asces-informe-slide.active{
+    display:grid;
+
+    opacity:1;
+}
+
+
+#asces-dashboard-v2
+.asces-informe-media{
+    width:100%;
+
+    height:100%;
+
+    min-height:
+        180px;
+
+    overflow:hidden;
+
+    border-radius:
+        12px;
+
+    background:#EEF2F6;
+}
+
+
+#asces-dashboard-v2
+.asces-informe-media img,
+
+#asces-dashboard-v2
+.asces-informe-media iframe{
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    border:0;
+
+    border-radius:
+        12px;
+}
+
+
+#asces-dashboard-v2
+.asces-informe-caption{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:
+        6px;
+
+    width:100%;
+
+    max-height:
+        160px;
+
+    padding:
+        6px;
+
+    overflow-y:auto;
+}
+
+
+#asces-dashboard-v2
+.asces-slide-title{
+    width:100%;
+
+    margin:0;
+
+    color:#0C4E9C;
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.3;
+
+    text-align:center;
+}
+
+
+#asces-dashboard-v2
+.asces-slide-legenda{
+    width:100%;
+
+    margin:0;
+
+    color:#64748B;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.4;
+
+    text-align:center;
+}
+
+
+/* =====================================================
+05.17 SETAS DOS INFORMES
+===================================================== */
+
+#asces-dashboard-v2
+.asces-informe-prev,
+
+#asces-dashboard-v2
+.asces-informe-next{
+    position:absolute;
+
+    top:42%;
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:0;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.88);
+
+    color:#0C4E9C;
+
+    box-shadow:
+        0 5px 16px
+        rgba(0,0,0,.18);
+
+    transform:
+        translateY(-50%);
+
+    z-index:25;
+}
+
+
+#asces-dashboard-v2
+.asces-informe-prev{
+    left:
+        7px;
+}
+
+
+#asces-dashboard-v2
+.asces-informe-next{
+    right:
+        7px;
+}
+
+
+/* =====================================================
+05.18 DOCUMENTOS
+===================================================== */
+
+#asces-dashboard-v2
+.asces-documento-container{
+    flex:
+        1 1 auto;
+
+    width:100%;
+
+    min-width:0;
+    min-height:0;
+
+    overflow:hidden;
+
+    background:
+        #EEF2F6;
+
+    border-radius:
+        12px;
+}
+
+
+#asces-dashboard-v2
+.asces-documento-container iframe{
+    display:block;
+
+    width:100% !important;
+    height:100% !important;
+
+    min-width:0;
+    min-height:0;
+
+    border:0;
+
+    background:
+        #EEF2F6;
+
+    border-radius:
+        12px;
+}
+
+
+/* =====================================================
+05.19 DESCRIÇÃO MODAL
+===================================================== */
+
+#asces-dashboard-v2
+.asces-modal-description{
+    margin:
+        0 0 12px;
+
+    color:#64748B;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.45;
+}
+
+
+/* =====================================================
+05.20 PROTEÇÃO MOBILE
+===================================================== */
+
+#asces-dashboard-v2
+button,
+
+#asces-dashboard-v2
+a{
+    max-width:100%;
+}
+
+
+#asces-dashboard-v2
+iframe{
+    max-width:100% !important;
+}
 
 /* =====================================================
 📚 06. COURSES
