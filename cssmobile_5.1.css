@@ -408,22 +408,22 @@ ASCES | MOODLE APP 5.1
 06.1 PAINEL PRINCIPAL
 ===================================================== */
 
-html.ionic .asces-painel-disciplina{
-    position:relative;
+.asces-painel-disciplina{
+    position:relative !important;
 
-    width:100%;
-    max-width:100%;
+    width:100% !important;
+    max-width:100% !important;
 
-    margin:0;
+    margin:0 !important;
 
     padding:
         18px
         14px
-        82px;
+        82px !important;
 
-    box-sizing:border-box;
+    box-sizing:border-box !important;
 
-    overflow:hidden;
+    overflow:hidden !important;
 
     background:
         linear-gradient(
@@ -431,60 +431,64 @@ html.ionic .asces-painel-disciplina{
             #0C4E9C 0%,
             #1565C0 55%,
             #0D47A1 100%
-        );
+        ) !important;
 
-    border-radius:16px;
+    border-radius:16px !important;
 
     box-shadow:
         0 8px 24px
-        rgba(0,0,0,.16);
+        rgba(0,0,0,.16) !important;
+
+    color:#fff !important;
 }
 
 
 /* =====================================================
-06.2 BARRAS DO PAINEL
+06.2 BARRAS INSTITUCIONAIS DO PAINEL
 ===================================================== */
 
-html.ionic
 .asces-painel-disciplina::before,
-
-html.ionic
 .asces-painel-disciplina::after{
-    content:"";
+    content:"" !important;
 
-    position:absolute;
+    position:absolute !important;
 
-    left:0;
+    left:0 !important;
 
-    width:100%;
-    height:6px;
+    width:100% !important;
+    height:6px !important;
 
     background:
         linear-gradient(
             to right,
+
             #1976d2 0%,
             #1976d2 28%,
+
             #1565c0 28%,
             #1565c0 50%,
+
             #0d47a1 50%,
             #0d47a1 65%,
+
             #ff9800 65%,
             #ff9800 82%,
+
             #ff6f00 82%,
             #ff6f00 100%
-        );
+        ) !important;
 
-    z-index:10;
+    z-index:10 !important;
+
+    pointer-events:none !important;
 }
 
-html.ionic
 .asces-painel-disciplina::before{
-    top:0;
+    top:0 !important;
 }
 
-html.ionic
 .asces-painel-disciplina::after{
-    bottom:0;
+    bottom:0 !important;
 }
 
 
@@ -492,61 +496,76 @@ html.ionic
 06.3 MENU PRINCIPAL
 ===================================================== */
 
-html.ionic
 .asces-menu-recursos{
-    display:grid;
+    position:relative !important;
+
+    z-index:2 !important;
+
+    display:grid !important;
 
     grid-template-columns:
-        repeat(2,minmax(0,1fr));
+        repeat(2,minmax(0,1fr)) !important;
 
-    gap:10px;
+    gap:10px !important;
 
-    width:100%;
+    width:100% !important;
 
-    margin-top:12px;
+    margin:
+        12px 0 0 !important;
+
+    padding:0 !important;
+
+    box-sizing:border-box !important;
 }
 
 
 /* =====================================================
-06.4 CARDS
+06.4 CARDS DO MENU
 ===================================================== */
 
-html.ionic
 .asces-item-menu{
-    display:flex;
+    display:flex !important;
 
-    flex-direction:column;
+    flex-direction:column !important;
 
-    align-items:center;
-    justify-content:center;
+    align-items:center !important;
+    justify-content:center !important;
 
-    gap:8px;
+    gap:8px !important;
 
-    min-width:0;
-    min-height:92px;
+    width:100% !important;
 
-    padding:10px 8px;
+    min-width:0 !important;
+    min-height:92px !important;
 
-    box-sizing:border-box;
+    margin:0 !important;
 
-    text-align:center;
+    padding:
+        10px
+        8px !important;
+
+    box-sizing:border-box !important;
+
+    overflow:hidden !important;
+
+    text-align:center !important;
 
     color:#fff !important;
 
     text-decoration:none !important;
 
-    font-size:12px;
-    font-weight:700;
-    line-height:1.25;
+    font-size:12px !important;
+    font-weight:700 !important;
+    line-height:1.25 !important;
 
     background:
-        rgba(255,255,255,.13);
+        rgba(255,255,255,.13) !important;
 
     border:
         1px solid
-        rgba(255,255,255,.26);
+        rgba(255,255,255,.26) !important;
 
-    border-radius:14px;
+    border-radius:14px !important;
 
     box-shadow:
         0 5px 16px
@@ -554,211 +573,254 @@ html.ionic
 
         inset
         0 1px 0
-        rgba(255,255,255,.32);
+        rgba(255,255,255,.32) !important;
 
-    overflow:hidden;
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
 }
 
 
-html.ionic
-.asces-item-menu .asces-label{
-    display:block;
+/* Texto */
 
-    width:100%;
+.asces-item-menu .asces-label{
+    display:block !important;
+
+    width:100% !important;
 
     color:#fff !important;
 
-    text-align:center;
+    text-align:center !important;
+
+    overflow-wrap:anywhere !important;
 }
 
 
-html.ionic
+/* SVG */
+
 .asces-item-menu svg{
-    width:28px;
-    height:28px;
+    display:block !important;
+
+    width:28px !important;
+    height:28px !important;
 
     stroke:#fff !important;
+    color:#fff !important;
+
     fill:none !important;
+}
+
+.asces-item-menu svg *{
+    stroke:#fff !important;
+}
+
+
+/* Manual */
+
+.asces-item-menu[data-recurso="manual"]{
+    justify-content:center !important;
+
+    word-break:normal !important;
 }
 
 
 /* =====================================================
-06.5 BOTÃO AULAS
+06.5 BOTÃO DE EXPANSÃO DAS AULAS
 ===================================================== */
 
-html.ionic
 .asces-toggle-aulas{
-    position:absolute;
+    position:absolute !important;
 
-    right:18px;
-    bottom:18px;
+    right:18px !important;
+    bottom:18px !important;
 
-    width:40px;
-    height:40px;
+    width:40px !important;
+    height:40px !important;
 
-    display:flex;
+    display:flex !important;
 
-    align-items:center;
-    justify-content:center;
+    align-items:center !important;
+    justify-content:center !important;
 
-    border:0;
+    margin:0 !important;
+    padding:0 !important;
 
-    border-radius:50%;
+    border:0 !important;
 
-    background:#1565C0;
+    border-radius:50% !important;
+
+    background:#1565C0 !important;
 
     color:#fff !important;
 
     text-decoration:none !important;
 
-    font-size:20px;
+    font-size:20px !important;
+
+    line-height:1 !important;
 
     box-shadow:
         0 5px 15px
-        rgba(0,0,0,.25);
+        rgba(0,0,0,.25) !important;
 
-    z-index:20;
+    z-index:20 !important;
 }
 
 
 /* =====================================================
-06.6 AULAS
+06.6 NAVEGAÇÃO DAS AULAS
 ===================================================== */
 
-html.ionic
 .asces-aulas{
-    display:grid;
+    display:grid !important;
 
     grid-template-columns:
-        repeat(4,48px);
+        repeat(4,48px) !important;
 
-    justify-content:center;
+    justify-content:center !important;
 
-    gap:9px;
+    gap:9px !important;
 
-    width:100%;
+    width:100% !important;
 
-    max-height:0;
+    max-width:100% !important;
 
-    overflow:hidden;
+    margin-left:auto !important;
+    margin-right:auto !important;
 
-    opacity:0;
+    max-height:0 !important;
+
+    overflow:hidden !important;
+
+    opacity:0 !important;
 
     transform:
-        translateY(-8px);
+        translateY(-8px) !important;
 
     transition:
         max-height .4s ease,
         opacity .3s ease,
-        transform .3s ease;
+        transform .3s ease !important;
 }
 
 
-html.ionic
 .asces-aulas.aberto{
-    max-height:600px;
+    max-height:600px !important;
 
-    margin-top:35px;
+    margin-top:35px !important;
 
-    opacity:1;
+    opacity:1 !important;
 
-    transform:none;
+    transform:none !important;
 }
 
 
-html.ionic
+/* Título */
+
 .asces-aulas::before{
-    content:"Navegação de aulas";
+    content:
+        "Navegação de aulas" !important;
 
-    grid-column:1/-1;
+    grid-column:
+        1 / -1 !important;
 
-    width:100%;
+    width:100% !important;
 
-    margin-bottom:4px;
+    margin-bottom:4px !important;
 
     color:
-        rgba(255,255,255,.88);
+        rgba(255,255,255,.88) !important;
 
-    font-size:12px;
-    font-weight:600;
+    font-size:12px !important;
+    font-weight:600 !important;
 
-    text-align:center;
+    text-align:center !important;
 }
 
 
-html.ionic
+/* Botões */
+
 .asces-aulas a{
-    width:48px;
-    height:48px;
+    display:flex !important;
 
-    display:flex;
+    align-items:center !important;
+    justify-content:center !important;
 
-    align-items:center;
-    justify-content:center;
+    width:48px !important;
+    height:48px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    box-sizing:border-box !important;
 
     color:#fff !important;
 
     text-decoration:none !important;
 
-    font-size:12px;
-    font-weight:700;
+    font-size:12px !important;
+    font-weight:700 !important;
 
     background:
-        rgba(255,255,255,.14);
+        rgba(255,255,255,.14) !important;
 
     border:
         1px solid
-        rgba(255,255,255,.24);
+        rgba(255,255,255,.24) !important;
 
-    border-radius:11px;
+    border-radius:11px !important;
 }
 
 
 /* =====================================================
-06.7 TÓPICOS
+06.7 NAVEGAÇÃO POR TÓPICOS
 ===================================================== */
 
-html.ionic
 .asces-aulas.asces-aulas-botoes{
-    display:flex;
+    display:flex !important;
 
-    flex-wrap:wrap;
+    flex-wrap:wrap !important;
 
-    justify-content:center;
+    justify-content:center !important;
 
-    gap:10px;
+    gap:10px !important;
 }
 
 
-html.ionic
 .asces-aulas.asces-aulas-botoes::before{
-    content:"Navegação por tópicos";
+    content:
+        "Navegação por tópicos" !important;
 
-    flex:0 0 100%;
+    flex:
+        0 0 100% !important;
+
+    width:100% !important;
 }
 
 
-html.ionic
 .asces-aulas.asces-aulas-botoes > a{
-    flex:0 0 100%;
+    flex:
+        0 0 100% !important;
 
-    width:100%;
-    max-width:100%;
+    width:100% !important;
+    max-width:100% !important;
 
-    min-height:54px;
-    height:auto;
+    min-height:54px !important;
+    height:auto !important;
 
     padding:
         11px
-        14px;
+        14px !important;
 
-    box-sizing:border-box;
+    box-sizing:border-box !important;
 
-    text-align:center;
+    text-align:center !important;
 
-    white-space:normal;
+    white-space:normal !important;
 
-    line-height:1.25;
+    line-height:1.25 !important;
 }
 
 
@@ -766,120 +828,122 @@ html.ionic
 06.8 FOOTER NEON
 ===================================================== */
 
-html.ionic
 .asces-neon-footer{
-    position:absolute;
+    position:absolute !important;
 
-    right:18px;
-    bottom:14px;
+    right:18px !important;
+    bottom:14px !important;
 
-    display:block;
+    display:block !important;
 
-    opacity:.45;
+    text-align:left !important;
 
-    z-index:15;
+    opacity:.45 !important;
+
+    z-index:15 !important;
 }
 
 
-html.ionic
 .asces-neon-footer-label{
     color:
-        rgba(255,255,255,.72);
+        rgba(255,255,255,.72) !important;
 
-    font-size:7px;
+    font-size:7px !important;
 
-    text-transform:uppercase;
+    text-transform:uppercase !important;
 
-    letter-spacing:.1em;
+    letter-spacing:.1em !important;
 }
 
 
-html.ionic
-.asces-neon-footer
-.asces-logo{
+.asces-neon-footer .asces-logo{
     position:static !important;
 
-    display:flex;
+    display:flex !important;
 
-    flex-direction:column;
+    flex-direction:column !important;
 
-    align-items:flex-start;
+    align-items:flex-start !important;
 
     width:auto !important;
 
+    height:auto !important;
+
     transform:none !important;
 
-    line-height:1.05;
+    line-height:1.05 !important;
 }
 
 
-html.ionic
 .asces-neon-footer
 .asces-logo div:first-child{
     color:#fff !important;
 
-    font-size:17px;
+    font-size:17px !important;
 
-    font-weight:800;
+    font-weight:800 !important;
 }
 
 
-html.ionic
 .asces-neon-footer
 .asces-logo div:not(:first-child){
     color:
         rgba(255,255,255,.82) !important;
 
-    font-size:7px;
+    font-size:7px !important;
 }
+
 
 /* =====================================================
 06.9 BANNER DE AULA
 ===================================================== */
 
-html.ionic
 .asces-banner{
-    position:relative;
+    position:relative !important;
 
-    width:100%;
+    width:100% !important;
+    max-width:100% !important;
 
-    margin:14px 0;
+    min-height:0 !important;
+
+    margin:
+        14px 0 !important;
 
     padding:
         20px
-        16px;
+        16px !important;
 
-    box-sizing:border-box;
+    box-sizing:border-box !important;
 
-    overflow:hidden;
+    overflow:hidden !important;
 
     background:
         linear-gradient(
             135deg,
             #167AC6 0%,
             #0D47A1 100%
-        );
+        ) !important;
 
-    border-radius:15px;
+    border-radius:15px !important;
 
     box-shadow:
         0 6px 16px
-        rgba(0,0,0,.12);
+        rgba(0,0,0,.12) !important;
 
-    color:#fff;
+    color:#fff !important;
 }
 
 
-html.ionic
-.asces-banner
-.asces-bar{
-    position:absolute;
+/* Barra institucional */
 
-    top:0;
-    left:0;
+.asces-banner .asces-bar{
+    position:absolute !important;
 
-    width:100%;
-    height:6px;
+    top:0 !important;
+    left:0 !important;
+
+    width:100% !important;
+    height:6px !important;
 
     background:
         linear-gradient(
@@ -894,165 +958,166 @@ html.ionic
             #ff9800 82%,
             #ff6f00 82%,
             #ff6f00 100%
-        );
+        ) !important;
 }
 
 
-html.ionic
 .asces-banner-content{
-    display:flex;
+    display:flex !important;
 
-    flex-direction:column;
+    flex-direction:column !important;
 
-    gap:12px;
+    gap:12px !important;
 }
 
 
-html.ionic
 .asces-banner-header{
-    display:flex;
+    display:flex !important;
 
-    align-items:center;
+    align-items:center !important;
 
-    justify-content:flex-start;
+    justify-content:flex-start !important;
 
-    gap:12px;
+    gap:12px !important;
+
+    width:100% !important;
 }
 
 
-html.ionic
 .asces-banner-left{
-    display:flex;
+    display:flex !important;
 
-    align-items:center;
+    align-items:center !important;
 
-    gap:10px;
+    gap:10px !important;
 
-    min-width:0;
+    min-width:0 !important;
 }
 
 
-html.ionic
 .asces-banner-icon{
-    display:flex;
+    display:flex !important;
 
-    align-items:center;
-    justify-content:center;
+    align-items:center !important;
+    justify-content:center !important;
 
-    flex:0 0 auto;
+    flex:0 0 auto !important;
 }
 
 
-html.ionic
 .asces-banner-icon svg{
-    width:32px;
-    height:32px;
+    width:32px !important;
+    height:32px !important;
 
     stroke:#fff !important;
+
     fill:none !important;
 }
 
 
-html.ionic
 .asces-banner-title{
-    margin:0;
+    margin:0 !important;
 
     color:#fff !important;
 
-    font-size:21px;
+    font-size:21px !important;
 
-    font-weight:700;
+    font-weight:700 !important;
 
-    line-height:1.2;
+    line-height:1.2 !important;
 }
 
 
-html.ionic
 .asces-banner-description{
-    width:100%;
+    display:block !important;
 
-    margin:0;
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 !important;
 
     padding:
         12px
-        14px;
+        14px !important;
 
-    box-sizing:border-box;
+    box-sizing:border-box !important;
 
     background:
-        rgba(255,255,255,.12);
+        rgba(255,255,255,.12) !important;
 
     border-left:
         4px solid
-        #FF8400;
+        #FF8400 !important;
 
-    border-radius:10px;
+    border-radius:10px !important;
 
     color:#fff !important;
 
-    font-size:13px;
+    font-size:13px !important;
 
-    line-height:1.45;
+    line-height:1.45 !important;
 }
 
 
 /*
-Botão Acessar é comportamento Web.
-No App deixamos a navegação para o componente nativo.
+No App não usamos o botão
+Acessar / Voltar do Web.
 */
-html.ionic
 .asces-banner-button{
     display:none !important;
 }
 
+
 /* =====================================================
-06.10 BANNERS DE RECURSO
+06.10 BANNERS DE RECURSOS
 ===================================================== */
 
-html.ionic
 .asces-banner-resource{
-    position:relative;
+    position:relative !important;
 
-    width:100%;
+    width:100% !important;
+    max-width:100% !important;
 
-    margin:14px 0;
+    margin:
+        14px 0 !important;
 
     padding:
         18px
-        16px;
+        16px !important;
 
-    box-sizing:border-box;
+    box-sizing:border-box !important;
 
-    overflow:hidden;
+    overflow:hidden !important;
 
     background:
         linear-gradient(
             135deg,
             #167AC6 0%,
             #0D47A1 100%
-        );
+        ) !important;
 
-    border-radius:15px;
+    border-radius:15px !important;
 
     box-shadow:
         0 6px 16px
-        rgba(0,0,0,.12);
+        rgba(0,0,0,.12) !important;
 
-    color:#fff;
+    color:#fff !important;
 }
 
 
-html.ionic
+/* Barra superior */
+
 .asces-banner-resource::before{
-    content:"";
+    content:"" !important;
 
-    position:absolute;
+    position:absolute !important;
 
-    top:0;
-    left:0;
+    top:0 !important;
+    left:0 !important;
 
-    width:100%;
-    height:6px;
+    width:100% !important;
+    height:6px !important;
 
     background:
         linear-gradient(
@@ -1067,142 +1132,145 @@ html.ionic
             #ff9800 82%,
             #ff6f00 82%,
             #ff6f00 100%
-        );
+        ) !important;
 }
 
 
-html.ionic
 .asces-banner-resource-content{
-    display:flex;
+    display:flex !important;
 
-    flex-direction:column;
+    flex-direction:column !important;
 
-    gap:12px;
+    gap:12px !important;
+
+    width:100% !important;
 }
 
 
-html.ionic
 .asces-banner-resource-header{
-    display:flex;
+    display:flex !important;
 
-    align-items:center;
+    flex-direction:row !important;
 
-    justify-content:flex-start;
+    align-items:center !important;
 
-    width:100%;
+    justify-content:flex-start !important;
+
+    width:100% !important;
 }
 
 
-html.ionic
 .asces-banner-resource-icon{
-    display:flex;
+    display:flex !important;
 
-    align-items:center;
-    justify-content:center;
+    align-items:center !important;
+    justify-content:center !important;
 
     color:#fff !important;
 }
 
 
-html.ionic
 .asces-banner-resource-icon svg{
-    width:30px;
-    height:30px;
+    width:30px !important;
+    height:30px !important;
 
     stroke:#fff !important;
+
     fill:none !important;
 }
 
 
-html.ionic
 .asces-banner-resource-text{
-    width:100%;
+    display:block !important;
 
-    margin:0;
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 !important;
 
     padding:
         12px
-        14px;
+        14px !important;
 
-    box-sizing:border-box;
+    box-sizing:border-box !important;
 
     background:
-        rgba(255,255,255,.12);
+        rgba(255,255,255,.12) !important;
 
     border-left:
         4px solid
-        #FF8400;
+        #FF8400 !important;
 
-    border-radius:10px;
+    border-radius:10px !important;
 
     color:#fff !important;
 
-    font-size:13px;
+    font-size:13px !important;
 
-    line-height:1.45;
+    line-height:1.45 !important;
 }
 
 
-html.ionic
 .asces-banner-resource-text *{
     color:#fff !important;
 }
 
 
-html.ionic
 .asces-banner-resource-button{
     display:none !important;
 }
+
 
 /* =====================================================
 06.11 SUBSEÇÕES
 ===================================================== */
 
-html.ionic
 .asces-banner-sub{
-    position:relative;
+    position:relative !important;
 
-    width:100%;
-    max-width:100%;
-    min-width:0;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
 
-    margin:12px 0;
+    margin:
+        12px 0 !important;
 
     padding:
         15px
         16px
-        17px;
+        17px !important;
 
-    box-sizing:border-box;
+    box-sizing:border-box !important;
 
-    overflow:hidden;
+    overflow:hidden !important;
 
     background:
         linear-gradient(
             135deg,
             #167AC6 0%,
             #0D47A1 100%
-        );
+        ) !important;
 
-    border-radius:14px;
+    border-radius:14px !important;
 
     box-shadow:
         0 4px 12px
-        rgba(0,0,0,.10);
+        rgba(0,0,0,.10) !important;
 }
 
 
-html.ionic
+/* Barra inferior */
+
 .asces-banner-sub::after{
-    content:"";
+    content:"" !important;
 
-    position:absolute;
+    position:absolute !important;
 
-    left:0;
-    bottom:0;
+    left:0 !important;
+    bottom:0 !important;
 
-    width:100%;
-    height:4px;
+    width:100% !important;
+    height:4px !important;
 
     background:
         linear-gradient(
@@ -1217,71 +1285,90 @@ html.ionic
             #ff9800 82%,
             #ff6f00 82%,
             #ff6f00 100%
-        );
+        ) !important;
 }
 
 
-html.ionic
 .asces-banner-sub-header{
-    display:flex;
+    display:flex !important;
 
-    align-items:center;
+    align-items:center !important;
 
-    gap:10px;
+    gap:10px !important;
 }
 
 
-html.ionic
 .asces-banner-sub-left{
-    display:flex;
+    display:flex !important;
 
-    align-items:center;
+    align-items:center !important;
 
-    gap:10px;
+    gap:10px !important;
 
-    min-width:0;
+    min-width:0 !important;
 }
 
 
-html.ionic
+.asces-banner-sub-icon{
+    display:flex !important;
+
+    align-items:center !important;
+    justify-content:center !important;
+}
+
+
 .asces-banner-sub-icon svg{
-    width:26px;
-    height:26px;
+    width:26px !important;
+    height:26px !important;
 
     stroke:#fff !important;
+
     fill:none !important;
 }
 
 
-html.ionic
 .asces-banner-sub-title{
-    margin:0;
+    margin:0 !important;
 
     color:#fff !important;
 
-    font-size:18px;
+    font-size:18px !important;
 
-    font-weight:700;
+    font-weight:700 !important;
 }
 
 
-html.ionic
 .asces-banner-sub-description{
+    width:100% !important;
+
     margin:
-        9px 0 0;
+        9px 0 0 !important;
 
     color:
         rgba(255,255,255,.90) !important;
 
-    font-size:12px;
+    font-size:12px !important;
 
-    line-height:1.4;
+    line-height:1.4 !important;
 }
 
 
-html.ionic
 .asces-banner-sub-button{
     display:none !important;
+}
+
+
+/* =====================================================
+06.12 SEGURANÇA DE LARGURA
+===================================================== */
+
+.asces-painel-disciplina *,
+.asces-banner *,
+.asces-banner-resource *,
+.asces-banner-sub *{
+    box-sizing:border-box !important;
+
+    max-width:100%;
 }
 
 /* =====================================================
