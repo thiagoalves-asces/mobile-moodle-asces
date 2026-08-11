@@ -4758,52 +4758,19 @@ ion-content:has(#asces-dashboard-v2)
 
 
 /* =====================================================
-MEUS CURSOS
-CAPAS — AJUSTE FINAL DE TESTE
+HOTFIX — CAPAS COMPACTAS NO APP
+Foco da imagem para o lado direito
 ===================================================== */
 
-
-/* -----------------------------------------------------
-1. VISUALIZAÇÃO COMPACTA / LISTA
-Imagem lateral maior, mas sem invadir o conteúdo
------------------------------------------------------ */
-
+/* Lista de disciplinas */
 core-courses-course-list-item img{
-    width:120px !important;
-    min-width:120px !important;
-
-    height:86px !important;
-    min-height:86px !important;
-
-    max-width:120px !important;
-    max-height:86px !important;
-
     object-fit:cover !important;
-    object-position:center center !important;
-
-    border-radius:12px !important;
-
-    margin:0 !important;
+    object-position:85% center !important;
 }
 
 
-/* -----------------------------------------------------
-2. VISUALIZAÇÃO EM CARD
-Aqui a capa pode ser bem maior
------------------------------------------------------ */
-
-core-courses-course-grid-item img{
-    width:100% !important;
-    max-width:320px !important;
-
-    height:130px !important;
-    min-height:130px !important;
-
+/* Cabeçalho da disciplina */
+body:has(.asces-painel-disciplina) img{
     object-fit:cover !important;
-    object-position:center center !important;
-
-    border-radius:14px !important;
-
-    display:block !important;
-    margin:0 auto !important;
+    object-position:85% center !important;
 }
