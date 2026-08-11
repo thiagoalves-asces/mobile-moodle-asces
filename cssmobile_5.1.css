@@ -1977,34 +1977,21 @@ Imagem direta ou dentro de wrappers conhecidos.
 }
 
 /* =====================================================
-05.21.5 HEADER INSTITUCIONAL
-Faixa formada na entrada
+HEADER — FAIXA INSTITUCIONAL DE ENTRADA
 ===================================================== */
 
 :root:not(.dark)
 ion-header{
-    position:relative !important;
-
     padding-bottom:6px !important;
 
     background:#0C4E9C !important;
 }
 
 
-/* Faixa institucional */
+/* O plugin adiciona esta classe em cada novo header */
 
 :root:not(.dark)
-ion-header::after{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:0;
-
-    width:100%;
-    height:6px;
-
+ion-header.asces-header-faixa{
     background:
         linear-gradient(
             to right,
@@ -2023,38 +2010,37 @@ ion-header::after{
 
             #FF6F00 82%,
             #FF6F00 100%
-        );
+        )
+        left bottom / 0% 6px
+        no-repeat,
 
-    transform-origin:left center;
-
-    transform:scaleX(0);
+        #0C4E9C !important;
 
     animation:
-        asces-faixa-carregar
+        asces-faixa-entrada
         .85s
         cubic-bezier(.22,1,.36,1)
-        forwards;
-
-    z-index:30;
-
-    pointer-events:none;
+        forwards !important;
 }
 
 
-/* Animação */
+@keyframes asces-faixa-entrada{
 
-@keyframes asces-faixa-carregar{
-    from{
-        transform:scaleX(0);
+    0%{
+        background-size:
+            0% 6px,
+            auto !important;
     }
 
-    to{
-        transform:scaleX(1);
+    100%{
+        background-size:
+            100% 6px,
+            auto !important;
     }
 }
 
 
-/* Fundo azul do toolbar permanece */
+/* Toolbar permanece azul */
 
 :root:not(.dark)
 ion-header ion-toolbar{
@@ -2065,13 +2051,15 @@ ion-header ion-toolbar{
 }
 
 
-/* Acessibilidade */
-
 @media(prefers-reduced-motion:reduce){
+
     :root:not(.dark)
-    ion-header::after{
+    ion-header.asces-header-faixa{
         animation:none !important;
-        transform:scaleX(1) !important;
+
+        background-size:
+            100% 6px,
+            auto !important;
     }
 }
 
