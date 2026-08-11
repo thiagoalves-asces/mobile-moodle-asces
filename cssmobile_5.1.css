@@ -3174,67 +3174,36 @@ CARROSSEL — MÍDIA DE FUNDO
 }
 
 /* =====================================================
-DISCIPLINA — ÍCONES BRANCOS SOMENTE NO HEADER PRINCIPAL
+DISCIPLINA — ÍCONES DO HEADER
 ===================================================== */
 
 body:has(.asces-painel-disciplina)
-> ion-app
-ion-router-outlet
 ion-header ion-toolbar ion-buttons ion-button,
 
 body:has(.asces-painel-disciplina)
-> ion-app
-ion-router-outlet
 ion-header ion-toolbar ion-back-button{
     --color:#FFFFFF !important;
     --ion-color-base:#FFFFFF !important;
-
     color:#FFFFFF !important;
 }
 
-
 body:has(.asces-painel-disciplina)
-> ion-app
-ion-router-outlet
 ion-header ion-toolbar ion-button::part(native),
 
 body:has(.asces-painel-disciplina)
-> ion-app
-ion-router-outlet
 ion-header ion-toolbar ion-back-button::part(native){
     --color:#FFFFFF !important;
-
     color:#FFFFFF !important;
 }
 
-
 body:has(.asces-painel-disciplina)
-> ion-app
-ion-router-outlet
 ion-header ion-toolbar ion-icon{
     --color:#FFFFFF !important;
-
     color:#FFFFFF !important;
-
     fill:currentColor !important;
     stroke:currentColor !important;
-
     opacity:1 !important;
 }
-
-body:has(.asces-painel-disciplina)
-ion-menu ion-header ion-button,
-
-body:has(.asces-painel-disciplina)
-ion-menu ion-header ion-icon{
-    --color:#0C4E9C !important;
-
-    color:#0C4E9C !important;
-
-    fill:currentColor !important;
-    stroke:currentColor !important;
-}
-
 
 /* =====================================================
 05.21.16 CATEGORIA DA DISCIPLINA
