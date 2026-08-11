@@ -4754,3 +4754,89 @@ ion-content:has(#asces-dashboard-v2)
     padding-left:2px !important;
     padding-right:2px !important;
 }
+
+
+/* =====================================================
+06.18 CAPA DAS DISCIPLINAS
+VISUALIZAÇÃO EM LISTA
+===================================================== */
+
+:root:not(.dark)
+core-courses-course-list-item
+.core-course-thumb{
+    width:104px !important;
+    min-width:104px !important;
+
+    height:78px !important;
+    min-height:78px !important;
+
+    flex:0 0 104px !important;
+
+    border-radius:14px !important;
+
+    overflow:hidden !important;
+
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+}
+
+:root:not(.dark)
+core-courses-course-list-item
+.core-course-thumb img,
+
+:root:not(.dark)
+core-courses-course-list-item
+img.core-course-thumb{
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:cover !important;
+    object-position:center !important;
+
+    border-radius:14px !important;
+}
+
+
+/* =====================================================
+06.19 CAPA DAS DISCIPLINAS
+VISUALIZAÇÃO EM CARDS
+===================================================== */
+
+:root:not(.dark)
+core-courses-course-list-item.card
+.core-course-thumb,
+
+:root:not(.dark)
+core-courses-course-list-item
+.card
+.core-course-thumb{
+    width:100% !important;
+    max-width:100% !important;
+
+    height:150px !important;
+
+    border-radius:
+        16px 16px 0 0 !important;
+
+    overflow:hidden !important;
+
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+}
+
+:root:not(.dark)
+core-courses-course-list-item.card
+.core-course-thumb img,
+
+:root:not(.dark)
+core-courses-course-list-item
+.card
+.core-course-thumb img{
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:cover !important;
+    object-position:center !important;
+}
