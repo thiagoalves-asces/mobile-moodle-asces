@@ -4790,3 +4790,13 @@ body:has(.asces-painel-disciplina) img{
 
     border-radius:12px !important;
 }
+
+core-courses-course-list-item
+.core-course-category{
+    outline:2px solid red !important;
+}
+
+core-courses-course-list-item
+ion-badge{
+    outline:2px solid lime !important;
+}
