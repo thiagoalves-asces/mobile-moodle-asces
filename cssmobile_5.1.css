@@ -4759,18 +4759,34 @@ ion-content:has(#asces-dashboard-v2)
 
 /* =====================================================
 HOTFIX — CAPAS COMPACTAS NO APP
-Foco da imagem para o lado direito
+Um pouco maiores + foco à direita
 ===================================================== */
 
 /* Lista de disciplinas */
 core-courses-course-list-item img{
+    width:112px !important;
+    min-width:112px !important;
+
+    height:82px !important;
+    min-height:82px !important;
+
     object-fit:cover !important;
     object-position:95% center !important;
+
+    border-radius:12px !important;
 }
 
 
 /* Cabeçalho da disciplina */
 body:has(.asces-painel-disciplina) img{
+    width:112px !important;
+    min-width:112px !important;
+
+    height:82px !important;
+    min-height:82px !important;
+
     object-fit:cover !important;
     object-position:95% center !important;
+
+    border-radius:12px !important;
 }
