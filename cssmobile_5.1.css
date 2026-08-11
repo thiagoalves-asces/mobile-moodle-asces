@@ -4923,3 +4923,19 @@ ion-buttons ion-button{
 
     margin:0 !important;
 }
+
+/* =====================================================
+DIAGNÓSTICO — ESTRUTURA DO ITEM DE CURSO
+===================================================== */
+
+core-courses-course-list-item{
+    outline:3px solid red !important;
+}
+
+core-courses-course-list-item > *{
+    outline:2px solid lime !important;
+}
+
+core-courses-course-list-item ion-item{
+    outline:2px solid blue !important;
+}
