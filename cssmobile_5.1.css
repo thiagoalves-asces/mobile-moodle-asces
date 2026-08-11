@@ -4753,18 +4753,25 @@ ion-content:has(#asces-dashboard-v2)
 
 
 /* =====================================================
-HOTFIX — CAPAS COMPACTAS NO APP
+CAPAS disciplinas NO APP
 Um pouco maiores + foco à direita
 ===================================================== */
 
-/* Cabeçalho da disciplina */
-body:has(.asces-painel-disciplina) img{
-    width:85px !important;
-    min-width:85px !important;
-    height:82px !important;
-    min-height:82px !important;
+/* =====================================================
+HOTFIX — CAPAS DOS CURSOS
+Somente enquadramento institucional
+===================================================== */
+
+core-courses-course-list-item img{
     object-fit:cover !important;
     object-position:95% center !important;
-    border-radius:12px !important;
 }
 
+/* =====================================================
+DIAGNÓSTICO — CAPA DO CABEÇALHO
+===================================================== */
+
+body:has(.asces-painel-disciplina)
+img:not(.activityicon){
+    outline:2px solid lime !important;
+}
