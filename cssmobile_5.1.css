@@ -4741,20 +4741,15 @@ ion-card-content{
     padding-right:0 !important;
 }
 
-
 /* O Dashboard usa toda a largura que recebeu */
-
 ion-content:has(#asces-dashboard-v2)
 #asces-dashboard-v2{
     width:100% !important;
     max-width:100% !important;
-
     margin:0 !important;
-
     padding-left:2px !important;
     padding-right:2px !important;
 }
-
 
 
 /* =====================================================
@@ -4762,82 +4757,14 @@ HOTFIX — CAPAS COMPACTAS NO APP
 Um pouco maiores + foco à direita
 ===================================================== */
 
-/* Lista de disciplinas */
-core-courses-course-list-item img{
-    width:58px !important;
-    min-width:58px !important;
-
-    height:60px !important;
-    min-height:60px !important;
-
-    object-fit:cover !important;
-    object-position:95% center !important;
-
-    border-radius:12px !important;
-}
-
-
 /* Cabeçalho da disciplina */
 body:has(.asces-painel-disciplina) img{
     width:85px !important;
     min-width:85px !important;
-
     height:82px !important;
     min-height:82px !important;
-
     object-fit:cover !important;
     object-position:95% center !important;
-
     border-radius:12px !important;
 }
 
-core-courses-course-list-item
-.core-course-category{
-    outline:2px solid red !important;
-}
-
-core-courses-course-list-item
-ion-badge{
-    outline:2px solid lime !important;
-}
-
-/* =====================================================
-HOTFIX — MEUS CURSOS
-BADGES LADO A LADO
-===================================================== */
-
-/* Categoria */
-core-courses-course-list-item
-.core-course-category{
-    display:inline-flex !important;
-
-    width:auto !important;
-
-    margin-right:6px !important;
-    margin-bottom:4px !important;
-
-    vertical-align:middle !important;
-}
-
-
-/* "Oculto para estudantes" */
-core-courses-course-list-item
-[class*="hidden"]{
-    display:inline-flex !important;
-
-    width:auto !important;
-
-    margin-right:0 !important;
-    margin-bottom:4px !important;
-
-    vertical-align:middle !important;
-}
-
-
-/* Tenta manter ambos na mesma linha */
-core-courses-course-list-item
-.core-course-category,
-core-courses-course-list-item
-[class*="hidden"]{
-    white-space:nowrap !important;
-}
