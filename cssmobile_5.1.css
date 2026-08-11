@@ -4757,86 +4757,99 @@ ion-content:has(#asces-dashboard-v2)
 
 
 /* =====================================================
-06.18 CAPA DAS DISCIPLINAS
+06.18 CAPAS — MEUS CURSOS
 VISUALIZAÇÃO EM LISTA
 ===================================================== */
 
-:root:not(.dark)
+/*
+Miniatura lateral da lista:
+deixa um pouco maior e horizontal.
+*/
+
 core-courses-course-list-item
-.core-course-thumb{
-    width:104px !important;
-    min-width:104px !important;
+ion-item
+.core-course-thumb,
+
+core-courses-course-list-item
+ion-item
+img{
+    width:118px !important;
+    min-width:118px !important;
 
     height:78px !important;
     min-height:78px !important;
 
-    flex:0 0 104px !important;
-
     border-radius:14px !important;
-
-    overflow:hidden !important;
-
-    background-size:cover !important;
-    background-position:center !important;
-    background-repeat:no-repeat !important;
-}
-
-:root:not(.dark)
-core-courses-course-list-item
-.core-course-thumb img,
-
-:root:not(.dark)
-core-courses-course-list-item
-img.core-course-thumb{
-    width:100% !important;
-    height:100% !important;
 
     object-fit:cover !important;
     object-position:center !important;
 
-    border-radius:14px !important;
+    overflow:hidden !important;
 }
 
 
 /* =====================================================
-06.19 CAPA DAS DISCIPLINAS
+06.19 CAPAS — MEUS CURSOS
 VISUALIZAÇÃO EM CARDS
 ===================================================== */
 
-:root:not(.dark)
-core-courses-course-list-item.card
-.core-course-thumb,
+/*
+Aqui já está quase ideal.
+Só garantimos proporção e preenchimento.
+*/
 
-:root:not(.dark)
 core-courses-course-list-item
-.card
-.core-course-thumb{
+ion-card
+img{
+
     width:100% !important;
     max-width:100% !important;
 
-    height:150px !important;
+    height:155px !important;
+
+    object-fit:cover !important;
+    object-position:center !important;
 
     border-radius:
         16px 16px 0 0 !important;
+}
 
-    overflow:hidden !important;
+
+/* Caso a capa seja background em vez de <img> */
+
+core-courses-course-list-item
+ion-card
+[style*="background-image"]{
+
+    width:100% !important;
+    height:155px !important;
 
     background-size:cover !important;
     background-position:center !important;
     background-repeat:no-repeat !important;
 }
 
-:root:not(.dark)
-core-courses-course-list-item.card
-.core-course-thumb img,
 
-:root:not(.dark)
-core-courses-course-list-item
-.card
-.core-course-thumb img{
-    width:100% !important;
-    height:100% !important;
+/* =====================================================
+06.20 CAPA — CABEÇALHO DA DISCIPLINA
+===================================================== */
+
+/*
+Aquela miniatura quadrada ao lado do nome.
+Aqui eu aumentaria sem exagerar.
+*/
+
+body:has(.asces-painel-disciplina)
+core-course-course
+img{
+
+    width:120px !important;
+    height:90px !important;
+
+    min-width:120px !important;
 
     object-fit:cover !important;
     object-position:center !important;
+
+    border-radius:15px !important;
 }
