@@ -3174,14 +3174,17 @@ CARROSSEL — MÍDIA DE FUNDO
 }
 
 /* =====================================================
-DISCIPLINA — ÍCONES BRANCOS SOMENTE QUANDO
-O PAINEL ASCES ESTIVER NA PÁGINA
+DISCIPLINA — ÍCONES BRANCOS SOMENTE NO HEADER PRINCIPAL
 ===================================================== */
 
 body:has(.asces-painel-disciplina)
+> ion-app
+ion-router-outlet
 ion-header ion-toolbar ion-buttons ion-button,
 
 body:has(.asces-painel-disciplina)
+> ion-app
+ion-router-outlet
 ion-header ion-toolbar ion-back-button{
     --color:#FFFFFF !important;
     --ion-color-base:#FFFFFF !important;
@@ -3190,12 +3193,14 @@ ion-header ion-toolbar ion-back-button{
 }
 
 
-/* Elemento interno nativo Ionic */
-
 body:has(.asces-painel-disciplina)
+> ion-app
+ion-router-outlet
 ion-header ion-toolbar ion-button::part(native),
 
 body:has(.asces-painel-disciplina)
+> ion-app
+ion-router-outlet
 ion-header ion-toolbar ion-back-button::part(native){
     --color:#FFFFFF !important;
 
@@ -3203,9 +3208,9 @@ ion-header ion-toolbar ion-back-button::part(native){
 }
 
 
-/* Ícones */
-
 body:has(.asces-painel-disciplina)
+> ion-app
+ion-router-outlet
 ion-header ion-toolbar ion-icon{
     --color:#FFFFFF !important;
 
@@ -3217,21 +3222,19 @@ ion-header ion-toolbar ion-icon{
     opacity:1 !important;
 }
 
-
-/* Estados */
+body:has(.asces-painel-disciplina)
+ion-menu ion-header ion-button,
 
 body:has(.asces-painel-disciplina)
-ion-header ion-toolbar ion-button:hover,
+ion-menu ion-header ion-icon{
+    --color:#0C4E9C !important;
 
-body:has(.asces-painel-disciplina)
-ion-header ion-toolbar ion-button:focus,
+    color:#0C4E9C !important;
 
-body:has(.asces-painel-disciplina)
-ion-header ion-toolbar ion-button:active{
-    --color:#FFFFFF !important;
-
-    color:#FFFFFF !important;
+    fill:currentColor !important;
+    stroke:currentColor !important;
 }
+
 
 /* =====================================================
 05.21.16 CATEGORIA DA DISCIPLINA
