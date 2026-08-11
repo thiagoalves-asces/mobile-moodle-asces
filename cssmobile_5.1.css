@@ -4755,7 +4755,6 @@ ion-content:has(#asces-dashboard-v2)
     padding-right:2px !important;
 }
 
-
 /* =====================================================
 CAPAS COMPACTAS — APP
 Maior + foco à direita
@@ -4789,62 +4788,29 @@ ion-thumbnail img{
 }
 
 
+/* CABEÇALHO DA DISCIPLINA */
+body:has(.asces-painel-disciplina)
+ion-thumbnail{
+    width:104px !important;
+    min-width:104px !important;
 
-/* =====================================================
-06.19 CAPAS — MEUS CURSOS
-VISUALIZAÇÃO EM CARDS
-===================================================== */
+    height:104px !important;
+    min-height:104px !important;
 
-/*
-Aqui já está quase ideal.
-Só garantimos proporção e preenchimento.
-*/
+    flex:0 0 104px !important;
 
-core-courses-course-list-item
-ion-card
-img{
+    border-radius:16px !important;
 
-    width:100% !important;
-    max-width:100% !important;
-
-    height:155px !important;
-
-    object-fit:cover !important;
-    object-position:center !important;
-
-    border-radius:
-        16px 16px 0 0 !important;
+    overflow:hidden !important;
 }
-
-
-/* Caso a capa seja background em vez de <img> */
-
-core-courses-course-list-item
-ion-card
-[style*="background-image"]{
-
-    width:100% !important;
-    height:155px !important;
-
-    background-size:cover !important;
-    background-position:center !important;
-    background-repeat:no-repeat !important;
-}
-
-
-/* =====================================================
-CAPA — CABEÇALHO DA DISCIPLINA
-===================================================== */
 
 body:has(.asces-painel-disciplina)
-core-course-course img{
-    width:118px !important;
-    height:88px !important;
-
-    min-width:118px !important;
+ion-thumbnail img{
+    width:100% !important;
+    height:100% !important;
 
     object-fit:cover !important;
-    object-position:center center !important;
+    object-position:right center !important;
 
-    border-radius:15px !important;
+    border-radius:16px !important;
 }
