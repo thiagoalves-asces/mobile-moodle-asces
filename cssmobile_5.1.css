@@ -4805,3 +4805,30 @@ body:has(.asces-painel-disciplina)
     border-radius:0 !important;
 }
 
+
+/* =====================================================
+DIAGNÓSTICO — CAPA DO CABEÇALHO DA DISCIPLINA
+===================================================== */
+
+/* Background inline */
+body:has(.asces-painel-disciplina)
+[style*="background-image"]{
+    outline:3px solid lime !important;
+}
+
+
+/* Possíveis componentes nativos */
+body:has(.asces-painel-disciplina)
+.core-course-thumb{
+    outline:3px solid red !important;
+}
+
+body:has(.asces-painel-disciplina)
+[class*="course-image"]{
+    outline:3px solid cyan !important;
+}
+
+body:has(.asces-painel-disciplina)
+ion-thumbnail{
+    outline:3px solid magenta !important;
+}
