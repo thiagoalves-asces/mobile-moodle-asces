@@ -3174,14 +3174,23 @@ CARROSSEL — MÍDIA DE FUNDO
 }
 
 /* =====================================================
-AÇÕES DO HEADER
-Estado normal + ativo
+DISCIPLINA — ÍCONES BRANCOS SOMENTE NO HEADER DO CURSO
 ===================================================== */
 
 :root:not(.dark)
-ion-header ion-toolbar ion-buttons ion-button,
+page-core-course
+ion-header ion-toolbar ion-button,
 
 :root:not(.dark)
+page-core-course
+ion-header ion-toolbar ion-back-button,
+
+:root:not(.dark)
+core-course-course
+ion-header ion-toolbar ion-button,
+
+:root:not(.dark)
+core-course-course
 ion-header ion-toolbar ion-back-button{
     --color:#FFFFFF !important;
     --ion-color-base:#FFFFFF !important;
@@ -3190,52 +3199,22 @@ ion-header ion-toolbar ion-back-button{
 }
 
 
-/* Parte nativa do botão Ionic */
+:root:not(.dark)
+page-core-course
+ion-header ion-toolbar ion-icon,
 
 :root:not(.dark)
-ion-header ion-toolbar ion-button::part(native),
-
-:root:not(.dark)
-ion-header ion-toolbar ion-back-button::part(native){
-    color:#FFFFFF !important;
-
+core-course-course
+ion-header ion-toolbar ion-icon{
     --color:#FFFFFF !important;
-}
 
-
-/* Ícones */
-
-:root:not(.dark)
-ion-header ion-toolbar ion-buttons ion-icon,
-
-:root:not(.dark)
-ion-header ion-toolbar ion-back-button ion-icon{
     color:#FFFFFF !important;
-
-    --color:#FFFFFF !important;
 
     fill:currentColor !important;
     stroke:currentColor !important;
 
     opacity:1 !important;
 }
-
-
-/* Não deixa mudar entre normal / focus / pressed */
-
-:root:not(.dark)
-ion-header ion-toolbar ion-button:hover,
-
-:root:not(.dark)
-ion-header ion-toolbar ion-button:focus,
-
-:root:not(.dark)
-ion-header ion-toolbar ion-button:active{
-    --color:#FFFFFF !important;
-
-    color:#FFFFFF !important;
-}
-
 
 /* =====================================================
 05.21.16 CATEGORIA DA DISCIPLINA
@@ -4733,32 +4712,63 @@ ASCES MOBILE — bootstrap técnico do plugin
 
 
 /* =====================================================
-05.25 DASHBOARD — APROVEITAMENTO DE LARGURA
+DASHBOARD — GANHAR LARGURA REAL NO APP
+Atua somente nos wrappers que CONTÊM o Dashboard
 ===================================================== */
 
 html.ionic
-#asces-dashboard-v2{
-    width:calc(100% + 24px) !important;
-    max-width:none !important;
+core-block-html:has(#asces-dashboard-v2),
 
-    margin-left:-12px !important;
-    margin-right:-12px !important;
+html.ionic
+core-block-html:has(#asces-dashboard-v2)
+.core-block-content,
+
+html.ionic
+core-block-html:has(#asces-dashboard-v2)
+ion-card,
+
+html.ionic
+core-block-html:has(#asces-dashboard-v2)
+ion-card-content{
+    width:100% !important;
+    max-width:100% !important;
+
+    margin-left:0 !important;
+    margin-right:0 !important;
+
+    padding-left:0 !important;
+    padding-right:0 !important;
 
     box-sizing:border-box !important;
 }
 
 
-/* Mantém uma pequena margem visual nos componentes */
+/* Dashboard */
 html.ionic
-#asces-dashboard-v2 > .asces-hero,
+#asces-dashboard-v2{
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 !important;
+
+    padding-left:4px !important;
+    padding-right:4px !important;
+
+    box-sizing:border-box !important;
+}
+
+
+/* Hero e carrossel aproveitam tudo */
 html.ionic
-#asces-dashboard-v2 > .asces-carousel,
+#asces-dashboard-v2
+.asces-hero,
+
 html.ionic
-#asces-dashboard-v2 > #asces-my-courses,
-html.ionic
-#asces-dashboard-v2 > .asces-tutorial{
+#asces-dashboard-v2
+.asces-carousel{
     width:100% !important;
     max-width:none !important;
 
-    box-sizing:border-box !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
 }
