@@ -4764,11 +4764,11 @@ Um pouco maiores + foco à direita
 
 /* Lista de disciplinas */
 core-courses-course-list-item img{
-    width:72px !important;
-    min-width:72px !important;
+    width:64px !important;
+    min-width:64px !important;
 
-    height:72px !important;
-    min-height:72px !important;
+    height:64px !important;
+    min-height:64px !important;
 
     object-fit:cover !important;
     object-position:95% center !important;
@@ -4779,8 +4779,8 @@ core-courses-course-list-item img{
 
 /* Cabeçalho da disciplina */
 body:has(.asces-painel-disciplina) img{
-    width:88px !important;
-    min-width:88px !important;
+    width:85px !important;
+    min-width:85px !important;
 
     height:82px !important;
     min-height:82px !important;
