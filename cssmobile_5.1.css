@@ -1756,13 +1756,14 @@ ASCES-UNITA | Moodle App 5.1
 ===================================================== */
 
 #asces-dashboard-v2{
-    width:calc(100% + 20px) !important;
-    max-width:none !important;
+    width:100% !important;
+    max-width:100% !important;
 
-    margin-left:-10px !important;
-    margin-right:-10px !important;
+    margin:0 !important;
 
-    padding:6px !important;
+    padding:6px 10px !important;
+
+    box-sizing:border-box !important;
 }
 
 #asces-dashboard-v2 .asces-hero,
@@ -1773,23 +1774,8 @@ ASCES-UNITA | Moodle App 5.1
 
 
 /* =====================================================
-05.21.2 CARROSSEL PRINCIPAL
+CARROSSEL — MÍDIA DE FUNDO
 ===================================================== */
-
-#asces-dashboard-v2
-.asces-carousel{
-    position:relative !important;
-
-    height:330px !important;
-    max-height:48dvh !important;
-
-    overflow:hidden !important;
-
-    border-radius:18px !important;
-}
-
-
-/* Slide */
 
 #asces-dashboard-v2
 .asces-slide{
@@ -1802,18 +1788,37 @@ ASCES-UNITA | Moodle App 5.1
 
     overflow:hidden !important;
 
-    background:#0D47A1 !important;
+    /* não deixa aparecer o azul como metade do card */
+    background:transparent !important;
 }
 
 
-/* =====================================================
-IMAGEM DO SLIDE
-Não força position:absolute no <img>,
-pois o Moodle App pode inserir wrappers.
-===================================================== */
+/*
+Imagem direta ou dentro de wrappers conhecidos.
+*/
 
 #asces-dashboard-v2
-.asces-slide img{
+.asces-slide > img,
+
+#asces-dashboard-v2
+.asces-slide > picture,
+
+#asces-dashboard-v2
+.asces-slide > picture > img,
+
+#asces-dashboard-v2
+.asces-slide core-format-text img,
+
+#asces-dashboard-v2
+.asces-slide .core-format-text img,
+
+#asces-dashboard-v2
+.asces-slide .no-overflow img{
+
+    position:absolute !important;
+
+    inset:0 !important;
+
     display:block !important;
 
     width:100% !important;
@@ -1833,38 +1838,26 @@ pois o Moodle App pode inserir wrappers.
 
     opacity:1 !important;
 
-    filter:none !important;
-    transform:none !important;
+    z-index:1 !important;
 }
 
 
-/* =====================================================
-WRAPPERS QUE O MOODLE APP PODE CRIAR
-Eles passam a ocupar todo o slide.
-===================================================== */
+/* Wrapper intermediário do Moodle App */
 
 #asces-dashboard-v2
-.asces-slide > core-format-text,
+.asces-slide core-format-text,
 
 #asces-dashboard-v2
-.asces-slide > .core-format-text,
+.asces-slide .core-format-text,
 
 #asces-dashboard-v2
-.asces-slide > .no-overflow,
-
-#asces-dashboard-v2
-.asces-slide > div:has(> img){
+.asces-slide .no-overflow{
     position:absolute !important;
 
     inset:0 !important;
 
-    display:block !important;
-
     width:100% !important;
     height:100% !important;
-
-    min-width:100% !important;
-    min-height:100% !important;
 
     margin:0 !important;
     padding:0 !important;
@@ -1875,23 +1868,7 @@ Eles passam a ocupar todo o slide.
 }
 
 
-/* Caso a imagem continue sendo filha direta,
-ainda funciona normalmente. */
-
-#asces-dashboard-v2
-.asces-slide > img{
-    position:absolute !important;
-
-    inset:0 !important;
-
-    width:100% !important;
-    height:100% !important;
-
-    z-index:1 !important;
-}
-
-
-/* Overlay */
+/* Overlay sempre acima da imagem */
 
 #asces-dashboard-v2
 .asces-overlay{
@@ -1912,38 +1889,6 @@ ainda funciona normalmente. */
 
     z-index:2 !important;
 }
-
-
-/* Conteúdo */
-
-#asces-dashboard-v2
-.asces-slide-content{
-    left:20px !important;
-    right:20px !important;
-
-    max-width:
-        calc(100% - 40px) !important;
-
-    z-index:5 !important;
-}
-
-#asces-dashboard-v2
-.asces-slide-content h2{
-    font-size:
-        clamp(
-            23px,
-            7vw,
-            29px
-        ) !important;
-}
-
-#asces-dashboard-v2
-.asces-slide-content p{
-    font-size:12.5px !important;
-
-    line-height:1.4 !important;
-}
-
 
 /* =====================================================
 05.21.3 SETAS PRINCIPAIS
@@ -3094,51 +3039,67 @@ DO MODAL DE HORÁRIOS.
 }
 
 /* =====================================================
-06.15 DISCIPLINA — ÍCONES DO HEADER
+06.15 DISCIPLINA — AÇÕES DO HEADER
+Estado normal + ativo
 ===================================================== */
 
-/*
-Voltar, download/offline, informações e demais
-ações exibidas sobre o header azul.
-*/
+:root:not(.dark)
+ion-header ion-toolbar ion-buttons ion-button,
 
 :root:not(.dark)
-page-core-course
-ion-header ion-toolbar ion-button,
-
-:root:not(.dark)
-page-core-course
-ion-header ion-toolbar ion-back-button,
-
-:root:not(.dark)
-page-core-course
-ion-header ion-toolbar ion-icon,
-
-:root:not(.dark)
-core-course-course
-ion-header ion-toolbar ion-button,
-
-:root:not(.dark)
-core-course-course
-ion-header ion-toolbar ion-icon{
+ion-header ion-toolbar ion-back-button{
     --color:#FFFFFF !important;
+    --ion-color-base:#FFFFFF !important;
 
     color:#FFFFFF !important;
-
-    fill:#FFFFFF !important;
-
-    stroke:#FFFFFF !important;
 }
 
 
-/* SVGs internos */
+/* Parte nativa do botão Ionic */
 
 :root:not(.dark)
-page-core-course
-ion-header svg,
+ion-header ion-toolbar ion-button::part(native),
 
 :root:not(.dark)
-page-core-course
+ion-header ion-toolbar ion-back-button::part(native){
+    color:#FFFFFF !important;
+
+    --color:#FFFFFF !important;
+}
+
+
+/* Ícones */
+
+:root:not(.dark)
+ion-header ion-toolbar ion-buttons ion-icon,
+
+:root:not(.dark)
+ion-header ion-toolbar ion-back-button ion-icon{
+    color:#FFFFFF !important;
+
+    --color:#FFFFFF !important;
+
+    fill:currentColor !important;
+    stroke:currentColor !important;
+
+    opacity:1 !important;
+}
+
+
+/* Não deixa mudar entre normal / focus / pressed */
+
+:root:not(.dark)
+ion-header ion-toolbar ion-button:hover,
+
+:root:not(.dark)
+ion-header ion-toolbar ion-button:focus,
+
+:root:not(.dark)
+ion-header ion-toolbar ion-button:active{
+    --color:#FFFFFF !important;
+
+    color:#FFFFFF !important;
+}-core-course
 ion-header svg path,
 
 :root:not(.dark)
