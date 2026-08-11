@@ -4771,21 +4771,50 @@ body:has(.asces-painel-disciplina) img{
 
 
 /* =====================================================
-DIAGNÓSTICO — BOTÃO DE ENVIO NO APP
+HOTFIX — MENSAGENS APP
+BOTÃO ENVIAR
 ===================================================== */
 
-page-core-messages-discussion ion-footer ion-button{
-    outline:3px solid red !important;
-}
-
-page-core-messages-discussion ion-footer ion-icon{
-    outline:2px solid lime !important;
-}
-
 core-send-message-form ion-button{
-    outline:3px solid orange !important;
+    --background:#0C4E9C !important;
+    --color:#FFFFFF !important;
+
+    width:42px !important;
+    height:42px !important;
+
+    min-width:42px !important;
+    min-height:42px !important;
+
+    margin-left:8px !important;
+
+    border-radius:50% !important;
+
+    box-shadow:
+        0 4px 12px
+        rgba(12,78,156,.22) !important;
+
+    opacity:1 !important;
 }
 
-core-send-message-form ion-icon{
-    outline:2px solid cyan !important;
+
+/* Ícone */
+core-send-message-form ion-button ion-icon{
+    --color:#FFFFFF !important;
+
+    color:#FFFFFF !important;
+
+    fill:currentColor !important;
+    stroke:currentColor !important;
+
+    font-size:20px !important;
+
+    opacity:1 !important;
+}
+
+
+/* Estado pressionado */
+core-send-message-form ion-button:active{
+    --background:#0A4589 !important;
+
+    transform:scale(.96);
 }
