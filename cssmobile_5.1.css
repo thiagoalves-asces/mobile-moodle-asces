@@ -4754,12 +4754,11 @@ ion-content:has(#asces-dashboard-v2)
 
 /* =====================================================
 CAPAS disciplinas NO APP
-Um pouco maiores + foco à direita
 ===================================================== */
 
 /* =====================================================
 HOTFIX — CAPAS DOS CURSOS
-Somente enquadramento institucional
+Lista / cards do Moodle App
 ===================================================== */
 
 core-courses-course-list-item img{
@@ -4767,30 +4766,35 @@ core-courses-course-list-item img{
     object-position:95% center !important;
 }
 
+
 /* =====================================================
 HOTFIX — CAPA DO CABEÇALHO DA DISCIPLINA
-Foco da arte no lado direito
 ===================================================== */
 
 body:has(.asces-painel-disciplina)
-[style*="background-image"]:not(.userpicture):not([class*="avatar"]):not([class*="user"]){
+[style*="background-image"]{
     background-size:cover !important;
     background-position:95% center !important;
     background-repeat:no-repeat !important;
 }
 
 
-/* Proteção do avatar */
+/* =====================================================
+PROTEÇÃO — FOTO DO USUÁRIO
+Somente elementos realmente identificados como avatar
+===================================================== */
+
 body:has(.asces-painel-disciplina)
 ion-avatar [style*="background-image"],
+
 body:has(.asces-painel-disciplina)
 .userpicture[style*="background-image"]{
     background-position:center center !important;
 }
 
+
 /* =====================================================
 HOTFIX — ÍCONES NATIVOS DE RECURSOS
-Proteção contra regras de imagem
 ===================================================== */
 
 body:has(.asces-painel-disciplina)
@@ -4801,29 +4805,15 @@ img.activityicon,
 
 body:has(.asces-painel-disciplina)
 .activity-icon img{
-
     width:24px !important;
     min-width:24px !important;
+    max-width:24px !important;
 
     height:24px !important;
     min-height:24px !important;
-
-    max-width:24px !important;
     max-height:24px !important;
 
     object-fit:contain !important;
 
     border-radius:0 !important;
 }
-
-/* Foto/avatar do usuário permanece intocado */
-body:has(.asces-painel-disciplina)
-ion-avatar [style*="background-image"],
-body:has(.asces-painel-disciplina)
-[class*="avatar"] [style*="background-image"],
-body:has(.asces-painel-disciplina)
-[class*="user"] [style*="background-image"]{
-    background-position:center center !important;
-}
-
-
