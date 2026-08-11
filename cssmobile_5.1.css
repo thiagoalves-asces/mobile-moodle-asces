@@ -4758,16 +4758,42 @@ ion-content:has(#asces-dashboard-v2)
 
 
 /* =====================================================
-DIAGNÓSTICO — FILHOS DIRETOS DO ITEM DE CURSO
+MEUS CURSOS — TESTE DE CAPA RETANGULAR NA LISTA
 ===================================================== */
 
-/* SOMENTE versão compacta */
-core-courses-course-list-item > [classe-do-container-da-lista]{
-    display:grid !important;
-    grid-template-columns:150px minmax(0,1fr) !important;
+/* Item inteiro */
+core-courses-course-list-item > *{
+    position:relative !important;
 }
 
-... [área da imagem] {
+
+/* Imagem da capa */
+core-courses-course-list-item > * img{
     width:150px !important;
-    height:100px !important;
+    min-width:150px !important;
+
+    height:96px !important;
+    min-height:96px !important;
+
+    object-fit:cover !important;
+    object-position:right center !important;
+
+    border-radius:14px !important;
+}
+
+
+/* Dá espaço para o conteúdo ao lado da capa */
+core-courses-course-list-item > *{
+    padding-left:0 !important;
+}
+
+
+/* Três pontinhos no canto superior direito */
+core-courses-course-list-item > * > *:last-child{
+    position:absolute !important;
+
+    top:8px !important;
+    right:8px !important;
+
+    z-index:10 !important;
 }
