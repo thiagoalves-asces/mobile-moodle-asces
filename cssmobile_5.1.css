@@ -4757,35 +4757,37 @@ ion-content:has(#asces-dashboard-v2)
 
 
 /* =====================================================
-06.18 CAPAS — MEUS CURSOS
-VISUALIZAÇÃO EM LISTA
+CAPAS COMPACTAS — APP
+Maior + foco à direita
 ===================================================== */
 
-/*
-Miniatura lateral da lista:
-deixa um pouco maior e horizontal.
-*/
-
+/* LISTA DE DISCIPLINAS */
 core-courses-course-list-item
-ion-item
-.core-course-thumb,
+ion-thumbnail{
+    width:96px !important;
+    min-width:96px !important;
 
-core-courses-course-list-item
-ion-item
-img{
-    width:118px !important;
-    min-width:118px !important;
+    height:96px !important;
+    min-height:96px !important;
 
-    height:78px !important;
-    min-height:78px !important;
+    flex:0 0 96px !important;
 
     border-radius:14px !important;
 
-    object-fit:cover !important;
-    object-position:center !important;
-
     overflow:hidden !important;
 }
+
+core-courses-course-list-item
+ion-thumbnail img{
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:cover !important;
+    object-position:right center !important;
+
+    border-radius:14px !important;
+}
+
 
 
 /* =====================================================
@@ -4831,43 +4833,18 @@ ion-card
 
 
 /* =====================================================
-06.20 CAPA — CABEÇALHO DA DISCIPLINA
+CAPA — CABEÇALHO DA DISCIPLINA
 ===================================================== */
-
-/*
-Aquela miniatura quadrada ao lado do nome.
-Aqui eu aumentaria sem exagerar.
-*/
 
 body:has(.asces-painel-disciplina)
-core-course-course
-img{
+core-course-course img{
+    width:118px !important;
+    height:88px !important;
 
-    width:120px !important;
-    height:90px !important;
-
-    min-width:120px !important;
+    min-width:118px !important;
 
     object-fit:cover !important;
-    object-position:center !important;
+    object-position:center center !important;
 
     border-radius:15px !important;
-}
-
-
-/* =====================================================
-TESTE 1 — IDENTIFICAR CAPA NA LISTA
-===================================================== */
-
-core-courses-course-list-item img{
-    outline:4px solid red !important;
-}
-
-
-/* =====================================================
-TESTE 2 — IDENTIFICAR CAPA NO CABEÇALHO DA DISCIPLINA
-===================================================== */
-
-body:has(.asces-painel-disciplina) img{
-    outline:4px solid lime !important;
 }
