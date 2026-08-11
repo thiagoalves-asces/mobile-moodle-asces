@@ -4755,21 +4755,16 @@ ion-content:has(#asces-dashboard-v2)
     padding-right:2px !important;
 }
 
+
+
 /* =====================================================
-DIAGNÓSTICO — DIFERENCIAR LISTA E CARDS
+DIAGNÓSTICO — FILHOS DIRETOS DO ITEM DE CURSO
 ===================================================== */
 
-/* Se a visualização usar ion-item */
-core-courses-course-list-item:has(ion-item){
-    outline:4px solid #00bcd4 !important;
+core-courses-course-list-item > *{
+    outline:3px solid magenta !important;
 }
 
-/* Se a visualização usar ion-card */
-core-courses-course-list-item:has(ion-card){
-    outline:4px solid #ff9800 !important;
-}
-
-/* Marca o thumbnail real */
-core-courses-course-list-item ion-thumbnail{
-    outline:4px solid #e91e63 !important;
+core-courses-course-list-item > * > *{
+    outline:2px solid cyan !important;
 }
