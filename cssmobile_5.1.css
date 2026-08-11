@@ -2558,6 +2558,60 @@ ion-header ion-toolbar{
 }
 
 
+#asces-dashboard-v2
+.asces-informe-video-open{
+    -webkit-appearance:none !important;
+    appearance:none !important;
+
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    gap:7px !important;
+
+    min-height:36px !important;
+
+    margin:4px auto 0 !important;
+    padding:8px 16px !important;
+
+    border:0 !important;
+    border-radius:30px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0C4E9C,
+            #1565C0
+        ) !important;
+
+    color:#FFFFFF !important;
+
+    font-size:11px !important;
+    font-weight:700 !important;
+
+    box-shadow:
+        0 4px 12px
+        rgba(12,78,156,.18) !important;
+}
+
+#asces-dashboard-v2
+.asces-informe-video-open span{
+    color:#FFFFFF !important;
+}
+
+#asces-dashboard-v2
+.asces-informe-video-open
+.asces-external-icon,
+
+#asces-dashboard-v2
+.asces-informe-video-open
+.asces-external-icon path{
+    color:#FFFFFF !important;
+    stroke:#FFFFFF !important;
+    fill:none !important;
+}
+
+
 /* =====================================================
 05.21.12 PDF
 ===================================================== */
