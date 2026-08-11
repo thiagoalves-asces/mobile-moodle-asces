@@ -3134,21 +3134,6 @@ ion-header ion-toolbar ion-button:active{
     --color:#FFFFFF !important;
 
     color:#FFFFFF !important;
-}-core-course
-ion-header svg path,
-
-:root:not(.dark)
-core-course-course
-ion-header svg,
-
-:root:not(.dark)
-core-course-course
-ion-header svg path{
-    color:#FFFFFF !important;
-
-    fill:currentColor !important;
-
-    stroke:currentColor !important;
 }
 
 
@@ -3226,6 +3211,60 @@ ion-badge{
     padding:7px 14px !important;
 }
 
+/* =====================================================
+CARROSSEL — BACKGROUND CONTROLADO PELO PLUGIN
+===================================================== */
+
+#asces-dashboard-v2
+.asces-slide.asces-slide-bg-ready{
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(5,32,66,.78) 0%,
+            rgba(5,32,66,.54) 50%,
+            rgba(5,32,66,.15) 100%
+        ),
+        var(--asces-slide-image) !important;
+
+    background-size:
+        cover,
+        cover !important;
+
+    background-position:
+        center,
+        center !important;
+
+    background-repeat:
+        no-repeat,
+        no-repeat !important;
+}
+
+
+/*
+A imagem original continua no HTML,
+mas não participa mais do layout.
+*/
+
+#asces-dashboard-v2
+.asces-slide.asces-slide-bg-ready img{
+    opacity:0 !important;
+
+    visibility:hidden !important;
+
+    pointer-events:none !important;
+}
+
+
+/*
+Como o overlay já está embutido
+no background acima, escondemos o antigo.
+*/
+
+#asces-dashboard-v2
+.asces-slide.asces-slide-bg-ready
+.asces-overlay{
+    background:none !important;
+}
 
 /* =====================================================
 📚 06. COURSES
@@ -4581,7 +4620,39 @@ Aguardando teste no App 5.1.
 
 
 /* =====================================================
-🛠️ 10. HOTFIXES
+10. FAIXA INSTITUCIONAL ANIMADA
+SOMENTE HEADER DO APP
+===================================================== */
+@keyframes asces-header-faixa{
+    0%{
+        background-position:left bottom;
+    }
+
+    100%{
+        background-position:right bottom;
+    }
+}
+
+:root:not(.dark) ion-header{
+    background-size:220% 6px !important;
+
+    animation:
+        asces-header-faixa
+        7s
+        linear
+        infinite
+        alternate !important;
+}
+
+/* Acessibilidade */
+@media(prefers-reduced-motion:reduce){
+    :root:not(.dark) ion-header{
+        animation:none !important;
+    }
+}
+
+/* =====================================================
+🛠️ 11. HOTFIXES
 ===================================================== */
 
 /* =====================================================
