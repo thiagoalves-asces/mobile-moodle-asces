@@ -1976,38 +1976,85 @@ Imagem direta ou dentro de wrappers conhecidos.
     background:#FFFFFF !important;
 }
 
-
 /* =====================================================
 05.21.5 HEADER INSTITUCIONAL
+Faixa formada na entrada
 ===================================================== */
 
 :root:not(.dark)
 ion-header{
+    position:relative !important;
+
     padding-bottom:6px !important;
+
+    background:#0C4E9C !important;
+}
+
+
+/* Faixa institucional */
+
+:root:not(.dark)
+ion-header::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:6px;
 
     background:
         linear-gradient(
             to right,
 
-            #1976d2 0%,
-            #1976d2 28%,
+            #1976D2 0%,
+            #1976D2 28%,
 
-            #1565c0 28%,
-            #1565c0 50%,
+            #1565C0 28%,
+            #1565C0 50%,
 
-            #0d47a1 50%,
-            #0d47a1 65%,
+            #0D47A1 50%,
+            #0D47A1 65%,
 
-            #ff9800 65%,
-            #ff9800 82%,
+            #FF9800 65%,
+            #FF9800 82%,
 
-            #ff6f00 82%,
-            #ff6f00 100%
-        )
-        left bottom / 100% 6px
-        no-repeat !important;
+            #FF6F00 82%,
+            #FF6F00 100%
+        );
+
+    transform-origin:left center;
+
+    transform:scaleX(0);
+
+    animation:
+        asces-faixa-carregar
+        .85s
+        cubic-bezier(.22,1,.36,1)
+        forwards;
+
+    z-index:30;
+
+    pointer-events:none;
 }
 
+
+/* Animação */
+
+@keyframes asces-faixa-carregar{
+    from{
+        transform:scaleX(0);
+    }
+
+    to{
+        transform:scaleX(1);
+    }
+}
+
+
+/* Fundo azul do toolbar permanece */
 
 :root:not(.dark)
 ion-header ion-toolbar{
@@ -2017,6 +2064,16 @@ ion-header ion-toolbar{
     background:#0C4E9C !important;
 }
 
+
+/* Acessibilidade */
+
+@media(prefers-reduced-motion:reduce){
+    :root:not(.dark)
+    ion-header::after{
+        animation:none !important;
+        transform:scaleX(1) !important;
+    }
+}
 
 /* =====================================================
 05.21.6 NORMALIZAÇÃO DE COMPONENTES DINÂMICOS
@@ -4674,110 +4731,7 @@ Aguardando teste no App 5.1.
 
 
 /* =====================================================
-FAIXA INSTITUCIONAL — ENTRADA ANIMADA
-SOMENTE HEADER DO APP
-===================================================== */
-
-/*
-O header continua azul.
-Criamos a faixa colorida em ::after
-e revelamos ela da esquerda para a direita.
-*/
-
-:root:not(.dark)
-ion-header{
-    position:relative !important;
-
-    padding-bottom:6px !important;
-
-    background:#0C4E9C !important;
-}
-
-
-/* =====================================================
-FAIXA
-===================================================== */
-
-:root:not(.dark)
-ion-header::after{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:0;
-
-    width:100%;
-    height:6px;
-
-    background:
-        linear-gradient(
-            to right,
-
-            #1976D2 0%,
-            #1976D2 28%,
-
-            #1565C0 28%,
-            #1565C0 50%,
-
-            #0D47A1 50%,
-            #0D47A1 65%,
-
-            #FF9800 65%,
-            #FF9800 82%,
-
-            #FF6F00 82%,
-            #FF6F00 100%
-        );
-
-    transform-origin:left center;
-
-    transform:scaleX(0);
-
-    animation:
-        asces-faixa-carregar
-        .85s
-        cubic-bezier(.22,1,.36,1)
-        forwards;
-
-    z-index:30;
-
-    pointer-events:none;
-}
-
-
-/* =====================================================
-ANIMAÇÃO
-===================================================== */
-
-@keyframes asces-faixa-carregar{
-
-    0%{
-        transform:scaleX(0);
-    }
-
-    100%{
-        transform:scaleX(1);
-    }
-}
-
-
-/* =====================================================
-ACESSIBILIDADE
-===================================================== */
-
-@media(prefers-reduced-motion:reduce){
-
-    :root:not(.dark)
-    ion-header::after{
-        animation:none !important;
-
-        transform:scaleX(1) !important;
-    }
-}
-
-/* =====================================================
-🛠️ 11. HOTFIXES
+🛠️ 10. HOTFIXES
 ===================================================== */
 
 /* =====================================================
