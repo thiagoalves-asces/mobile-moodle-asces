@@ -4765,12 +4765,12 @@ Foco da imagem para o lado direito
 /* Lista de disciplinas */
 core-courses-course-list-item img{
     object-fit:cover !important;
-    object-position:85% center !important;
+    object-position:95% center !important;
 }
 
 
 /* Cabeçalho da disciplina */
 body:has(.asces-painel-disciplina) img{
     object-fit:cover !important;
-    object-position:85% center !important;
+    object-position:95% center !important;
 }
