@@ -4730,3 +4730,35 @@ ASCES MOBILE — bootstrap técnico do plugin
 .asces-mobile-bootstrap{
     display:none !important;
 }
+
+
+/* =====================================================
+05.25 DASHBOARD — APROVEITAMENTO DE LARGURA
+===================================================== */
+
+html.ionic
+#asces-dashboard-v2{
+    width:calc(100% + 24px) !important;
+    max-width:none !important;
+
+    margin-left:-12px !important;
+    margin-right:-12px !important;
+
+    box-sizing:border-box !important;
+}
+
+
+/* Mantém uma pequena margem visual nos componentes */
+html.ionic
+#asces-dashboard-v2 > .asces-hero,
+html.ionic
+#asces-dashboard-v2 > .asces-carousel,
+html.ionic
+#asces-dashboard-v2 > #asces-my-courses,
+html.ionic
+#asces-dashboard-v2 > .asces-tutorial{
+    width:100% !important;
+    max-width:none !important;
+
+    box-sizing:border-box !important;
+}
