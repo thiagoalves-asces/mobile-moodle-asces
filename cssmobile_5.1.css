@@ -4752,16 +4752,24 @@ ion-content:has(#asces-dashboard-v2)
 }
 
 
-/* =====================================================
-HOTFIX — CAPAS DISCIPLINAS NO APP
-===================================================== */
 
+
+/* =====================================================
+HOTFIX — CAPAS ASCES NO APP
+Enquadramento + leve ampliação
+===================================================== */
 core-courses-course-list-item img{
     object-fit:cover !important;
     object-position:95% center !important;
+
+    transform:scale(1.06) !important;
+    transform-origin:95% center !important;
 }
 
 body:has(.asces-painel-disciplina) img{
     object-fit:cover !important;
     object-position:95% center !important;
+
+    transform:scale(1.06) !important;
+    transform-origin:95% center !important;
 }
