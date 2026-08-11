@@ -3174,23 +3174,14 @@ CARROSSEL — MÍDIA DE FUNDO
 }
 
 /* =====================================================
-DISCIPLINA — ÍCONES BRANCOS SOMENTE NO HEADER DO CURSO
+DISCIPLINA — ÍCONES BRANCOS SOMENTE QUANDO
+O PAINEL ASCES ESTIVER NA PÁGINA
 ===================================================== */
 
-:root:not(.dark)
-page-core-course
-ion-header ion-toolbar ion-button,
+body:has(.asces-painel-disciplina)
+ion-header ion-toolbar ion-buttons ion-button,
 
-:root:not(.dark)
-page-core-course
-ion-header ion-toolbar ion-back-button,
-
-:root:not(.dark)
-core-course-course
-ion-header ion-toolbar ion-button,
-
-:root:not(.dark)
-core-course-course
+body:has(.asces-painel-disciplina)
 ion-header ion-toolbar ion-back-button{
     --color:#FFFFFF !important;
     --ion-color-base:#FFFFFF !important;
@@ -3199,12 +3190,22 @@ ion-header ion-toolbar ion-back-button{
 }
 
 
-:root:not(.dark)
-page-core-course
-ion-header ion-toolbar ion-icon,
+/* Elemento interno nativo Ionic */
 
-:root:not(.dark)
-core-course-course
+body:has(.asces-painel-disciplina)
+ion-header ion-toolbar ion-button::part(native),
+
+body:has(.asces-painel-disciplina)
+ion-header ion-toolbar ion-back-button::part(native){
+    --color:#FFFFFF !important;
+
+    color:#FFFFFF !important;
+}
+
+
+/* Ícones */
+
+body:has(.asces-painel-disciplina)
 ion-header ion-toolbar ion-icon{
     --color:#FFFFFF !important;
 
@@ -3214,6 +3215,22 @@ ion-header ion-toolbar ion-icon{
     stroke:currentColor !important;
 
     opacity:1 !important;
+}
+
+
+/* Estados */
+
+body:has(.asces-painel-disciplina)
+ion-header ion-toolbar ion-button:hover,
+
+body:has(.asces-painel-disciplina)
+ion-header ion-toolbar ion-button:focus,
+
+body:has(.asces-painel-disciplina)
+ion-header ion-toolbar ion-button:active{
+    --color:#FFFFFF !important;
+
+    color:#FFFFFF !important;
 }
 
 /* =====================================================
@@ -4712,23 +4729,35 @@ ASCES MOBILE — bootstrap técnico do plugin
 
 
 /* =====================================================
-DASHBOARD — GANHAR LARGURA REAL NO APP
-Atua somente nos wrappers que CONTÊM o Dashboard
+DASHBOARD — LARGURA REAL DO ION-CONTENT
+Somente na tela que contém o Dashboard ASCES
 ===================================================== */
 
-html.ionic
-core-block-html:has(#asces-dashboard-v2),
+ion-content:has(#asces-dashboard-v2){
+    --padding-start:4px !important;
+    --padding-end:4px !important;
 
-html.ionic
-core-block-html:has(#asces-dashboard-v2)
+    --padding-top:0 !important;
+}
+
+
+/* Área interna criada pelo Ionic */
+
+ion-content:has(#asces-dashboard-v2)::part(scroll){
+    padding-left:4px !important;
+    padding-right:4px !important;
+}
+
+
+/* Remove margens adicionais dos wrappers conhecidos */
+
+ion-content:has(#asces-dashboard-v2)
 .core-block-content,
 
-html.ionic
-core-block-html:has(#asces-dashboard-v2)
+ion-content:has(#asces-dashboard-v2)
 ion-card,
 
-html.ionic
-core-block-html:has(#asces-dashboard-v2)
+ion-content:has(#asces-dashboard-v2)
 ion-card-content{
     width:100% !important;
     max-width:100% !important;
@@ -4738,37 +4767,18 @@ ion-card-content{
 
     padding-left:0 !important;
     padding-right:0 !important;
-
-    box-sizing:border-box !important;
 }
 
 
-/* Dashboard */
-html.ionic
+/* O Dashboard usa toda a largura que recebeu */
+
+ion-content:has(#asces-dashboard-v2)
 #asces-dashboard-v2{
     width:100% !important;
     max-width:100% !important;
 
     margin:0 !important;
 
-    padding-left:4px !important;
-    padding-right:4px !important;
-
-    box-sizing:border-box !important;
-}
-
-
-/* Hero e carrossel aproveitam tudo */
-html.ionic
-#asces-dashboard-v2
-.asces-hero,
-
-html.ionic
-#asces-dashboard-v2
-.asces-carousel{
-    width:100% !important;
-    max-width:none !important;
-
-    margin-left:0 !important;
-    margin-right:0 !important;
+    padding-left:2px !important;
+    padding-right:2px !important;
 }
