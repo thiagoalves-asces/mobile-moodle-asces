@@ -4814,3 +4814,112 @@ ion-thumbnail img{
 
     border-radius:16px !important;
 }
+
+
+
+
+/* =====================================================
+MEUS CURSOS — LISTA COM CAPA MAIOR
+TESTE DE LAYOUT
+===================================================== */
+
+/* Cada item da lista */
+core-courses-course-list-item ion-item{
+    --padding-start:8px !important;
+    --inner-padding-end:8px !important;
+
+    align-items:center !important;
+}
+
+
+/* =====================================================
+CAPA
+===================================================== */
+
+core-courses-course-list-item ion-thumbnail{
+    width:138px !important;
+    min-width:138px !important;
+
+    height:92px !important;
+    min-height:92px !important;
+
+    flex:0 0 138px !important;
+
+    margin-right:14px !important;
+
+    border-radius:14px !important;
+
+    overflow:hidden !important;
+}
+
+
+core-courses-course-list-item ion-thumbnail img{
+    width:100% !important;
+    height:100% !important;
+
+    max-width:none !important;
+    max-height:none !important;
+
+    object-fit:cover !important;
+
+    /*
+    Mantemos o foco à direita,
+    pensando nas capas futuras do App.
+    */
+    object-position:right center !important;
+
+    border-radius:14px !important;
+}
+
+
+/* =====================================================
+CONTEÚDO À DIREITA
+===================================================== */
+
+core-courses-course-list-item ion-label{
+    min-width:0 !important;
+
+    margin-top:6px !important;
+    margin-bottom:6px !important;
+}
+
+
+/* Nome do curso pode quebrar normalmente */
+core-courses-course-list-item ion-label h2,
+core-courses-course-list-item ion-label h3,
+core-courses-course-list-item ion-label p{
+    white-space:normal !important;
+
+    overflow:visible !important;
+
+    text-overflow:unset !important;
+}
+
+
+/* =====================================================
+AÇÕES
+Tenta manter botões lado a lado
+===================================================== */
+
+core-courses-course-list-item
+ion-item
+ion-buttons{
+    display:flex !important;
+
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+
+    align-items:center !important;
+    justify-content:flex-end !important;
+
+    gap:4px !important;
+}
+
+
+core-courses-course-list-item
+ion-item
+ion-buttons ion-button{
+    flex:0 0 auto !important;
+
+    margin:0 !important;
+}
