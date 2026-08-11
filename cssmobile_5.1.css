@@ -4761,10 +4761,13 @@ ion-content:has(#asces-dashboard-v2)
 DIAGNÓSTICO — FILHOS DIRETOS DO ITEM DE CURSO
 ===================================================== */
 
-core-courses-course-list-item > *{
-    outline:3px solid magenta !important;
+/* SOMENTE versão compacta */
+core-courses-course-list-item > [classe-do-container-da-lista]{
+    display:grid !important;
+    grid-template-columns:150px minmax(0,1fr) !important;
 }
 
-core-courses-course-list-item > * > *{
-    outline:2px solid cyan !important;
+... [área da imagem] {
+    width:150px !important;
+    height:100px !important;
 }
