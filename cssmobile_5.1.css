@@ -4768,14 +4768,19 @@ core-courses-course-list-item img{
 }
 
 /* =====================================================
-DIAGNÓSTICO — CAPA DO CABEÇALHO
+HOTFIX — CAPA DO CABEÇALHO DA DISCIPLINA
+Foco da arte para o lado direito
 ===================================================== */
 
 body:has(.asces-painel-disciplina)
-img:not(.activityicon){
-    outline:2px solid lime !important;
+[style*="background-image"]
+:not(.userpicture)
+:not([class*="avatar"])
+:not([class*="user"]){
+    background-size:cover !important;
+    background-position:95% center !important;
+    background-repeat:no-repeat !important;
 }
-
 
 /* =====================================================
 HOTFIX — ÍCONES NATIVOS DE RECURSOS
@@ -4805,30 +4810,14 @@ body:has(.asces-painel-disciplina)
     border-radius:0 !important;
 }
 
-
-/* =====================================================
-DIAGNÓSTICO — CAPA DO CABEÇALHO DA DISCIPLINA
-===================================================== */
-
-/* Background inline */
+/* Foto/avatar do usuário permanece intocado */
 body:has(.asces-painel-disciplina)
-[style*="background-image"]{
-    outline:3px solid lime !important;
+ion-avatar [style*="background-image"],
+body:has(.asces-painel-disciplina)
+[class*="avatar"] [style*="background-image"],
+body:has(.asces-painel-disciplina)
+[class*="user"] [style*="background-image"]{
+    background-position:center center !important;
 }
 
 
-/* Possíveis componentes nativos */
-body:has(.asces-painel-disciplina)
-.core-course-thumb{
-    outline:3px solid red !important;
-}
-
-body:has(.asces-painel-disciplina)
-[class*="course-image"]{
-    outline:3px solid cyan !important;
-}
-
-body:has(.asces-painel-disciplina)
-ion-thumbnail{
-    outline:3px solid magenta !important;
-}
