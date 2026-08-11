@@ -4853,3 +4853,21 @@ img{
 
     border-radius:15px !important;
 }
+
+
+/* =====================================================
+TESTE 1 — IDENTIFICAR CAPA NA LISTA
+===================================================== */
+
+core-courses-course-list-item img{
+    outline:4px solid red !important;
+}
+
+
+/* =====================================================
+TESTE 2 — IDENTIFICAR CAPA NO CABEÇALHO DA DISCIPLINA
+===================================================== */
+
+body:has(.asces-painel-disciplina) img{
+    outline:4px solid lime !important;
+}
