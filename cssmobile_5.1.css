@@ -4768,3 +4768,68 @@ body:has(.asces-painel-disciplina) img{
     object-fit:cover !important;
     object-position:98% center !important;
 }
+
+
+
+
+
+/* =====================================================
+HOTFIX — MENSAGENS
+BOTÃO "ENVIAR MENSAGEM"
+===================================================== */
+
+button[data-action="send-message"]{
+    width:42px !important;
+    height:42px !important;
+
+    min-width:42px !important;
+    min-height:42px !important;
+
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    padding:0 !important;
+    margin-left:8px !important;
+
+    border:0 !important;
+    border-radius:50% !important;
+
+    background:#0C4E9C !important;
+    color:#FFFFFF !important;
+
+    box-shadow:
+        0 4px 12px
+        rgba(12,78,156,.22) !important;
+
+    opacity:1 !important;
+}
+
+
+/* Ícone de envio */
+button[data-action="send-message"]
+[data-region="send-icon-container"],
+
+button[data-action="send-message"]
+[data-region="send-icon-container"] i{
+    color:#FFFFFF !important;
+
+    opacity:1 !important;
+}
+
+
+/* Font Awesome */
+button[data-action="send-message"]
+.fa-paper-plane{
+    color:#FFFFFF !important;
+
+    font-size:17px !important;
+}
+
+
+/* Pressionado */
+button[data-action="send-message"]:active{
+    background:#0A4589 !important;
+
+    transform:scale(.96);
+}
