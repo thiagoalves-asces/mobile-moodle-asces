@@ -4687,7 +4687,7 @@ Aguardando teste no App 5.1.
 */
 
 
-/* =====================================================
+/* ====================================================
 🛠️ 10. HOTFIXES
 ===================================================== */
 
@@ -4800,3 +4800,24 @@ core-courses-course-list-item
 ion-badge{
     outline:2px solid lime !important;
 }
+
+/* =====================================================
+DIAGNÓSTICO — BADGE "OCULTO PARA ESTUDANTES"
+===================================================== */
+
+core-courses-course-list-item ion-badge{
+    outline:3px solid lime !important;
+}
+
+core-courses-course-list-item .badge{
+    outline:3px solid orange !important;
+}
+
+core-courses-course-list-item [class*="visibility"]{
+    outline:3px solid cyan !important;
+}
+
+core-courses-course-list-item [class*="hidden"]{
+    outline:3px solid magenta !important;
+}
+
