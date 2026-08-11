@@ -4769,17 +4769,23 @@ core-courses-course-list-item img{
 
 /* =====================================================
 HOTFIX — CAPA DO CABEÇALHO DA DISCIPLINA
-Foco da arte para o lado direito
+Foco da arte no lado direito
 ===================================================== */
 
 body:has(.asces-painel-disciplina)
-[style*="background-image"]
-:not(.userpicture)
-:not([class*="avatar"])
-:not([class*="user"]){
+[style*="background-image"]:not(.userpicture):not([class*="avatar"]):not([class*="user"]){
     background-size:cover !important;
     background-position:95% center !important;
     background-repeat:no-repeat !important;
+}
+
+
+/* Proteção do avatar */
+body:has(.asces-painel-disciplina)
+ion-avatar [style*="background-image"],
+body:has(.asces-painel-disciplina)
+.userpicture[style*="background-image"]{
+    background-position:center center !important;
 }
 
 /* =====================================================
