@@ -4775,3 +4775,33 @@ body:has(.asces-painel-disciplina)
 img:not(.activityicon){
     outline:2px solid lime !important;
 }
+
+
+/* =====================================================
+HOTFIX — ÍCONES NATIVOS DE RECURSOS
+Proteção contra regras de imagem
+===================================================== */
+
+body:has(.asces-painel-disciplina)
+.activityicon,
+
+body:has(.asces-painel-disciplina)
+img.activityicon,
+
+body:has(.asces-painel-disciplina)
+.activity-icon img{
+
+    width:24px !important;
+    min-width:24px !important;
+
+    height:24px !important;
+    min-height:24px !important;
+
+    max-width:24px !important;
+    max-height:24px !important;
+
+    object-fit:contain !important;
+
+    border-radius:0 !important;
+}
+
