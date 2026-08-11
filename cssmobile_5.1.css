@@ -4758,42 +4758,52 @@ ion-content:has(#asces-dashboard-v2)
 
 
 /* =====================================================
-MEUS CURSOS — TESTE DE CAPA RETANGULAR NA LISTA
+MEUS CURSOS
+CAPAS — AJUSTE FINAL DE TESTE
 ===================================================== */
 
-/* Item inteiro */
-core-courses-course-list-item > *{
-    position:relative !important;
-}
 
+/* -----------------------------------------------------
+1. VISUALIZAÇÃO COMPACTA / LISTA
+Imagem lateral maior, mas sem invadir o conteúdo
+----------------------------------------------------- */
 
-/* Imagem da capa */
-core-courses-course-list-item > * img{
-    width:150px !important;
-    min-width:150px !important;
+core-courses-course-list-item img{
+    width:120px !important;
+    min-width:120px !important;
 
-    height:96px !important;
-    min-height:96px !important;
+    height:86px !important;
+    min-height:86px !important;
+
+    max-width:120px !important;
+    max-height:86px !important;
 
     object-fit:cover !important;
-    object-position:right center !important;
+    object-position:center center !important;
+
+    border-radius:12px !important;
+
+    margin:0 !important;
+}
+
+
+/* -----------------------------------------------------
+2. VISUALIZAÇÃO EM CARD
+Aqui a capa pode ser bem maior
+----------------------------------------------------- */
+
+core-courses-course-grid-item img{
+    width:100% !important;
+    max-width:320px !important;
+
+    height:130px !important;
+    min-height:130px !important;
+
+    object-fit:cover !important;
+    object-position:center center !important;
 
     border-radius:14px !important;
-}
 
-
-/* Dá espaço para o conteúdo ao lado da capa */
-core-courses-course-list-item > *{
-    padding-left:0 !important;
-}
-
-
-/* Três pontinhos no canto superior direito */
-core-courses-course-list-item > * > *:last-child{
-    position:absolute !important;
-
-    top:8px !important;
-    right:8px !important;
-
-    z-index:10 !important;
+    display:block !important;
+    margin:0 auto !important;
 }
