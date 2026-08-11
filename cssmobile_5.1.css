@@ -3039,7 +3039,42 @@ DO MODAL DE HORÁRIOS.
 }
 
 /* =====================================================
-06.15 DISCIPLINA — AÇÕES DO HEADER
+05.21.15 CARROSSEL PRINCIPAL
+===================================================== */
+
+#asces-dashboard-v2
+.asces-carousel{
+    position:relative !important;
+
+    height:330px !important;
+    max-height:48dvh !important;
+
+    overflow:hidden !important;
+
+    border-radius:18px !important;
+}
+
+
+/* =====================================================
+CARROSSEL — MÍDIA DE FUNDO
+===================================================== */
+
+#asces-dashboard-v2
+.asces-slide{
+    position:absolute !important;
+
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    overflow:hidden !important;
+
+    background:transparent !important;
+}
+
+/* =====================================================
+AÇÕES DO HEADER
 Estado normal + ativo
 ===================================================== */
 
@@ -3118,7 +3153,7 @@ ion-header svg path{
 
 
 /* =====================================================
-06.16 CATEGORIA DA DISCIPLINA
+05.21.16 CATEGORIA DA DISCIPLINA
 ===================================================== */
 
 /*
@@ -3170,7 +3205,7 @@ core-courses-course-list-item
 
 
 /* =====================================================
-06.17 BADGE — ACABAMENTO
+05.21.17 BADGE — ACABAMENTO
 ===================================================== */
 
 :root:not(.dark)
