@@ -4770,66 +4770,22 @@ body:has(.asces-painel-disciplina) img{
 }
 
 
-
-
-
 /* =====================================================
-HOTFIX — MENSAGENS
-BOTÃO "ENVIAR MENSAGEM"
+DIAGNÓSTICO — BOTÃO DE ENVIO NO APP
 ===================================================== */
 
-button[data-action="send-message"]{
-    width:42px !important;
-    height:42px !important;
-
-    min-width:42px !important;
-    min-height:42px !important;
-
-    display:inline-flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    padding:0 !important;
-    margin-left:8px !important;
-
-    border:0 !important;
-    border-radius:50% !important;
-
-    background:#0C4E9C !important;
-    color:#FFFFFF !important;
-
-    box-shadow:
-        0 4px 12px
-        rgba(12,78,156,.22) !important;
-
-    opacity:1 !important;
+page-core-messages-discussion ion-footer ion-button{
+    outline:3px solid red !important;
 }
 
-
-/* Ícone de envio */
-button[data-action="send-message"]
-[data-region="send-icon-container"],
-
-button[data-action="send-message"]
-[data-region="send-icon-container"] i{
-    color:#FFFFFF !important;
-
-    opacity:1 !important;
+page-core-messages-discussion ion-footer ion-icon{
+    outline:2px solid lime !important;
 }
 
-
-/* Font Awesome */
-button[data-action="send-message"]
-.fa-paper-plane{
-    color:#FFFFFF !important;
-
-    font-size:17px !important;
+core-send-message-form ion-button{
+    outline:3px solid orange !important;
 }
 
-
-/* Pressionado */
-button[data-action="send-message"]:active{
-    background:#0A4589 !important;
-
-    transform:scale(.96);
+core-send-message-form ion-icon{
+    outline:2px solid cyan !important;
 }
