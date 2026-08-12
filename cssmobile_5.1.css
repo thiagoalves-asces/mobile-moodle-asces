@@ -4800,13 +4800,13 @@ core-send-message-form ion-button ion-icon{
     width:34px !important;
     height:34px !important;
 
-    min-width:34px !important;
-    min-height:34px !important;
+    min-width:28px !important;
+    min-height:28px !important;
 
-    max-width:34px !important;
-    max-height:34px !important;
+    max-width:28px !important;
+    max-height:28px !important;
 
-    font-size:34px !important;
+    font-size:28px !important;
 
     fill:currentColor !important;
     stroke:currentColor !important;
