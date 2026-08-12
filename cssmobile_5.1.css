@@ -4772,49 +4772,50 @@ body:has(.asces-painel-disciplina) img{
 
 /* =====================================================
 HOTFIX — MENSAGENS APP
-BOTÃO ENVIAR
+AVIÃO DE ENVIO SEM CÍRCULO
 ===================================================== */
 
 core-send-message-form ion-button{
-    --background:#0C4E9C !important;
-    --color:#FFFFFF !important;
+    --background:transparent !important;
+    --background-hover:transparent !important;
+    --background-activated:transparent !important;
+    --background-focused:transparent !important;
 
-    width:42px !important;
-    height:42px !important;
+    --color:#0C4E9C !important;
 
-    min-width:42px !important;
-    min-height:42px !important;
+    width:44px !important;
+    height:44px !important;
 
-    margin-left:8px !important;
+    min-width:44px !important;
+    min-height:44px !important;
 
-    border-radius:50% !important;
+    margin-left:6px !important;
 
-    box-shadow:
-        0 4px 12px
-        rgba(12,78,156,.22) !important;
+    padding:0 !important;
+
+    box-shadow:none !important;
 
     opacity:1 !important;
 }
 
 
-/* Ícone */
+/* Avião */
 core-send-message-form ion-button ion-icon{
-    --color:#FFFFFF !important;
+    --color:#0C4E9C !important;
 
-    color:#FFFFFF !important;
+    color:#0C4E9C !important;
 
     fill:currentColor !important;
     stroke:currentColor !important;
 
-    font-size:20px !important;
+    font-size:29px !important;
 
     opacity:1 !important;
 }
 
 
-/* Estado pressionado */
+/* Feedback ao tocar */
 core-send-message-form ion-button:active{
-    --background:#0A4589 !important;
-
-    transform:scale(.96);
+    transform:scale(.90);
+    opacity:.75 !important;
 }
