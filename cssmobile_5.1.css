@@ -4791,13 +4791,26 @@ core-send-message-form ion-button{
 }
 
 
-/* Avião */
+/* Avião de envio */
 core-send-message-form ion-button ion-icon{
     --color:#0C4E9C !important;
+
     color:#0C4E9C !important;
+
+    width:34px !important;
+    height:34px !important;
+
+    min-width:34px !important;
+    min-height:34px !important;
+
+    max-width:34px !important;
+    max-height:34px !important;
+
+    font-size:34px !important;
+
     fill:currentColor !important;
     stroke:currentColor !important;
-    font-size:50px !important;
+
     opacity:1 !important;
 }
 
