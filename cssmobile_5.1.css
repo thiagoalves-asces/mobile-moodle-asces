@@ -4774,27 +4774,19 @@ body:has(.asces-painel-disciplina) img{
 HOTFIX — MENSAGENS APP
 AVIÃO DE ENVIO SEM CÍRCULO
 ===================================================== */
-
 core-send-message-form ion-button{
     --background:transparent !important;
     --background-hover:transparent !important;
     --background-activated:transparent !important;
     --background-focused:transparent !important;
-
     --color:#0C4E9C !important;
-
     width:44px !important;
     height:44px !important;
-
     min-width:44px !important;
     min-height:44px !important;
-
     margin-left:6px !important;
-
     padding:0 !important;
-
     box-shadow:none !important;
-
     opacity:1 !important;
 }
 
@@ -4802,17 +4794,12 @@ core-send-message-form ion-button{
 /* Avião */
 core-send-message-form ion-button ion-icon{
     --color:#0C4E9C !important;
-
     color:#0C4E9C !important;
-
     fill:currentColor !important;
     stroke:currentColor !important;
-
-    font-size:29px !important;
-
+    font-size:50px !important;
     opacity:1 !important;
 }
-
 
 /* Feedback ao tocar */
 core-send-message-form ion-button:active{
