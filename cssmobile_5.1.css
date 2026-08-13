@@ -5426,15 +5426,12 @@ ion-content:has(.core-login-info-box){
 
 
 /* =====================================================
-ÁREA INFERIOR DO LOGIN
+SAFE AREA INFERIOR DO APP
+FUNDO INSTITUCIONAL
 ===================================================== */
-ion-content:has(.core-login-info-box){
-    padding-bottom:
-        env(safe-area-inset-bottom) !important;
-    background-color:
+html,
+body,
+ion-app{
+    background:
         #0C4E9C !important;
-}
-
-ion-content:has(.core-login-info-box)::part(background){
-    background-color:#0C4E9C !important;
 }
