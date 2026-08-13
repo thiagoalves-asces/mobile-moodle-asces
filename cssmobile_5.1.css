@@ -5490,3 +5490,29 @@ ion-app{
     background:
         #0C4E9C !important;
 }
+
+
+/* =====================================================
+21. LOGIN CONGELADO — SEM SCROLL / SEM PUXAR
+===================================================== */
+
+ion-content:has(.core-login-info-box){
+    --overflow:hidden !important;
+}
+
+ion-content:has(.core-login-info-box)::part(scroll){
+    overflow:hidden !important;
+    overscroll-behavior:none !important;
+}
+
+ion-content:has(.core-login-info-box)
+.core-login-info-box{
+    min-height:
+        calc(
+            100vh
+            - 52px
+        ) !important;
+
+    box-sizing:
+        border-box !important;
+}
