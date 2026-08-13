@@ -5493,12 +5493,9 @@ ion-app{
 
 
 /* =====================================================
-21. LOGIN CONGELADO — SEM MOVIMENTO VERTICAL
+21. LOGIN CONGELADO
+SEM PUXAR / SEM CORTAR O CARD
 ===================================================== */
-html,
-body{
-    overscroll-behavior:none !important;
-}
 
 ion-content:has(.core-login-info-box){
     --overflow:hidden !important;
@@ -5507,15 +5504,14 @@ ion-content:has(.core-login-info-box){
 ion-content:has(.core-login-info-box)::part(scroll){
     overflow:hidden !important;
     overscroll-behavior:none !important;
+
+    height:100% !important;
+    min-height:100% !important;
 }
 
+/* NÃO força mais min-height na caixa do login */
 ion-content:has(.core-login-info-box)
 .core-login-info-box{
-    min-height:
-        calc(
-            100vh
-            - 52px
-        ) !important;
-    box-sizing:
-        border-box !important;
+    min-height:0 !important;
+    height:auto !important;
 }
