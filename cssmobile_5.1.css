@@ -5305,36 +5305,53 @@ podemos substituir a imagem nativa por CSS assim:
 /* =====================================================
 17. BALÃO — PONTINHA DO BALÃO DO NEO
 ===================================================== */
+/* =====================================================
+17. PONTINHA DO BALÃO DO NEO
+===================================================== */
+
 .core-login-methods{
     position:relative !important;
 }
 
-.core-login-identity-providers::after{
+.core-login-methods .core-login-identity-providers{
+    overflow:visible !important;
+}
+
+.core-login-methods .core-login-identity-providers::after{
     content:"" !important;
+
     position:fixed !important;
-    left:
-        82px !important;
+
+    left:82px !important;
+
     bottom:
         calc(
-            92px +
+            98px +
             env(safe-area-inset-bottom)
         ) !important;
-    width:
-        18px !important;
-    height:
-        20px !important;
-    background:
-        #0C4E9C !important;
+
+    width:18px !important;
+    height:20px !important;
+
+    background:#0C4E9C !important;
+
     clip-path:
         polygon(
             100% 0,
             100% 100%,
             0 50%
         ) !important;
-    z-index:
-        58 !important;
-    pointer-events:
-        none !important;
+
+    -webkit-clip-path:
+        polygon(
+            100% 0,
+            100% 100%,
+            0 50%
+        ) !important;
+
+    z-index:61 !important;
+
+    pointer-events:none !important;
 }
 
 /* =====================================================
