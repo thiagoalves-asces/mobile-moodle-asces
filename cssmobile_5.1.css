@@ -4828,36 +4828,31 @@ MOODLE APP 5.1
 ===================================================== */
 
 /* =====================================================
-🔐 LOGIN APP — IDENTIFICAÇÃO DO SELETOR REAL
-TEMPORÁRIO
+🔐 LOGIN APP — ESTRUTURA OFICIAL MOODLE APP
+TESTE 01
 ===================================================== */
 
-/* 1 */
-core-login-credentials{
-    outline:5px solid red !important;
+/* Remove login tradicional */
+.core-login-form {
+    display:none !important;
 }
 
-/* 2 */
-core-login-site{
-    outline:5px solid lime !important;
+/* Remove separador "Ou" */
+.core-login-methods-separator {
+    display:none !important;
 }
 
-/* 3 */
-core-login-reconnect{
-    outline:5px solid orange !important;
+/* Remove cadastro/criação de conta */
+.core-login-sign-up {
+    display:none !important;
 }
 
-/* 4 */
-core-login-sites{
-    outline:5px solid cyan !important;
+/* Destaca somente provedores OAuth */
+.core-login-identity-providers {
+    outline:3px solid lime !important;
 }
 
-/* 5 */
-core-login-email-signup{
-    outline:5px solid magenta !important;
-}
-
-/* 6 */
-form{
-    outline:5px dashed blue !important;
+/* Destaca especificamente o botão Google */
+.core-oauth-provider {
+    outline:3px solid orange !important;
 }
