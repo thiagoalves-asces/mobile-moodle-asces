@@ -4959,6 +4959,31 @@ MOODLE APP 5.1
         contain !important;
 }
 
+/* =====================================================
+05.1 LOGO COMPACTA
+TESTE — URL DRAFTFILE
+===================================================== */
+
+.core-login-site img{
+    content:
+        url("https://moodle.asces.edu.br/draftfile.php/463373/user/draft/846538052/0C4E9C%20%28logo%20pequena%29.png?preview=thumb&oid=1786655916") !important;
+
+    width:auto !important;
+
+    max-width:
+        190px !important;
+
+    max-height:
+        72px !important;
+
+    margin:
+        12px auto
+        14px !important;
+
+    object-fit:
+        contain !important;
+}
+
 
 /*
 =====================================================
@@ -4990,17 +5015,20 @@ podemos substituir a imagem nativa por CSS assim:
 /* =====================================================
 07. BRANDING PRINCIPAL
 ===================================================== */
-
 .core-login-site::after{
     content:
         "MOODLE\A ASCES-UNITA" !important;
 
     display:block !important;
 
-    width:100% !important;
+    width:
+        calc(100% - 54px) !important;
+
+    max-width:
+        385px !important;
 
     margin:
-        6px auto
+        8px auto
         0 !important;
 
     white-space:
@@ -5010,18 +5038,19 @@ podemos substituir a imagem nativa por CSS assim:
         #0C4E9C !important;
 
     font-size:
-        30px !important;
+        32px !important;
 
     font-weight:
         900 !important;
 
     line-height:
-        1.02 !important;
+        .98 !important;
 
     letter-spacing:
-        -.6px !important;
+        -.7px !important;
 
-    text-align:center !important;
+    text-align:
+        left !important;
 }
 
 
@@ -5278,60 +5307,50 @@ podemos substituir a imagem nativa por CSS assim:
         contain !important;
 }
 
+/* =====================================================
+14.1 DESCE O CARD DO GOOGLE
+===================================================== */
+
+.core-login-identity-providers{
+    margin:
+        32px auto
+        150px !important;
+
+    width:
+        calc(100% - 24px) !important;
+
+    max-width:
+        385px !important;
+}
+
 
 /* =====================================================
 15. NEO
 ===================================================== */
-
 .core-login-info-box::after{
-    content:"";
-
-    position:fixed !important;
-
     left:
         max(
-            10px,
+            8px,
             env(safe-area-inset-left)
         ) !important;
 
     bottom:
         calc(
-            10px
-            + env(safe-area-inset-bottom)
+            8px +
+            env(safe-area-inset-bottom)
         ) !important;
 
     width:
-        74px !important;
+        98px !important;
 
     height:
-        86px !important;
-
-    background-image:
-        url("https://raw.githubusercontent.com/thiagoalves-asces/mobile-moodle-asces/main/Ol%C3%A1.svg") !important;
-
-    background-repeat:
-        no-repeat !important;
-
-    background-position:
-        center bottom !important;
+        116px !important;
 
     background-size:
         contain !important;
 
-    filter:
-        drop-shadow(
-            0 9px 12px
-            rgba(0,0,0,.22)
-        );
-
-    animation:
-        ascesNeoLoginWave
-        3.5s
-        ease-in-out
-        infinite;
-
-    pointer-events:
-        none !important;
+    background-position:
+        center bottom !important;
 
     z-index:
         60 !important;
@@ -5341,6 +5360,7 @@ podemos substituir a imagem nativa por CSS assim:
 /* =====================================================
 16. BALÃO DO NEO
 ===================================================== */
+/* BALÃO DO NEO MAIOR */
 
 .core-login-methods::after{
     content:
@@ -5349,23 +5369,23 @@ podemos substituir a imagem nativa por CSS assim:
     position:fixed !important;
 
     left:
-        72px !important;
+        94px !important;
 
     bottom:
         calc(
-            74px
-            + env(safe-area-inset-bottom)
+            94px +
+            env(safe-area-inset-bottom)
         ) !important;
 
     width:
         min(
-            205px,
-            calc(100vw - 92px)
+            245px,
+            calc(100vw - 108px)
         ) !important;
 
     padding:
-        9px
-        11px !important;
+        12px
+        14px !important;
 
     box-sizing:
         border-box !important;
@@ -5377,13 +5397,13 @@ podemos substituir a imagem nativa por CSS assim:
         #264152 !important;
 
     font-size:
-        11px !important;
+        12px !important;
 
     font-weight:
         650 !important;
 
     line-height:
-        1.4 !important;
+        1.45 !important;
 
     text-align:
         left !important;
@@ -5393,21 +5413,21 @@ podemos substituir a imagem nativa por CSS assim:
 
     border:
         1px solid
-        rgba(12,78,156,.14) !important;
+        rgba(12,78,156,.15) !important;
 
     border-left:
         4px solid
         #0C4E9C !important;
 
     border-radius:
-        13px
-        13px
-        13px
+        15px
+        15px
+        15px
         7px !important;
 
     box-shadow:
-        0 8px 20px
-        rgba(0,0,0,.10) !important;
+        0 10px 26px
+        rgba(0,0,0,.12) !important;
 
     z-index:
         59 !important;
@@ -5415,6 +5435,7 @@ podemos substituir a imagem nativa por CSS assim:
     pointer-events:
         none !important;
 }
+
 
 
 /* =====================================================
@@ -5434,103 +5455,83 @@ já cria a sensação de ligação com o Neo.
 /* =====================================================
 18. TELAS MAIS BAIXAS
 ===================================================== */
-
 @media(max-height:760px){
 
-    .core-login-info-box{
-        padding-top:
+    .core-login-site img{
+        max-width:
+            165px !important;
+
+        max-height:
+            62px !important;
+
+        margin-bottom:
             8px !important;
     }
 
 
-    .core-login-site img{
-        max-width:
-            220px !important;
-
-        max-height:
-            74px !important;
-
-        margin-bottom:
-            6px !important;
-    }
-
-
     .core-login-site::after{
+        width:
+            calc(100% - 42px) !important;
+
         font-size:
-            25px !important;
-
-        line-height:
-            1 !important;
-
-        margin-top:
-            2px !important;
+            27px !important;
     }
 
 
     .core-login-methods::before{
-        margin:
-            8px auto
-            14px !important;
+        width:
+            calc(100% - 42px) !important;
+
+        margin-bottom:
+            16px !important;
 
         font-size:
-            14px !important;
-    }
-
-
-    .core-login-identity-providers{
-        margin-bottom:
-            92px !important;
-
-        padding:
-            14px
-            14px
             13px !important;
     }
 
 
-    .core-oauth-provider{
-        min-height:
-            52px !important;
+    .core-login-identity-providers{
+        margin-top:
+            20px !important;
+
+        margin-bottom:
+            118px !important;
     }
 
 
     .core-login-info-box::after{
         width:
-            66px !important;
+            84px !important;
 
         height:
-            76px !important;
+            98px !important;
     }
 
 
     .core-login-methods::after{
         left:
-            64px !important;
+            80px !important;
 
         bottom:
             calc(
-                68px
-                + env(safe-area-inset-bottom)
+                80px +
+                env(safe-area-inset-bottom)
             ) !important;
 
         width:
             min(
-                195px,
-                calc(100vw - 86px)
+                220px,
+                calc(100vw - 92px)
             ) !important;
 
         padding:
-            8px
-            10px !important;
+            10px
+            12px !important;
 
         font-size:
-            10px !important;
-
-        line-height:
-            1.35 !important;
+            10.8px !important;
     }
 }
-
 
 /* =====================================================
 19. REDUÇÃO DE MOVIMENTO
