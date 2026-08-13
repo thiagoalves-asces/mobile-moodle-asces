@@ -5637,7 +5637,8 @@ Visual apenas
 
 .core-login-methods::after{
     content:
-        "Olá! 👋 Sou o Neo.\A Esqueceu sua senha ou precisa de ajuda?\A Toque no (?) acima e fale com nossa equipe de suporte.";
+        content:
+    "Olá! 👋 Sou o Neo.\A Esqueceu sua senha?\A Toque no (?) acima e fale com nosso suporte pelo WhatsApp.";
 
     position:fixed !important;
 
