@@ -5613,3 +5613,20 @@ já cria a sensação de ligação com o Neo.
             rotate(-3deg);
     }
 }
+
+
+/* =====================================================
+05.2 BACKGROUND DO LOGIN
+ESCUDO ANCORADO À DIREITA
+===================================================== */
+
+ion-content:has(.core-login-info-box){
+    --background:
+        linear-gradient(
+            rgba(255,255,255,.82),
+            rgba(255,255,255,.82)
+        ),
+        url("https://moodle.asces.edu.br/pluginfile.php/1/theme_moove/loginbgimg/1786656082/Backgroud_Moodle_5.1.png")
+        right center / cover
+        no-repeat !important;
+}
