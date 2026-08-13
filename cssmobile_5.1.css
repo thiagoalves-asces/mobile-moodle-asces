@@ -5285,18 +5285,42 @@ podemos substituir a imagem nativa por CSS assim:
         none !important;
 }
 
+
+
 /* =====================================================
-17. BALÃO — PEQUENA SETA PARA O NEO
+17. BALÃO — PONTINHA DO BALÃO DO NEO
 ===================================================== */
+.core-login-methods{
+    position:relative !important;
+}
 
-/*
-Não usamos outro pseudo-elemento porque
-.core-login-methods::before já contém o slogan
-e ::after já contém o balão.
-
-A borda inferior esquerda do próprio balão
-já cria a sensação de ligação com o Neo.
-*/
+.core-login-identity-providers::after{
+    content:"" !important;
+    position:fixed !important;
+    left:
+        82px !important;
+    bottom:
+        calc(
+            92px +
+            env(safe-area-inset-bottom)
+        ) !important;
+    width:
+        18px !important;
+    height:
+        20px !important;
+    background:
+        #0C4E9C !important;
+    clip-path:
+        polygon(
+            100% 0,
+            100% 100%,
+            0 50%
+        ) !important;
+    z-index:
+        58 !important;
+    pointer-events:
+        none !important;
+}
 
 /* =====================================================
 18. TELAS MAIS BAIXAS
@@ -5423,7 +5447,6 @@ ion-content:has(.core-login-info-box){
         right center / cover
         no-repeat !important;
 }
-
 
 /* =====================================================
 SAFE AREA INFERIOR DO APP
