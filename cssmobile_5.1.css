@@ -4827,166 +4827,44 @@ core-send-message-form ion-button:active{
 MOODLE APP 5.1
 ===================================================== */
 
-
 /* =====================================================
-LOGIN — ESCOPO
+🔐 LOGIN APP — TESTE DIRETO
 ===================================================== */
 
-ion-app:has(core-login-credentials){
-    --asces-login-primary:#0C4E9C;
-    --asces-login-primary-2:#1565C0;
-    --asces-login-orange:#FF8400;
-
-    --asces-login-text:#212529;
-    --asces-login-muted:#64748B;
-
-    --asces-login-border:#DCE5EF;
-    --asces-login-surface:#FFFFFF;
+/* 1. REMOVE USUÁRIO / SENHA */
+core-login-credentials {
+    display:none !important;
 }
 
-
-/* =====================================================
-BARRA INSTITUCIONAL ASCES
-===================================================== */
-
-ion-app:has(core-login-credentials)
-ion-header{
-    position:relative !important;
-}
-
-
-ion-app:has(core-login-credentials)
-ion-header::after{
-    content:"";
-
+/* 2. TESTE DA BARRA NO HEADER */
+ion-header::after {
+    content:"" !important;
     position:absolute !important;
-
     left:0 !important;
     bottom:0 !important;
-
     width:100% !important;
-    height:5px !important;
+    height:6px !important;
 
     background:
         linear-gradient(
             to right,
-
             #1976d2 0%,
             #1976d2 28%,
-
             #1565c0 28%,
             #1565c0 50%,
-
             #0d47a1 50%,
             #0d47a1 65%,
-
             #ff9800 65%,
             #ff9800 82%,
-
             #ff6f00 82%,
             #ff6f00 100%
         ) !important;
 
-    transform:scaleX(0);
-    transform-origin:left center;
-
-    animation:
-        ascesLoginBarLoad
-        .8s
-        ease-out
-        forwards;
-
-    z-index:9999;
-
-    pointer-events:none;
+    z-index:99999 !important;
+    pointer-events:none !important;
 }
 
-
-@keyframes ascesLoginBarLoad{
-
-    from{
-        transform:scaleX(0);
-    }
-
-    to{
-        transform:scaleX(1);
-    }
-}
-
-
-/* =====================================================
-REMOVE LOGIN TRADICIONAL
-===================================================== */
-
-ion-app:has(core-login-credentials)
-core-login-credentials{
-    display:none !important;
-}
-
-
-/* =====================================================
-ÁREA PRINCIPAL
-===================================================== */
-
-ion-app:has(core-login-credentials)
-ion-content{
-
-    --background:#FFFFFF !important;
-
-    --padding-start:18px !important;
-    --padding-end:18px !important;
-
-    --padding-top:22px !important;
-    --padding-bottom:24px !important;
-}
-
-
-/* =====================================================
-LOGO
-===================================================== */
-
-ion-app:has(core-login-credentials)
-ion-content img{
-
-    max-width:230px;
-
-    height:auto;
-
-    margin-left:auto;
-    margin-right:auto;
-}
-
-
-/* =====================================================
-TEXTOS
-===================================================== */
-
-ion-app:has(core-login-credentials)
-ion-content h1,
-
-ion-app:has(core-login-credentials)
-ion-content h2,
-
-ion-app:has(core-login-credentials)
-ion-content h3{
-
-    color:#0C4E9C !important;
-
-    font-weight:800 !important;
-}
-
-
-/* =====================================================
-BOTÕES DO LOGIN
-===================================================== */
-
-ion-app:has(core-login-credentials)
-ion-content ion-button{
-
-    min-height:54px !important;
-
-    --border-radius:14px !important;
-
-    font-size:15px !important;
-    font-weight:700 !important;
+/* 3. DIAGNÓSTICO GOOGLE */
+core-login-credentials ~ * {
+    outline:3px solid lime !important;
 }
