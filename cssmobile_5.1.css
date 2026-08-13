@@ -5426,14 +5426,15 @@ ion-content:has(.core-login-info-box){
 
 
 /* =====================================================
-BOTTOM SAFE AREA — LOGIN
+ÁREA INFERIOR DO LOGIN
 ===================================================== */
-ion-app,
-ion-router-outlet,
-.ion-page{
-    --ion-background-color:#0C4E9C;
+ion-content:has(.core-login-info-box){
+    padding-bottom:
+        env(safe-area-inset-bottom) !important;
+    background-color:
+        #0C4E9C !important;
 }
 
-ion-content:has(.core-login-info-box){
-    --ion-safe-area-bottom:0px;
+ion-content:has(.core-login-info-box)::part(background){
+    background-color:#0C4E9C !important;
 }
