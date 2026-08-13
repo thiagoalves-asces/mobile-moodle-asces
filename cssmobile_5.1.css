@@ -5637,34 +5637,32 @@ Visual apenas
 
 .core-login-methods::after{
     content:
-        "Olá! 👋\A Sou o Neo, seu ajudante virtual do Moodle ASCES-UNITA!\A Esqueceu sua senha ou precisa de ajuda?\A Fale com nossa equipe pelo WhatsApp.";
+        "Olá! 👋 Sou o Neo.\A Esqueceu sua senha ou precisa de ajuda?\A Toque no (?) acima e fale com nossa equipe de suporte.";
 
     position:fixed !important;
 
-    left:
-        72px !important;
+    left:72px !important;
 
     bottom:
         calc(
-            78px
+            74px
             + env(safe-area-inset-bottom)
         ) !important;
 
     width:
-        min(210px, calc(100vw - 95px)) !important;
+        min(205px, calc(100vw - 92px)) !important;
 
     padding:
-        10px
-        12px !important;
+        9px
+        11px !important;
 
     white-space:
         pre-line !important;
 
-    color:
-        #264152 !important;
+    color:#264152 !important;
 
     font-size:
-        11px !important;
+        10.5px !important;
 
     font-weight:
         600 !important;
@@ -5675,33 +5673,30 @@ Visual apenas
     text-align:left !important;
 
     background:
-        rgba(255,255,255,.96) !important;
+        rgba(255,255,255,.97) !important;
 
     border:
         1px solid
-        rgba(12,78,156,.12) !important;
+        rgba(12,78,156,.14) !important;
 
     border-left:
         4px solid
         #0C4E9C !important;
 
     border-radius:
-        14px
-        14px
-        14px
-        8px !important;
+        13px
+        13px
+        13px
+        7px !important;
 
     box-shadow:
-        0 10px 24px
+        0 8px 20px
         rgba(0,0,0,.10) !important;
 
-    z-index:
-        59 !important;
+    z-index:59 !important;
 
-    pointer-events:
-        none !important;
+    pointer-events:none !important;
 }
-
 
 /* =====================================================
 09. RESPIRO GERAL
