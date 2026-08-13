@@ -4828,7 +4828,7 @@ MOODLE APP 5.1
 
 
 /* =====================================================
-01. REMOVE LOGIN TRADICIONAL
+01. REMOVE ELEMENTOS QUE NÃO USAMOS
 ===================================================== */
 
 .core-login-form,
@@ -4839,221 +4839,45 @@ MOODLE APP 5.1
 
 
 /* =====================================================
-02. ÁREA DE LOGIN
-===================================================== */
-
-.core-login-identity-providers{
-    width:100% !important;
-    max-width:420px !important;
-
-    margin:
-        24px auto
-        0 !important;
-
-    padding:
-        22px
-        18px !important;
-
-    box-sizing:border-box !important;
-
-    background:
-        linear-gradient(
-            145deg,
-            #F7FAFD,
-            #FFFFFF
-        ) !important;
-
-    border:
-        1px solid
-        #DCE6F1 !important;
-
-    border-radius:
-        20px !important;
-
-    box-shadow:
-        0 10px 28px
-        rgba(12,78,156,.10) !important;
-
-    text-align:center !important;
-}
-
-
-/* =====================================================
-03. TÍTULO DO LOGIN
-===================================================== */
-
-.core-login-identity-providers
-.item-heading{
-
-    margin:
-        0 0 16px !important;
-
-    color:
-        #0C4E9C !important;
-
-    font-size:
-        15px !important;
-
-    font-weight:
-        700 !important;
-
-    line-height:
-        1.35 !important;
-
-    text-align:center !important;
-}
-
-
-/* =====================================================
-04. BOTÃO GOOGLE
-===================================================== */
-
-.core-oauth-provider{
-
-    --background:
-        #FFFFFF !important;
-
-    --background-hover:
-        #F8FBFE !important;
-
-    --background-activated:
-        #EEF5FB !important;
-
-    --color:
-        #212529 !important;
-
-    --border-color:
-        #D2DCE7 !important;
-
-    --border-width:
-        1px !important;
-
-    --border-style:
-        solid !important;
-
-    --border-radius:
-        15px !important;
-
-    width:100% !important;
-
-    min-height:
-        58px !important;
-
-    margin:
-        0 !important;
-
-    font-size:
-        15px !important;
-
-    font-weight:
-        700 !important;
-
-    text-transform:
-        none !important;
-
-    letter-spacing:
-        0 !important;
-
-    box-shadow:
-        0 6px 18px
-        rgba(12,78,156,.08) !important;
-}
-
-
-/* =====================================================
-05. ÍCONE GOOGLE
-===================================================== */
-
-.core-oauth-provider img{
-
-    width:
-        30px !important;
-
-    height:
-        30px !important;
-
-    margin-right:
-        10px !important;
-
-    object-fit:
-        contain !important;
-}
-
-
-/* =====================================================
-06. LOGO / IDENTIDADE DO SITE
+02. BLOCO INSTITUCIONAL
 ===================================================== */
 
 .core-login-info-box{
+    position:relative !important;
 
-    margin-bottom:
-        10px !important;
-
-    text-align:
-        center !important;
-}
-
-
-.core-login-site{
-
-    text-align:
-        center !important;
-}
-
-
-.core-login-site img{
-
-    width:auto !important;
-
-    max-width:
-        300px !important;
-
-    max-height:
-        105px !important;
+    width:100% !important;
 
     margin:
-        10px auto
-        22px !important;
+        0 auto !important;
+
+    padding:
+        18px 0
+        4px !important;
+
+    text-align:center !important;
 }
 
 
 /* =====================================================
-07. URL DO SITE
+03. BARRA INSTITUCIONAL
+ABAIXO DO HEADER
 ===================================================== */
 
-.core-siteurl{
-
-    margin-top:
-        8px !important;
-
-    color:
-        #64748B !important;
-
-    font-size:
-        13px !important;
-
-    font-weight:
-        500 !important;
-
-    opacity:
-        .82 !important;
-}
-
-/* =====================================================
-08. BARRA INSTITUCIONAL
-===================================================== */
-
-core-login-site::before{
-
+.core-login-info-box::before{
     content:"";
 
-    position:fixed;
+    position:fixed !important;
 
-    top:0;
-    left:0;
+    top:
+        calc(
+            env(safe-area-inset-top, 0px)
+            + 56px
+        ) !important;
 
-    width:100%;
-    height:5px;
+    left:0 !important;
+
+    width:100% !important;
+    height:5px !important;
 
     background:
         linear-gradient(
@@ -5073,36 +4897,542 @@ core-login-site::before{
 
             #ff6f00 82%,
             #ff6f00 100%
-        );
+        ) !important;
 
-    z-index:
-        99999;
+    transform:
+        scaleX(0);
 
-    pointer-events:
-        none;
+    transform-origin:
+        left center;
 
     animation:
-        ascesLoginBar
+        ascesLoginBarLoad
         .8s
-        ease-out;
+        ease-out
+        forwards;
+
+    pointer-events:none !important;
+
+    z-index:99999 !important;
 }
 
 
-@keyframes ascesLoginBar{
+/* =====================================================
+04. LOGO ASCES-UNITA
+===================================================== */
+
+.core-login-site{
+    display:flex !important;
+
+    flex-direction:column !important;
+
+    align-items:center !important;
+
+    width:100% !important;
+
+    margin:0 !important;
+
+    text-align:center !important;
+}
+
+
+.core-login-site img{
+    display:block !important;
+
+    width:auto !important;
+
+    max-width:
+        275px !important;
+
+    max-height:
+        95px !important;
+
+    margin:
+        8px auto
+        12px !important;
+
+    object-fit:
+        contain !important;
+}
+
+
+/* =====================================================
+05. REMOVE NOME COMPLETO E URL ORIGINAIS
+===================================================== */
+
+.core-login-site h1,
+.core-login-site h2,
+.core-login-site h3,
+.core-login-site .core-siteurl,
+.core-siteurl{
+    display:none !important;
+}
+
+
+/* =====================================================
+06. BRANDING DO MOODLE
+===================================================== */
+
+.core-login-site::after{
+    content:
+        "MOODLE ASCES-UNITA\A Lugar que inspira, aproxima e realiza";
+
+    display:block !important;
+
+    width:100% !important;
+
+    margin:
+        4px auto
+        8px !important;
+
+    white-space:
+        pre-line !important;
+
+    color:
+        #0C4E9C !important;
+
+    font-size:
+        20px !important;
+
+    font-weight:
+        800 !important;
+
+    line-height:
+        1.35 !important;
+
+    text-align:
+        center !important;
+
+    letter-spacing:
+        -.2px !important;
+}
+
+
+/*
+Segunda linha mais leve não pode receber
+estilo independente via ::after.
+Mantemos tamanho equilibrado para as duas.
+*/
+
+
+/* =====================================================
+07. CONTAINER DOS MÉTODOS
+===================================================== */
+
+.core-login-methods{
+    width:100% !important;
+
+    max-width:
+        430px !important;
+
+    margin:
+        0 auto !important;
+
+    padding:0 !important;
+
+    box-sizing:
+        border-box !important;
+}
+
+
+/* =====================================================
+08. CARD DO GOOGLE
+===================================================== */
+
+.core-login-identity-providers{
+    width:
+        calc(100% - 20px) !important;
+
+    max-width:
+        390px !important;
+
+    margin:
+        14px auto
+        0 !important;
+
+    padding:
+        18px
+        16px
+        16px !important;
+
+    box-sizing:
+        border-box !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #F7FAFD 0%,
+            #FFFFFF 100%
+        ) !important;
+
+    border:
+        1px solid
+        #DCE6F1 !important;
+
+    border-radius:
+        20px !important;
+
+    box-shadow:
+        0 10px 28px
+        rgba(12,78,156,.10) !important;
+
+    text-align:
+        center !important;
+
+    overflow:
+        hidden !important;
+}
+
+
+/* =====================================================
+09. TEXTO DA AUTENTICAÇÃO
+Troca o texto técnico do Moodle
+===================================================== */
+
+.core-login-identity-providers
+.item-heading{
+    margin:
+        0 0
+        15px !important;
+
+    padding:0 !important;
+
+    color:
+        transparent !important;
+
+    font-size:
+        0 !important;
+
+    line-height:
+        0 !important;
+
+    text-align:
+        center !important;
+}
+
+
+.core-login-identity-providers
+.item-heading::after{
+    content:
+        "Acesse com sua conta institucional";
+
+    display:block !important;
+
+    color:
+        #0C4E9C !important;
+
+    font-size:
+        15px !important;
+
+    font-weight:
+        750 !important;
+
+    line-height:
+        1.35 !important;
+
+    text-align:
+        center !important;
+}
+
+
+/* =====================================================
+10. BOTÃO GOOGLE
+===================================================== */
+
+.core-oauth-provider{
+    --background:
+        #FFFFFF !important;
+
+    --background-hover:
+        #F8FBFE !important;
+
+    --background-focused:
+        #F8FBFE !important;
+
+    --background-activated:
+        #EEF5FB !important;
+
+    --color:
+        #212529 !important;
+
+    --border-color:
+        #C9D8E6 !important;
+
+    --border-width:
+        1px !important;
+
+    --border-style:
+        solid !important;
+
+    --border-radius:
+        15px !important;
+
+    width:
+        100% !important;
+
+    min-height:
+        58px !important;
+
+    margin:
+        0 !important;
+
+    padding:
+        0 !important;
+
+    font-size:
+        15px !important;
+
+    font-weight:
+        700 !important;
+
+    line-height:
+        1.25 !important;
+
+    letter-spacing:
+        0 !important;
+
+    text-transform:
+        none !important;
+
+    box-shadow:
+        0 6px 18px
+        rgba(12,78,156,.09) !important;
+}
+
+
+/* =====================================================
+11. CONTEÚDO INTERNO DO BOTÃO
+===================================================== */
+
+.core-oauth-provider ion-label{
+    font-size:
+        15px !important;
+
+    font-weight:
+        700 !important;
+
+    color:
+        #212529 !important;
+
+    white-space:
+        normal !important;
+}
+
+
+/* =====================================================
+12. ÍCONE GOOGLE
+===================================================== */
+
+.core-oauth-provider img{
+    width:
+        30px !important;
+
+    height:
+        30px !important;
+
+    min-width:
+        30px !important;
+
+    margin-right:
+        10px !important;
+
+    object-fit:
+        contain !important;
+}
+
+
+/* =====================================================
+13. NEO — CANTO INFERIOR ESQUERDO
+VERSÃO VISUAL DO LOGIN APP
+===================================================== */
+
+.core-login-info-box::after{
+    content:"";
+
+    position:fixed !important;
+
+    left:
+        max(
+            7px,
+            env(safe-area-inset-left)
+        ) !important;
+
+    bottom:
+        calc(
+            8px
+            + env(safe-area-inset-bottom)
+        ) !important;
+
+    width:
+        82px !important;
+
+    height:
+        94px !important;
+
+    background-image:
+        url("https://raw.githubusercontent.com/thiagoalves-asces/mobile-moodle-asces/main/Ol%C3%A1.svg") !important;
+
+    background-repeat:
+        no-repeat !important;
+
+    background-position:
+        center bottom !important;
+
+    background-size:
+        contain !important;
+
+    filter:
+        drop-shadow(
+            0 9px 12px
+            rgba(0,0,0,.22)
+        );
+
+    animation:
+        ascesNeoLoginWave
+        3.5s
+        ease-in-out
+        infinite;
+
+    pointer-events:
+        none !important;
+
+    z-index:
+        50 !important;
+}
+
+
+/* =====================================================
+14. AJUSTE DO CONTEÚDO PARA NÃO BATER NO NEO
+===================================================== */
+
+.core-login-identity-providers{
+    margin-bottom:
+        105px !important;
+}
+
+
+/* =====================================================
+15. TELAS MAIS BAIXAS
+===================================================== */
+
+@media(max-height:760px){
+
+    .core-login-info-box{
+        padding-top:
+            8px !important;
+    }
+
+    .core-login-site img{
+        max-width:
+            225px !important;
+
+        max-height:
+            76px !important;
+
+        margin-bottom:
+            7px !important;
+    }
+
+    .core-login-site::after{
+        margin-top:
+            1px !important;
+
+        margin-bottom:
+            3px !important;
+
+        font-size:
+            17px !important;
+
+        line-height:
+            1.3 !important;
+    }
+
+    .core-login-identity-providers{
+        margin-top:
+            8px !important;
+
+        margin-bottom:
+            82px !important;
+
+        padding:
+            14px
+            14px
+            13px !important;
+    }
+
+    .core-oauth-provider{
+        min-height:
+            52px !important;
+    }
+
+    .core-login-info-box::after{
+        width:
+            70px !important;
+
+        height:
+            82px !important;
+    }
+}
+
+
+/* =====================================================
+16. REDUÇÃO DE MOVIMENTO
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .core-login-info-box::before,
+    .core-login-info-box::after{
+        animation:
+            none !important;
+    }
+
+    .core-login-info-box::before{
+        transform:
+            scaleX(1) !important;
+    }
+}
+
+
+/* =====================================================
+17. ANIMAÇÕES
+===================================================== */
+
+@keyframes ascesLoginBarLoad{
 
     from{
         transform:
             scaleX(0);
-
-        transform-origin:
-            left;
     }
 
     to{
         transform:
             scaleX(1);
+    }
+}
 
-        transform-origin:
-            left;
+
+@keyframes ascesNeoLoginWave{
+
+    0%,
+    40%,
+    100%{
+        transform:
+            rotate(0deg);
+    }
+
+    10%{
+        transform:
+            rotate(-3deg);
+    }
+
+    20%{
+        transform:
+            rotate(3deg);
+    }
+
+    30%{
+        transform:
+            rotate(-3deg);
     }
 }
