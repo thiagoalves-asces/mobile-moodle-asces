@@ -4828,37 +4828,36 @@ MOODLE APP 5.1
 ===================================================== */
 
 /* =====================================================
-🔐 LOGIN APP — DIAGNÓSTICO ESTRUTURAL 02
+🔐 LOGIN APP — IDENTIFICAÇÃO DO SELETOR REAL
 TEMPORÁRIO
 ===================================================== */
 
-/* FORMULÁRIO REAL */
-form {
-    outline:4px solid red !important;
+/* 1 */
+core-login-credentials{
+    outline:5px solid red !important;
 }
 
-/* CAMPOS */
-form ion-item {
-    outline:3px solid lime !important;
+/* 2 */
+core-login-site{
+    outline:5px solid lime !important;
 }
 
-/* BOTÕES DENTRO DO FORM */
-form ion-button {
-    outline:3px solid orange !important;
+/* 3 */
+core-login-reconnect{
+    outline:5px solid orange !important;
 }
 
-/* DIVS DIRETAS DO FORM */
-form > div {
-    outline:2px dashed magenta !important;
+/* 4 */
+core-login-sites{
+    outline:5px solid cyan !important;
 }
 
-/* BLOCOS IMEDIATAMENTE DEPOIS DO FORM */
-form + * {
-    outline:4px solid cyan !important;
+/* 5 */
+core-login-email-signup{
+    outline:5px solid magenta !important;
 }
 
-/* BOTÕES FORA DO FORM */
-ion-content > * ion-button {
-    box-shadow:
-        inset 0 0 0 3px yellow !important;
+/* 6 */
+form{
+    outline:5px dashed blue !important;
 }
