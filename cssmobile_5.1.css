@@ -4828,7 +4828,7 @@ MOODLE APP 5.1
 
 
 /* =====================================================
-01. REMOVE ELEMENTOS QUE NÃO USAMOS
+01. LIMPEZA DO LOGIN NATIVO
 ===================================================== */
 
 .core-login-form,
@@ -4847,12 +4847,12 @@ MOODLE APP 5.1
 
     width:100% !important;
 
-    margin:
-        0 auto !important;
+    margin:0 auto !important;
 
     padding:
-        18px 0
-        4px !important;
+        14px
+        0
+        2px !important;
 
     text-align:center !important;
 }
@@ -4860,7 +4860,6 @@ MOODLE APP 5.1
 
 /* =====================================================
 03. BARRA INSTITUCIONAL
-ABAIXO DO HEADER
 ===================================================== */
 
 .core-login-info-box::before{
@@ -4868,11 +4867,11 @@ ABAIXO DO HEADER
 
     position:fixed !important;
 
-    top:
-        calc(
-            env(safe-area-inset-top, 0px)
-            + 56px
-        ) !important;
+    /*
+    Valor fixo para evitar a barra
+    "subindo" durante o carregamento.
+    */
+    top:52px !important;
 
     left:0 !important;
 
@@ -4903,13 +4902,13 @@ ABAIXO DO HEADER
         scaleX(0);
 
     transform-origin:
-        left center;
+        left center !important;
 
     animation:
         ascesLoginBarLoad
         .8s
         ease-out
-        forwards;
+        forwards !important;
 
     pointer-events:none !important;
 
@@ -4918,7 +4917,7 @@ ABAIXO DO HEADER
 
 
 /* =====================================================
-04. LOGO ASCES-UNITA
+04. ÁREA DA LOGO
 ===================================================== */
 
 .core-login-site{
@@ -4927,6 +4926,7 @@ ABAIXO DO HEADER
     flex-direction:column !important;
 
     align-items:center !important;
+    justify-content:center !important;
 
     width:100% !important;
 
@@ -4936,28 +4936,46 @@ ABAIXO DO HEADER
 }
 
 
+/* =====================================================
+05. LOGO ASCES-UNITA
+===================================================== */
+
 .core-login-site img{
     display:block !important;
 
     width:auto !important;
 
     max-width:
-        275px !important;
+        255px !important;
 
     max-height:
-        95px !important;
+        88px !important;
 
     margin:
         8px auto
-        12px !important;
+        10px !important;
 
     object-fit:
         contain !important;
 }
 
 
+/*
+=====================================================
+QUANDO VOCÊ ME PASSAR A LOGO MENOR,
+podemos substituir a imagem nativa por CSS assim:
+
+.core-login-site img{
+    content:
+        url("URL-DA-LOGO-MENOR-AQUI") !important;
+}
+
+=====================================================
+*/
+
+
 /* =====================================================
-05. REMOVE NOME COMPLETO E URL ORIGINAIS
+06. REMOVE NOME E URL ORIGINAIS
 ===================================================== */
 
 .core-login-site h1,
@@ -4970,20 +4988,20 @@ ABAIXO DO HEADER
 
 
 /* =====================================================
-06. BRANDING DO MOODLE
+07. BRANDING PRINCIPAL
 ===================================================== */
 
 .core-login-site::after{
     content:
-        "MOODLE ASCES-UNITA\A Lugar que inspira, aproxima e realiza";
+        "MOODLE\A ASCES-UNITA" !important;
 
     display:block !important;
 
     width:100% !important;
 
     margin:
-        4px auto
-        8px !important;
+        6px auto
+        0 !important;
 
     white-space:
         pre-line !important;
@@ -4992,34 +5010,28 @@ ABAIXO DO HEADER
         #0C4E9C !important;
 
     font-size:
-        20px !important;
+        30px !important;
 
     font-weight:
-        800 !important;
+        900 !important;
 
     line-height:
-        1.35 !important;
-
-    text-align:
-        center !important;
+        1.02 !important;
 
     letter-spacing:
-        -.2px !important;
+        -.6px !important;
+
+    text-align:center !important;
 }
 
 
-/*
-Segunda linha mais leve não pode receber
-estilo independente via ::after.
-Mantemos tamanho equilibrado para as duas.
-*/
-
-
 /* =====================================================
-07. CONTAINER DOS MÉTODOS
+08. CONTAINER DOS MÉTODOS
 ===================================================== */
 
 .core-login-methods{
+    position:relative !important;
+
     width:100% !important;
 
     max-width:
@@ -5036,24 +5048,59 @@ Mantemos tamanho equilibrado para as duas.
 
 
 /* =====================================================
-08. CARD DO GOOGLE
+09. SLOGAN INSTITUCIONAL
+===================================================== */
+
+.core-login-methods::before{
+    content:
+        "Lugar que inspira, aproxima e realiza";
+
+    display:block !important;
+
+    width:100% !important;
+
+    margin:
+        10px auto
+        18px !important;
+
+    color:
+        #0C4E9C !important;
+
+    font-size:
+        16px !important;
+
+    font-weight:
+        800 !important;
+
+    line-height:
+        1.25 !important;
+
+    letter-spacing:
+        -.1px !important;
+
+    text-align:center !important;
+}
+
+
+/* =====================================================
+10. CARD GOOGLE
 ===================================================== */
 
 .core-login-identity-providers{
     width:
-        calc(100% - 20px) !important;
+        calc(100% - 24px) !important;
 
     max-width:
-        390px !important;
+        385px !important;
 
     margin:
-        14px auto
-        0 !important;
+        0 auto
+        108px !important;
 
     padding:
-        18px
         16px
-        16px !important;
+        15px
+        15px !important;
 
     box-sizing:
         border-box !important;
@@ -5070,23 +5117,20 @@ Mantemos tamanho equilibrado para as duas.
         #DCE6F1 !important;
 
     border-radius:
-        20px !important;
+        18px !important;
 
     box-shadow:
         0 10px 28px
         rgba(12,78,156,.10) !important;
 
-    text-align:
-        center !important;
+    text-align:center !important;
 
-    overflow:
-        hidden !important;
+    overflow:hidden !important;
 }
 
 
 /* =====================================================
-09. TEXTO DA AUTENTICAÇÃO
-Troca o texto técnico do Moodle
+11. TEXTO DO CARD
 ===================================================== */
 
 .core-login-identity-providers
@@ -5106,15 +5150,14 @@ Troca o texto técnico do Moodle
     line-height:
         0 !important;
 
-    text-align:
-        center !important;
+    text-align:center !important;
 }
 
 
 .core-login-identity-providers
 .item-heading::after{
     content:
-        "Acesse com sua conta institucional";
+        "Acesse com sua conta institucional:" !important;
 
     display:block !important;
 
@@ -5122,21 +5165,20 @@ Troca o texto técnico do Moodle
         #0C4E9C !important;
 
     font-size:
-        15px !important;
+        16px !important;
 
     font-weight:
-        750 !important;
+        800 !important;
 
     line-height:
-        1.35 !important;
+        1.3 !important;
 
-    text-align:
-        center !important;
+    text-align:center !important;
 }
 
 
 /* =====================================================
-10. BOTÃO GOOGLE
+12. BOTÃO GOOGLE
 ===================================================== */
 
 .core-oauth-provider{
@@ -5165,22 +5207,18 @@ Troca o texto técnico do Moodle
         solid !important;
 
     --border-radius:
-        15px !important;
+        14px !important;
 
-    width:
-        100% !important;
+    width:100% !important;
 
     min-height:
-        58px !important;
+        56px !important;
 
-    margin:
-        0 !important;
-
-    padding:
-        0 !important;
+    margin:0 !important;
+    padding:0 !important;
 
     font-size:
-        15px !important;
+        14px !important;
 
     font-weight:
         700 !important;
@@ -5201,18 +5239,18 @@ Troca o texto técnico do Moodle
 
 
 /* =====================================================
-11. CONTEÚDO INTERNO DO BOTÃO
+13. CONTEÚDO DO BOTÃO
 ===================================================== */
 
 .core-oauth-provider ion-label{
+    color:
+        #212529 !important;
+
     font-size:
-        15px !important;
+        14px !important;
 
     font-weight:
         700 !important;
-
-    color:
-        #212529 !important;
 
     white-space:
         normal !important;
@@ -5220,7 +5258,7 @@ Troca o texto técnico do Moodle
 
 
 /* =====================================================
-12. ÍCONE GOOGLE
+14. ÍCONE GOOGLE
 ===================================================== */
 
 .core-oauth-provider img{
@@ -5242,8 +5280,7 @@ Troca o texto técnico do Moodle
 
 
 /* =====================================================
-13. NEO — CANTO INFERIOR ESQUERDO
-VERSÃO VISUAL DO LOGIN APP
+15. NEO
 ===================================================== */
 
 .core-login-info-box::after{
@@ -5253,21 +5290,21 @@ VERSÃO VISUAL DO LOGIN APP
 
     left:
         max(
-            7px,
+            10px,
             env(safe-area-inset-left)
         ) !important;
 
     bottom:
         calc(
-            8px
+            10px
             + env(safe-area-inset-bottom)
         ) !important;
 
     width:
-        82px !important;
+        74px !important;
 
     height:
-        94px !important;
+        86px !important;
 
     background-image:
         url("https://raw.githubusercontent.com/thiagoalves-asces/mobile-moodle-asces/main/Ol%C3%A1.svg") !important;
@@ -5297,22 +5334,105 @@ VERSÃO VISUAL DO LOGIN APP
         none !important;
 
     z-index:
-        50 !important;
+        60 !important;
 }
 
 
 /* =====================================================
-14. AJUSTE DO CONTEÚDO PARA NÃO BATER NO NEO
+16. BALÃO DO NEO
 ===================================================== */
 
-.core-login-identity-providers{
-    margin-bottom:
-        105px !important;
+.core-login-methods::after{
+    content:
+        "Olá! 👋 Sou o Neo.\A Esqueceu sua senha?\A Toque no (?) acima e fale com nosso suporte pelo WhatsApp." !important;
+
+    position:fixed !important;
+
+    left:
+        72px !important;
+
+    bottom:
+        calc(
+            74px
+            + env(safe-area-inset-bottom)
+        ) !important;
+
+    width:
+        min(
+            205px,
+            calc(100vw - 92px)
+        ) !important;
+
+    padding:
+        9px
+        11px !important;
+
+    box-sizing:
+        border-box !important;
+
+    white-space:
+        pre-line !important;
+
+    color:
+        #264152 !important;
+
+    font-size:
+        11px !important;
+
+    font-weight:
+        650 !important;
+
+    line-height:
+        1.4 !important;
+
+    text-align:
+        left !important;
+
+    background:
+        rgba(255,255,255,.97) !important;
+
+    border:
+        1px solid
+        rgba(12,78,156,.14) !important;
+
+    border-left:
+        4px solid
+        #0C4E9C !important;
+
+    border-radius:
+        13px
+        13px
+        13px
+        7px !important;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,.10) !important;
+
+    z-index:
+        59 !important;
+
+    pointer-events:
+        none !important;
 }
 
 
 /* =====================================================
-15. TELAS MAIS BAIXAS
+17. BALÃO — PEQUENA SETA PARA O NEO
+===================================================== */
+
+/*
+Não usamos outro pseudo-elemento porque
+.core-login-methods::before já contém o slogan
+e ::after já contém o balão.
+
+A borda inferior esquerda do próprio balão
+já cria a sensação de ligação com o Neo.
+*/
+
+
+/* =====================================================
+18. TELAS MAIS BAIXAS
 ===================================================== */
 
 @media(max-height:760px){
@@ -5322,37 +5442,44 @@ VERSÃO VISUAL DO LOGIN APP
             8px !important;
     }
 
+
     .core-login-site img{
         max-width:
-            225px !important;
+            220px !important;
 
         max-height:
-            76px !important;
+            74px !important;
 
         margin-bottom:
-            7px !important;
+            6px !important;
     }
+
 
     .core-login-site::after{
-        margin-top:
-            1px !important;
-
-        margin-bottom:
-            3px !important;
-
         font-size:
-            17px !important;
+            25px !important;
 
         line-height:
-            1.3 !important;
+            1 !important;
+
+        margin-top:
+            2px !important;
     }
 
-    .core-login-identity-providers{
-        margin-top:
-            8px !important;
 
+    .core-login-methods::before{
+        margin:
+            8px auto
+            14px !important;
+
+        font-size:
+            14px !important;
+    }
+
+
+    .core-login-identity-providers{
         margin-bottom:
-            82px !important;
+            92px !important;
 
         padding:
             14px
@@ -5360,23 +5487,53 @@ VERSÃO VISUAL DO LOGIN APP
             13px !important;
     }
 
+
     .core-oauth-provider{
         min-height:
             52px !important;
     }
 
+
     .core-login-info-box::after{
         width:
-            70px !important;
+            66px !important;
 
         height:
-            82px !important;
+            76px !important;
+    }
+
+
+    .core-login-methods::after{
+        left:
+            64px !important;
+
+        bottom:
+            calc(
+                68px
+                + env(safe-area-inset-bottom)
+            ) !important;
+
+        width:
+            min(
+                195px,
+                calc(100vw - 86px)
+            ) !important;
+
+        padding:
+            8px
+            10px !important;
+
+        font-size:
+            10px !important;
+
+        line-height:
+            1.35 !important;
     }
 }
 
 
 /* =====================================================
-16. REDUÇÃO DE MOVIMENTO
+19. REDUÇÃO DE MOVIMENTO
 ===================================================== */
 
 @media(prefers-reduced-motion:reduce){
@@ -5387,6 +5544,7 @@ VERSÃO VISUAL DO LOGIN APP
             none !important;
     }
 
+
     .core-login-info-box::before{
         transform:
             scaleX(1) !important;
@@ -5395,7 +5553,7 @@ VERSÃO VISUAL DO LOGIN APP
 
 
 /* =====================================================
-17. ANIMAÇÕES
+20. ANIMAÇÕES
 ===================================================== */
 
 @keyframes ascesLoginBarLoad{
@@ -5434,270 +5592,5 @@ VERSÃO VISUAL DO LOGIN APP
     30%{
         transform:
             rotate(-3deg);
-    }
-}
-
-/* =====================================================
-🔧 REFINOS FINAIS — LOGIN APP ASCES-UNITA
-===================================================== */
-
-/* =====================================================
-01. BARRA INSTITUCIONAL
-Sobe 2px
-===================================================== */
-.core-login-info-box::before{
-    top:
-        calc(
-            env(safe-area-inset-top, 0px)
-            + 54px
-        ) !important;
-}
-
-/* =====================================================
-02. BRANDING PRINCIPAL
-Mais destaque para MOODLE / ASCES-UNITA
-===================================================== */
-.core-login-site::after{
-    content:
-        "MOODLE\A ASCES-UNITA" !important;
-    display:block !important;
-    width:100% !important;
-    margin:
-        6px auto
-        0 !important;
-    white-space:
-        pre-line !important;
-    color:
-        #0C4E9C !important;
-    font-size:
-        30px !important;
-    font-weight:
-        900 !important;
-    line-height:
-        1.02 !important;
-    letter-spacing:
-        -.6px !important;
-    text-align:
-        center !important;
-}
-
-/* =====================================================
-03. SLOGAN EM LINHA SEPARADA
-===================================================== */
-.core-login-methods::before{
-    content:
-        "Lugar que inspira, aproxima e realiza";
-    display:block !important;
-    width:100% !important;
-    margin:
-        10px auto
-        18px !important;
-    color:
-        #0C4E9C !important;
-    font-size:
-        16px !important;
-    font-weight:
-        800 !important;
-    line-height:
-        1.25 !important;
-    text-align:
-        center !important;
-    letter-spacing:
-        -.1px !important;
-}
-
-/* =====================================================
-04. CARD DO GOOGLE
-Mais compacto e central
-===================================================== */
-.core-login-identity-providers{
-    width:
-        calc(100% - 24px) !important;
-    max-width:
-        385px !important;
-    margin:
-        0 auto
-        108px !important;
-    padding:
-        16px
-        15px
-        15px !important;
-    border-radius:
-        18px !important;
-}
-
-/* =====================================================
-05. TEXTO DO CARD
-===================================================== */
-.core-login-identity-providers
-.item-heading::after{
-    content:
-        "Acesse com sua conta institucional:" !important;
-    font-size:
-        16px !important;
-    font-weight:
-        800 !important;
-    line-height:
-        1.3 !important;
-}
-
-/* =====================================================
-06. BOTÃO GOOGLE
-Mantém bom, só ajusta encaixe
-===================================================== */
-.core-oauth-provider{
-    min-height:
-        56px !important;
-    --border-radius:
-        14px !important;
-}
-
-.core-oauth-provider ion-label{
-    font-size:
-        14px !important;
-    font-weight:
-        700 !important;
-}
-
-/* =====================================================
-07. NEO
-Ligeiramente menor e mais elegante
-===================================================== */
-.core-login-info-box::after{
-    left:
-        max(
-            10px,
-            env(safe-area-inset-left)
-        ) !important;
-    bottom:
-        calc(
-            10px
-            + env(safe-area-inset-bottom)
-        ) !important;
-    width:
-        74px !important;
-    height:
-        86px !important;
-    z-index:
-        60 !important;
-}
-
-
-/* =====================================================
-08. BALÃO DISCRETO DO NEO
-Visual apenas
-===================================================== */
-.core-login-methods::after{
-    content:
-        content:
-    "Olá! 👋 Sou o Neo.\A Esqueceu sua senha?\A Toque no (?) acima e fale com nosso suporte pelo WhatsApp.";
-    position:fixed !important;
-    left:72px !important;
-    bottom:
-        calc(
-            74px
-            + env(safe-area-inset-bottom)
-        ) !important;
-    width:
-        min(205px, calc(100vw - 92px)) !important;
-    padding:
-        9px
-        11px !important;
-    white-space:
-        pre-line !important;
-    color:#264152 !important;
-    font-size:
-        12px !important;
-    font-weight:
-        700 !important;
-    line-height:
-        1.3 !important;
-    text-align:left !important;
-    background:
-        rgba(255,255,255,.97) !important;
-    border:
-        1px solid
-        rgba(12,78,156,.14) !important;
-    border-left:
-        4px solid
-        #0C4E9C !important;
-    border-radius:
-        13px
-        13px
-        13px
-        7px !important;
-    box-shadow:
-        0 8px 20px
-        rgba(0,0,0,.10) !important;
-    z-index:59 !important;
-    pointer-events:none !important;
-}
-
-/* =====================================================
-09. RESPIRO GERAL
-===================================================== */
-.core-login-info-box{
-    padding-top:
-        14px !important;
-    padding-bottom:
-        2px !important;
-}
-
-.core-login-site img{
-    max-width:
-        255px !important;
-    max-height:
-        88px !important;
-    margin:
-        8px auto
-        10px !important;
-}
-
-/* =====================================================
-10. TELAS MAIS BAIXAS
-===================================================== */
-@media(max-height:760px){
-    .core-login-site::after{
-        font-size:
-            25px !important;
-        line-height:
-            1 !important;
-    }
-
-    .core-login-methods::before{
-        font-size:
-            14px !important;
-        margin:
-            8px auto
-            14px !important;
-    }
-
-    .core-login-identity-providers{
-        margin-bottom:
-            92px !important;
-    }
-
-    .core-login-info-box::after{
-        width:
-            66px !important;
-        height:
-            76px !important;
-    }
-
-    .core-login-methods::after{
-        left:
-            64px !important;
-        bottom:
-            calc(
-                70px
-                + env(safe-area-inset-bottom)
-            ) !important;
-        width:
-            min(195px, calc(100vw - 86px)) !important;
-        font-size:
-            10.5px !important;
-        padding:
-            9px
-            11px !important;
     }
 }
