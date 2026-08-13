@@ -5493,8 +5493,12 @@ ion-app{
 
 
 /* =====================================================
-21. LOGIN CONGELADO — SEM SCROLL / SEM PUXAR
+21. LOGIN CONGELADO — SEM MOVIMENTO VERTICAL
 ===================================================== */
+html,
+body{
+    overscroll-behavior:none !important;
+}
 
 ion-content:has(.core-login-info-box){
     --overflow:hidden !important;
@@ -5512,7 +5516,6 @@ ion-content:has(.core-login-info-box)
             100vh
             - 52px
         ) !important;
-
     box-sizing:
         border-box !important;
 }
