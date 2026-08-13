@@ -5033,35 +5033,50 @@ podemos substituir a imagem nativa por CSS assim:
 .core-login-identity-providers{
     width:
         calc(100% - 24px) !important;
+
     max-width:
         385px !important;
+
     margin:
-        0 auto
-        108px !important;
+        32px auto
+        150px !important;
+
     padding:
         16px
         15px
         15px !important;
+
     box-sizing:
         border-box !important;
+
     background:
-        linear-gradient(
-            145deg,
-            #F7FAFD 0%,
-            #FFFFFF 100%
-        ) !important;
+        rgba(255,255,255,.58) !important;
+
+    backdrop-filter:
+        blur(18px)
+        saturate(135%) !important;
+
+    -webkit-backdrop-filter:
+        blur(18px)
+        saturate(135%) !important;
+
     border:
         1px solid
-        #DCE6F1 !important;
-    border-radius:
-        18px !important;
-    box-shadow:
-        0 10px 28px
-        rgba(12,78,156,.10) !important;
-    text-align:center !important;
-    overflow:hidden !important;
-}
+        rgba(255,255,255,.72) !important;
 
+    border-radius:
+        20px !important;
+
+    box-shadow:
+        0 14px 34px
+        rgba(12,78,156,.13) !important;
+
+    text-align:
+        center !important;
+
+    overflow:
+        hidden !important;
+}
 /* =====================================================
 11. TEXTO DO CARD
 ===================================================== */
