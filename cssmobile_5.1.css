@@ -4966,7 +4966,7 @@ TESTE — URL DRAFTFILE
 
 .core-login-site img{
     content:
-        url("https://moodle.asces.edu.br/draftfile.php/463373/user/draft/846538052/0C4E9C%20%28logo%20pequena%29.png?preview=thumb&oid=1786655916") !important;
+        url("https://raw.githubusercontent.com/thiagoalves-asces/mobile-moodle-asces/refs/heads/main/0C4E9C%20(logo%20pequena).png") !important;
 
     width:auto !important;
 
@@ -4983,7 +4983,6 @@ TESTE — URL DRAFTFILE
     object-fit:
         contain !important;
 }
-
 
 /*
 =====================================================
@@ -5576,24 +5575,19 @@ já cria a sensação de ligação com o Neo.
     }
 }
 
-
 /* =====================================================
 20. ANIMAÇÕES
 ===================================================== */
-
 @keyframes ascesLoginBarLoad{
-
     from{
         transform:
             scaleX(0);
     }
-
     to{
         transform:
             scaleX(1);
     }
 }
-
 
 @keyframes ascesNeoLoginWave{
 
