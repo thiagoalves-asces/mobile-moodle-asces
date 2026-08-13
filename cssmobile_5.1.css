@@ -4821,38 +4821,220 @@ core-send-message-form ion-button:active{
 }
 
 
-
 /* =====================================================
 🔐 LOGIN ASCES-UNITA
 MOODLE APP 5.1
 ===================================================== */
 
+
 /* =====================================================
-🔐 LOGIN APP — ESTRUTURA OFICIAL MOODLE APP
-TESTE 01
+01. REMOVE LOGIN TRADICIONAL
 ===================================================== */
 
-/* Remove login tradicional */
-.core-login-form {
+.core-login-form,
+.core-login-methods-separator,
+.core-login-sign-up{
     display:none !important;
 }
 
-/* Remove separador "Ou" */
-.core-login-methods-separator {
-    display:none !important;
+
+/* =====================================================
+02. ÁREA DE LOGIN
+===================================================== */
+
+.core-login-identity-providers{
+    width:100% !important;
+    max-width:420px !important;
+
+    margin:
+        24px auto
+        0 !important;
+
+    padding:
+        22px
+        18px !important;
+
+    box-sizing:border-box !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #F7FAFD,
+            #FFFFFF
+        ) !important;
+
+    border:
+        1px solid
+        #DCE6F1 !important;
+
+    border-radius:
+        20px !important;
+
+    box-shadow:
+        0 10px 28px
+        rgba(12,78,156,.10) !important;
+
+    text-align:center !important;
 }
 
-/* Remove cadastro/criação de conta */
-.core-login-sign-up {
-    display:none !important;
+
+/* =====================================================
+03. TÍTULO DO LOGIN
+===================================================== */
+
+.core-login-identity-providers
+.item-heading{
+
+    margin:
+        0 0 16px !important;
+
+    color:
+        #0C4E9C !important;
+
+    font-size:
+        15px !important;
+
+    font-weight:
+        700 !important;
+
+    line-height:
+        1.35 !important;
+
+    text-align:center !important;
 }
 
-/* Destaca somente provedores OAuth */
-.core-login-identity-providers {
-    outline:3px solid lime !important;
+
+/* =====================================================
+04. BOTÃO GOOGLE
+===================================================== */
+
+.core-oauth-provider{
+
+    --background:
+        #FFFFFF !important;
+
+    --background-hover:
+        #F8FBFE !important;
+
+    --background-activated:
+        #EEF5FB !important;
+
+    --color:
+        #212529 !important;
+
+    --border-color:
+        #D2DCE7 !important;
+
+    --border-width:
+        1px !important;
+
+    --border-style:
+        solid !important;
+
+    --border-radius:
+        15px !important;
+
+    width:100% !important;
+
+    min-height:
+        58px !important;
+
+    margin:
+        0 !important;
+
+    font-size:
+        15px !important;
+
+    font-weight:
+        700 !important;
+
+    text-transform:
+        none !important;
+
+    letter-spacing:
+        0 !important;
+
+    box-shadow:
+        0 6px 18px
+        rgba(12,78,156,.08) !important;
 }
 
-/* Destaca especificamente o botão Google */
-.core-oauth-provider {
-    outline:3px solid orange !important;
+
+/* =====================================================
+05. ÍCONE GOOGLE
+===================================================== */
+
+.core-oauth-provider img{
+
+    width:
+        30px !important;
+
+    height:
+        30px !important;
+
+    margin-right:
+        10px !important;
+
+    object-fit:
+        contain !important;
+}
+
+
+/* =====================================================
+06. LOGO / IDENTIDADE DO SITE
+===================================================== */
+
+.core-login-info-box{
+
+    margin-bottom:
+        10px !important;
+
+    text-align:
+        center !important;
+}
+
+
+.core-login-site{
+
+    text-align:
+        center !important;
+}
+
+
+.core-login-site img{
+
+    width:auto !important;
+
+    max-width:
+        300px !important;
+
+    max-height:
+        105px !important;
+
+    margin:
+        10px auto
+        22px !important;
+}
+
+
+/* =====================================================
+07. URL DO SITE
+===================================================== */
+
+.core-siteurl{
+
+    margin-top:
+        8px !important;
+
+    color:
+        #64748B !important;
+
+    font-size:
+        13px !important;
+
+    font-weight:
+        500 !important;
+
+    opacity:
+        .82 !important;
 }
