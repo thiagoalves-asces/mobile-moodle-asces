@@ -4819,3 +4819,39 @@ core-send-message-form ion-button:active{
     transform:scale(.90);
     opacity:.75 !important;
 }
+
+
+
+/* =====================================================
+🔐 TESTE 01 — MAPEAMENTO DA TELA DE LOGIN
+ASCES-UNITA | Moodle App
+===================================================== */
+
+/* Containers/formulários de autenticação */
+core-login-credentials,
+core-login-site,
+core-login-reconnect,
+core-login-sites,
+core-login-email-signup,
+form {
+    outline: 3px solid red !important;
+}
+
+/* Itens/campos */
+core-login-credentials ion-item,
+core-login-site ion-item,
+ion-input {
+    outline: 3px solid lime !important;
+}
+
+/* Botões */
+core-login-credentials ion-button,
+core-login-site ion-button {
+    outline: 3px solid orange !important;
+}
+
+/* Links */
+core-login-credentials a,
+core-login-site a {
+    outline: 3px solid magenta !important;
+}
