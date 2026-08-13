@@ -5327,7 +5327,12 @@ podemos substituir a imagem nativa por CSS assim:
 /* =====================================================
 15. NEO
 ===================================================== */
+
 .core-login-info-box::after{
+    content:"" !important;
+
+    position:fixed !important;
+
     left:
         max(
             8px,
@@ -5346,17 +5351,36 @@ podemos substituir a imagem nativa por CSS assim:
     height:
         116px !important;
 
-    background-size:
-        contain !important;
+    background-image:
+        url("https://raw.githubusercontent.com/thiagoalves-asces/mobile-moodle-asces/main/Ol%C3%A1.svg") !important;
+
+    background-repeat:
+        no-repeat !important;
 
     background-position:
         center bottom !important;
 
+    background-size:
+        contain !important;
+
+    filter:
+        drop-shadow(
+            0 9px 12px
+            rgba(0,0,0,.22)
+        );
+
+    animation:
+        ascesNeoLoginWave
+        3.5s
+        ease-in-out
+        infinite;
+
+    pointer-events:
+        none !important;
+
     z-index:
         60 !important;
 }
-
-
 /* =====================================================
 16. BALÃO DO NEO
 ===================================================== */
