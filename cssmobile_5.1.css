@@ -5308,21 +5308,17 @@ ARREDONDADO + FAIXA AZUL 6PX + SETA MAIS DELICADA
         "Olá! 👋 Sou o Neo.\A Esqueceu sua senha?\A Toque no (?) acima e fale com nosso suporte pelo WhatsApp." !important;
 
     position:fixed !important;
-
     left:82px !important;
-
     bottom:
         calc(
             94px +
             env(safe-area-inset-bottom)
         ) !important;
-
     width:
         min(
             258px,
             calc(100vw - 96px)
         ) !important;
-
     padding:
         12px
         14px
@@ -5341,7 +5337,7 @@ ARREDONDADO + FAIXA AZUL 6PX + SETA MAIS DELICADA
         linear-gradient(
             to right,
             #0C4E9C 0,
-            #0C4E9C 8px,
+            #0C4E9C 10px,
             rgba(255,255,255,.97) 8px,
             rgba(255,255,255,.97) 100%
         ) !important;
@@ -5363,9 +5359,9 @@ ARREDONDADO + FAIXA AZUL 6PX + SETA MAIS DELICADA
             100% 100%,
             18px 100%,
             6px 100%,
-            6px 92%,
+            6px 91%,
             0 87%,
-            6px 82%,
+            6px 81%,
             6px 18%,
             10px 6%,
             18px 0
@@ -5378,9 +5374,9 @@ ARREDONDADO + FAIXA AZUL 6PX + SETA MAIS DELICADA
             100% 100%,
             18px 100%,
             6px 100%,
-            6px 92%,
+            6px 91%,
             0 87%,
-            6px 82%,
+            6px 81%,
             6px 18%,
             10px 6%,
             18px 0
