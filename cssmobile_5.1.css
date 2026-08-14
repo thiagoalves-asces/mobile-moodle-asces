@@ -6002,3 +6002,19 @@ DA TELA DE RECONEXÃO
 .core-login-methods ion-accordion-group{
     display:none !important;
 }
+
+
+/* TESTE BRUTO DA TELA DE RECONEXÃO */
+
+.core-login-fullname{
+    color:red !important;
+    font-size:30px !important;
+}
+
+.core-login-user{
+    background:yellow !important;
+}
+
+.core-login-reconnect-warning{
+    outline:5px solid lime !important;
+}
