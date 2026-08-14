@@ -5299,10 +5299,9 @@ MONTA DA ESQUERDA PARA A DIREITA
         60 !important;
 }
 
-
 /* =====================================================
 16. BALÃO DO NEO
-PONTINHA BAIXA + DESTAQUE AZUL LATERAL
+ARREDONDADO + FAIXA AZUL + SETA BAIXA
 ===================================================== */
 
 .core-login-methods::after{
@@ -5329,86 +5328,106 @@ PONTINHA BAIXA + DESTAQUE AZUL LATERAL
         12px
         14px
         12px
-        30px !important;
+        31px !important;
 
-    box-sizing:
-        border-box !important;
+    box-sizing:border-box !important;
 
-    white-space:
-        pre-line !important;
+    white-space:pre-line !important;
 
     color:#264152 !important;
 
-    font-size:
-        12px !important;
+    font-size:12px !important;
+    font-weight:650 !important;
+    line-height:1.45 !important;
 
-    font-weight:
-        650 !important;
-
-    line-height:
-        1.45 !important;
-
-    text-align:
-        left !important;
+    text-align:left !important;
 
 
-    /* =========================
-       FUNDO DO BALÃO
-       Faixa azul lateral
-    ========================= */
+    /* ================================================
+       FUNDO
+       18px de destaque azul na lateral
+    ================================================= */
 
     background:
         linear-gradient(
             to right,
+
             #0C4E9C 0,
             #0C4E9C 18px,
+
             rgba(255,255,255,.97) 18px,
             rgba(255,255,255,.97) 100%
         ) !important;
 
 
-    /* =========================
-       FORMATO
-       Cantos suavizados + seta baixa
-    ========================= */
+    /* ================================================
+       FORMATO DO BALÃO
+       Cantos suavizados + seta mais baixa
+    ================================================= */
 
     clip-path:
         polygon(
-            /* canto superior esquerdo */
-            18px 0,
-            98% 0,
-            100% 5%,
 
-            /* canto superior direito */
-            100% 95%,
-            98% 100%,
+            /* SUPERIOR ESQUERDO ARREDONDADO */
+            26px 0,
+            22px 1%,
+            19px 4%,
+            18px 9%,
 
-            /* base */
-            18px 100%,
+            /* LATERAL ESQUERDA */
+            18px 72%,
 
-            /* seta mais baixa */
+            /* SETA */
+            18px 78%,
+            0 88%,
             18px 96%,
-            0 87%,
-            18px 78%
+
+            /* INFERIOR ESQUERDO ARREDONDADO */
+            18px 97%,
+            20px 99%,
+            26px 100%,
+
+            /* INFERIOR DIREITO */
+            94% 100%,
+            98% 98%,
+            100% 93%,
+
+            /* SUPERIOR DIREITO */
+            100% 7%,
+            98% 2%,
+            94% 0
         ) !important;
 
     -webkit-clip-path:
         polygon(
-            18px 0,
-            98% 0,
-            100% 5%,
-            100% 95%,
-            98% 100%,
-            18px 100%,
+            26px 0,
+            22px 1%,
+            19px 4%,
+            18px 9%,
+
+            18px 72%,
+
+            18px 78%,
+            0 88%,
             18px 96%,
-            0 87%,
-            18px 78%
+
+            18px 97%,
+            20px 99%,
+            26px 100%,
+
+            94% 100%,
+            98% 98%,
+            100% 93%,
+
+            100% 7%,
+            98% 2%,
+            94% 0
         ) !important;
 
 
-    /* =========================
+    /* ================================================
        ACABAMENTO
-    ========================= */
+    ================================================= */
 
     border:
         1px solid
@@ -5419,15 +5438,13 @@ PONTINHA BAIXA + DESTAQUE AZUL LATERAL
 
     filter:
         drop-shadow(
-            0 10px 14px
+            0 8px 14px
             rgba(0,0,0,.12)
         );
 
-    z-index:
-        59 !important;
+    z-index:59 !important;
 
-    pointer-events:
-        none !important;
+    pointer-events:none !important;
 }
 
 /* =====================================================
