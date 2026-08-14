@@ -5304,85 +5304,67 @@ MONTA DA ESQUERDA PARA A DIREITA
 16. BALÃO DO NEO
 PONTINHA INTEGRADA NO PRÓPRIO BALÃO
 ===================================================== */
-
 .core-login-methods::after{
     content:
         "Olá! 👋 Sou o Neo.\A Esqueceu sua senha?\A Toque no (?) acima e fale com nosso suporte pelo WhatsApp." !important;
-
     position:fixed !important;
-
     left:
         80px !important;
-
     bottom:
         calc(
             94px +
             env(safe-area-inset-bottom)
         ) !important;
-
     width:
         min(
             260px,
             calc(100vw - 94px)
         ) !important;
-
     padding:
         12px
         14px
         12px
         28px !important;
-
     box-sizing:
         border-box !important;
-
     white-space:
         pre-line !important;
-
     color:
         #264152 !important;
-
     font-size:
         12px !important;
-
     font-weight:
         650 !important;
-
     line-height:
         1.45 !important;
-
     text-align:
         left !important;
-
-
+     
     /* =========================
        FUNDO + ÁREA AZUL DA PONTA
     ========================= */
-
     background:
         linear-gradient(
             to right,
             #0C4E9C 0,
-            #0C4E9C 14px,
+            #0C4E9C 24px,
             rgba(255,255,255,.97) 14px,
             rgba(255,255,255,.97) 100%
         ) !important;
-
 
     /* =========================
        FORMATO DO BALÃO
        A ponta faz parte da caixa
     ========================= */
-
     clip-path:
         polygon(
             14px 0,
             100% 0,
             100% 100%,
-            14px 100%,
-
-            14px 72%,
+            10px 100%,
+            10px 72%,
             0 82%,
-            14px 92%
+            10px 92%
         ) !important;
 
     -webkit-clip-path:
@@ -5391,29 +5373,23 @@ PONTINHA INTEGRADA NO PRÓPRIO BALÃO
             100% 0,
             100% 100%,
             14px 100%,
-
             14px 72%,
             0 82%,
             14px 92%
         ) !important;
 
-
     border:
         1px solid
         rgba(12,78,156,.15) !important;
-
     border-radius:
         15px !important;
-
     filter:
         drop-shadow(
             0 10px 14px
             rgba(0,0,0,.12)
         );
-
     z-index:
         59 !important;
-
     pointer-events:
         none !important;
 }
@@ -5422,99 +5398,77 @@ PONTINHA INTEGRADA NO PRÓPRIO BALÃO
 17. TELAS MAIS BAIXAS
 ===================================================== */
 @media(max-height:760px){
-
     .core-login-site img{
         max-width:
             165px !important;
-
         max-height:
             62px !important;
-
         margin-bottom:
             8px !important;
     }
 
-
     .core-login-site::after{
         width:
             calc(100% - 42px) !important;
-
         font-size:
             27px !important;
     }
 
-
     .core-login-methods::before{
         width:
             calc(100% - 42px) !important;
-
         margin-bottom:
             16px !important;
-
         font-size:
             13px !important;
     }
 
-
     .core-login-identity-providers{
         margin-top:
             20px !important;
-
         margin-bottom:
             118px !important;
     }
 
-
     .core-login-info-box::after{
         width:
             84px !important;
-
         height:
             98px !important;
     }
 
-
     .core-login-methods::after{
         left:
             80px !important;
-
         bottom:
             calc(
                 80px +
                 env(safe-area-inset-bottom)
             ) !important;
-
         width:
             min(
                 220px,
                 calc(100vw - 92px)
             ) !important;
-
         padding:
             10px
             12px !important;
-
         font-size:
             10.8px !important;
     }
 
-
     .core-login-identity-providers::before{
         left:
             68px !important;
-
         bottom:
             calc(
                 87px +
                 env(safe-area-inset-bottom)
             ) !important;
-
         border-top-width:
             8px !important;
-
         border-bottom-width:
             8px !important;
-
         border-right-width:
             14px !important;
     }
@@ -5599,7 +5553,6 @@ ion-content:has(.core-login-info-box){
     --overflow:hidden !important;
 }
 
-
 ion-content:has(.core-login-info-box)::part(scroll){
     overflow:hidden !important;
     overscroll-behavior:
@@ -5609,7 +5562,6 @@ ion-content:has(.core-login-info-box)::part(scroll){
     min-height:
         100% !important;
 }
-
 
 ion-content:has(.core-login-info-box)
 .core-login-info-box{
