@@ -4820,136 +4820,131 @@ core-send-message-form ion-button:active{
     opacity:.75 !important;
 }
 
-
 /* =====================================================
 🔐 LOGIN ASCES-UNITA
 MOODLE APP 5.1
 ===================================================== */
 
+
 /* =====================================================
 01. LIMPEZA DO LOGIN NATIVO
 ===================================================== */
+
 .core-login-form,
 .core-login-methods-separator,
 .core-login-sign-up{
     display:none !important;
 }
 
+
 /* =====================================================
 02. BLOCO INSTITUCIONAL
 ===================================================== */
+
 .core-login-info-box{
     position:relative !important;
     width:100% !important;
     margin:0 auto !important;
-    padding:
-        14px
-        0
-        2px !important;
+    padding:14px 0 2px !important;
     text-align:center !important;
 }
 
+
 /* =====================================================
 03. BARRA INSTITUCIONAL
+MONTA DA ESQUERDA PARA A DIREITA
 ===================================================== */
+
 .core-login-info-box::before{
     content:"";
+
     position:absolute !important;
-    top:-16px !important;
+
+    top:-18px !important;
     left:50% !important;
+
     width:100vw !important;
-    margin-left:-50vw !important;
     height:5px !important;
+
+    margin-left:-50vw !important;
+
     background:
         linear-gradient(
             to right,
+
             #1976d2 0%,
             #1976d2 28%,
+
             #1565c0 28%,
             #1565c0 50%,
+
             #0d47a1 50%,
             #0d47a1 65%,
+
             #ff9800 65%,
             #ff9800 82%,
+
             #ff6f00 82%,
             #ff6f00 100%
         ) !important;
+
     transform:scaleX(0);
     transform-origin:left center !important;
+
     animation:
         ascesLoginBarLoad
         .8s
         ease-out
         forwards !important;
+
     pointer-events:none !important;
     z-index:999 !important;
 }
 
+
 /* =====================================================
 04. ÁREA DA LOGO
 ===================================================== */
+
 .core-login-site{
     display:flex !important;
     flex-direction:column !important;
     align-items:center !important;
     justify-content:center !important;
+
     width:100% !important;
     margin:0 !important;
+
     text-align:center !important;
 }
 
-/* =====================================================
-05. LOGO ASCES-UNITA
-===================================================== */
-.core-login-site img{
-    display:block !important;
-    width:auto !important;
-    max-width:
-        255px !important;
-    max-height:
-        88px !important;
-    margin:
-        8px auto
-        10px !important;
-    object-fit:
-        contain !important;
-}
 
 /* =====================================================
-05.1 LOGO COMPACTA
-TESTE — URL DRAFTFILE
+05. LOGO COMPACTA ASCES-UNITA
 ===================================================== */
+
 .core-login-site img{
     content:
         url("https://raw.githubusercontent.com/thiagoalves-asces/mobile-moodle-asces/refs/heads/main/0C4E9C%20(logo%20pequena).png") !important;
+
+    display:block !important;
+
     width:auto !important;
-    max-width:
-        190px !important;
-    max-height:
-        72px !important;
+    max-width:190px !important;
+    max-height:72px !important;
+
     margin:
         12px auto
         14px !important;
-    object-fit:
-        contain !important;
+
+    object-fit:contain !important;
 }
 
-/*
-=====================================================
-QUANDO VOCÊ ME PASSAR A LOGO MENOR,
-podemos substituir a imagem nativa por CSS assim:
-
-.core-login-site img{
-    content:
-        url("URL-DA-LOGO-MENOR-AQUI") !important;
-}
-
-=====================================================
-*/
 
 /* =====================================================
 06. REMOVE NOME E URL ORIGINAIS
 ===================================================== */
+
 .core-login-site h1,
 .core-login-site h2,
 .core-login-site h3,
@@ -4958,79 +4953,112 @@ podemos substituir a imagem nativa por CSS assim:
     display:none !important;
 }
 
+
 /* =====================================================
 07. BRANDING PRINCIPAL
 ===================================================== */
+
 .core-login-site::after{
     content:
         "MOODLE\A ASCES-UNITA" !important;
+
     display:block !important;
+
     width:
         calc(100% - 54px) !important;
+
     max-width:
         385px !important;
+
     margin:
         8px auto
         0 !important;
+
     white-space:
         pre-line !important;
-    color:
-        #0C4E9C !important;
+
+    color:#0C4E9C !important;
+
     font-size:
         32px !important;
+
     font-weight:
         900 !important;
+
     line-height:
         .98 !important;
+
     letter-spacing:
         -.7px !important;
+
     text-align:
         left !important;
 }
 
+
 /* =====================================================
 08. CONTAINER DOS MÉTODOS
 ===================================================== */
+
 .core-login-methods{
     position:relative !important;
+
     width:100% !important;
+
     max-width:
         430px !important;
+
     margin:
         0 auto !important;
+
     padding:0 !important;
+
     box-sizing:
         border-box !important;
 }
 
+
 /* =====================================================
-09. SLOGAN INSTITUCIONAL
+09. SLOGAN
 ===================================================== */
+
 .core-login-methods::before{
     content:
         "Lugar que inspira, aproxima e realiza";
+
     display:block !important;
+
     width:100% !important;
+
     margin:
         10px auto
         18px !important;
-    color:
-        #0C4E9C !important;
+
+    color:#0C4E9C !important;
+
     font-size:
         16px !important;
+
     font-weight:
         800 !important;
+
     line-height:
         1.25 !important;
+
     letter-spacing:
         -.1px !important;
+
     text-align:center !important;
 }
 
+
 /* =====================================================
-10. CARD GOOGLE
+10. CARD GOOGLE — EFEITO VIDRO
 ===================================================== */
+
 .core-login-identity-providers{
+    position:relative !important;
+
     width:
         calc(100% - 24px) !important;
 
@@ -5071,98 +5099,122 @@ podemos substituir a imagem nativa por CSS assim:
         0 14px 34px
         rgba(12,78,156,.13) !important;
 
-    text-align:
-        center !important;
+    text-align:center !important;
 
-    overflow:
-        hidden !important;
+    /*
+    Necessário para não cortar
+    a pontinha do balão.
+    */
+    overflow:visible !important;
 }
+
+
 /* =====================================================
 11. TEXTO DO CARD
 ===================================================== */
+
 .core-login-identity-providers
 .item-heading{
     margin:
         0 0
         15px !important;
+
     padding:0 !important;
+
     color:
         transparent !important;
+
     font-size:
         0 !important;
+
     line-height:
         0 !important;
+
     text-align:center !important;
 }
+
 
 .core-login-identity-providers
 .item-heading::after{
     content:
         "Acesse com sua conta institucional:" !important;
+
     display:block !important;
-    color:
-        #0C4E9C !important;
+
+    color:#0C4E9C !important;
+
     font-size:
         16px !important;
+
     font-weight:
         800 !important;
+
     line-height:
         1.3 !important;
+
     text-align:center !important;
 }
+
 
 /* =====================================================
 12. BOTÃO GOOGLE
 ===================================================== */
+
 .core-oauth-provider{
-    --background:
-        #FFFFFF !important;
-    --background-hover:
-        #F8FBFE !important;
-    --background-focused:
-        #F8FBFE !important;
-    --background-activated:
-        #EEF5FB !important;
-    --color:
-        #212529 !important;
-    --border-color:
-        #C9D8E6 !important;
-    --border-width:
-        1px !important;
-    --border-style:
-        solid !important;
-    --border-radius:
-        14px !important;
+    --background:#FFFFFF !important;
+    --background-hover:#F8FBFE !important;
+    --background-focused:#F8FBFE !important;
+    --background-activated:#EEF5FB !important;
+
+    --color:#212529 !important;
+
+    --border-color:#C9D8E6 !important;
+    --border-width:1px !important;
+    --border-style:solid !important;
+    --border-radius:14px !important;
+
     width:100% !important;
+
     min-height:
         56px !important;
+
     margin:0 !important;
     padding:0 !important;
+
     font-size:
         14px !important;
+
     font-weight:
         700 !important;
+
     line-height:
         1.25 !important;
+
     letter-spacing:
         0 !important;
+
     text-transform:
         none !important;
+
     box-shadow:
         0 6px 18px
         rgba(12,78,156,.09) !important;
 }
 
+
 /* =====================================================
 13. CONTEÚDO DO BOTÃO
 ===================================================== */
+
 .core-oauth-provider ion-label{
-    color:
-        #212529 !important;
+    color:#212529 !important;
+
     font-size:
         14px !important;
+
     font-weight:
         700 !important;
+
     white-space:
         normal !important;
 }
@@ -5171,181 +5223,171 @@ podemos substituir a imagem nativa por CSS assim:
 /* =====================================================
 14. ÍCONE GOOGLE
 ===================================================== */
+
 .core-oauth-provider img{
     width:
         30px !important;
+
     height:
         30px !important;
+
     min-width:
         30px !important;
+
     margin-right:
         10px !important;
+
     object-fit:
         contain !important;
 }
 
-/* =====================================================
-14.1 DESCE O CARD DO GOOGLE
-===================================================== */
-.core-login-identity-providers{
-    margin:
-        32px auto
-        150px !important;
-    width:
-        calc(100% - 24px) !important;
-    max-width:
-        385px !important;
-}
 
 /* =====================================================
 15. NEO
 ===================================================== */
+
 .core-login-info-box::after{
     content:"" !important;
+
     position:fixed !important;
+
     left:
         max(
             8px,
             env(safe-area-inset-left)
         ) !important;
+
     bottom:
         calc(
             8px +
             env(safe-area-inset-bottom)
         ) !important;
+
     width:
         98px !important;
+
     height:
         116px !important;
+
     background-image:
         url("https://raw.githubusercontent.com/thiagoalves-asces/mobile-moodle-asces/main/Ol%C3%A1.svg") !important;
+
     background-repeat:
         no-repeat !important;
+
     background-position:
         center bottom !important;
+
     background-size:
         contain !important;
+
     filter:
         drop-shadow(
             0 9px 12px
             rgba(0,0,0,.22)
         );
+
     animation:
         ascesNeoLoginWave
         3.5s
         ease-in-out
         infinite;
-    pointer-events:
-        none !important;
+
+    pointer-events:none !important;
+
     z-index:
         60 !important;
 }
 
+
 /* =====================================================
 16. BALÃO DO NEO
 ===================================================== */
+
 .core-login-methods::after{
     content:
         "Olá! 👋 Sou o Neo.\A Esqueceu sua senha?\A Toque no (?) acima e fale com nosso suporte pelo WhatsApp." !important;
 
     position:fixed !important;
+
     left:
         94px !important;
+
     bottom:
         calc(
             94px +
             env(safe-area-inset-bottom)
         ) !important;
+
     width:
         min(
             245px,
             calc(100vw - 108px)
         ) !important;
+
     padding:
         12px
         14px !important;
+
     box-sizing:
         border-box !important;
+
     white-space:
         pre-line !important;
-    color:
-        #264152 !important;
+
+    color:#264152 !important;
+
     font-size:
         12px !important;
+
     font-weight:
         650 !important;
+
     line-height:
         1.45 !important;
-    text-align:
-        left !important;
+
+    text-align:left !important;
+
     background:
         rgba(255,255,255,.97) !important;
+
     border:
         1px solid
         rgba(12,78,156,.15) !important;
+
     border-left:
         4px solid
         #0C4E9C !important;
+
     border-radius:
         15px
         15px
         15px
         7px !important;
+
     box-shadow:
         0 10px 26px
         rgba(0,0,0,.12) !important;
+
     z-index:
         59 !important;
+
     pointer-events:
         none !important;
 }
 
 
-
 /* =====================================================
-17. BALÃO — PONTINHA DO BALÃO DO NEO
+17. PONTINHA DO BALÃO
 ===================================================== */
-/* =====================================================
-17. PONTINHA DO BALÃO DO NEO
-===================================================== */
-
-.core-login-methods{
-    position:relative !important;
-}
-
-.core-login-methods .core-login-identity-providers{
-    overflow:visible !important;
-}
-
-.core-login-methods .core-login-identity-providers::after{
-    content:"" !important;
-
-    position:fixed !important;
-
-    left:82px !important;
-
-    bottom:
-        calc(
-            98px +
-            env(safe-area-inset-bottom)
-        ) !important;
-
-    width:18px !important;
-    height:20px !important;/* =====================================================
-17. PONTINHA DO BALÃO DO NEO
-VERSÃO MAIS COMPATÍVEL
-===================================================== */
-
-.core-login-identity-providers{
-    overflow:visible !important;
-}
 
 .core-login-identity-providers::before{
     content:"" !important;
 
     position:fixed !important;
 
-    left:82px !important;
+    left:
+        80px !important;
 
     bottom:
         calc(
@@ -5357,13 +5399,16 @@ VERSÃO MAIS COMPATÍVEL
     height:0 !important;
 
     border-top:
-        10px solid transparent !important;
+        10px solid
+        transparent !important;
 
     border-bottom:
-        10px solid transparent !important;
+        10px solid
+        transparent !important;
 
     border-right:
-        16px solid #0C4E9C !important;
+        16px solid
+        #0C4E9C !important;
 
     z-index:
         61 !important;
@@ -5371,79 +5416,124 @@ VERSÃO MAIS COMPATÍVEL
     pointer-events:
         none !important;
 }
+
+
 /* =====================================================
 18. TELAS MAIS BAIXAS
 ===================================================== */
+
 @media(max-height:760px){
+
     .core-login-site img{
         max-width:
             165px !important;
+
         max-height:
             62px !important;
+
         margin-bottom:
             8px !important;
     }
 
+
     .core-login-site::after{
         width:
             calc(100% - 42px) !important;
+
         font-size:
             27px !important;
     }
 
+
     .core-login-methods::before{
         width:
             calc(100% - 42px) !important;
+
         margin-bottom:
             16px !important;
+
         font-size:
             13px !important;
     }
 
+
     .core-login-identity-providers{
         margin-top:
             20px !important;
+
         margin-bottom:
             118px !important;
     }
 
+
     .core-login-info-box::after{
         width:
             84px !important;
+
         height:
             98px !important;
     }
 
+
     .core-login-methods::after{
         left:
             80px !important;
+
         bottom:
             calc(
                 80px +
                 env(safe-area-inset-bottom)
             ) !important;
+
         width:
             min(
                 220px,
                 calc(100vw - 92px)
             ) !important;
+
         padding:
             10px
             12px !important;
+
         font-size:
             10.8px !important;
     }
+
+
+    .core-login-identity-providers::before{
+        left:
+            68px !important;
+
+        bottom:
+            calc(
+                87px +
+                env(safe-area-inset-bottom)
+            ) !important;
+
+        border-top-width:
+            8px !important;
+
+        border-bottom-width:
+            8px !important;
+
+        border-right-width:
+            14px !important;
+    }
 }
+
 
 /* =====================================================
 19. REDUÇÃO DE MOVIMENTO
 ===================================================== */
+
 @media(prefers-reduced-motion:reduce){
+
     .core-login-info-box::before,
     .core-login-info-box::after{
         animation:
             none !important;
     }
+
 
     .core-login-info-box::before{
         transform:
@@ -5451,45 +5541,55 @@ VERSÃO MAIS COMPATÍVEL
     }
 }
 
+
 /* =====================================================
 20. ANIMAÇÕES
 ===================================================== */
+
 @keyframes ascesLoginBarLoad{
+
     from{
         transform:
             scaleX(0);
     }
+
     to{
         transform:
             scaleX(1);
     }
 }
 
+
 @keyframes ascesNeoLoginWave{
+
     0%,
     40%,
     100%{
         transform:
             rotate(0deg);
     }
+
     10%{
         transform:
             rotate(-3deg);
     }
+
     20%{
         transform:
             rotate(3deg);
     }
+
     30%{
         transform:
             rotate(-3deg);
     }
 }
 
+
 /* =====================================================
 21. BACKGROUND DO LOGIN
-IMAGEM PURA — ANCORADA À DIREITA
 ===================================================== */
+
 ion-content:has(.core-login-info-box){
     --background:
         url("https://moodle.asces.edu.br/pluginfile.php/1/theme_moove/loginbgimg/1786656082/Backgroud_Moodle_5.1.png")
@@ -5497,10 +5597,11 @@ ion-content:has(.core-login-info-box){
         no-repeat !important;
 }
 
+
 /* =====================================================
-SAFE AREA INFERIOR DO APP
-FUNDO INSTITUCIONAL
+22. SAFE AREA INFERIOR
 ===================================================== */
+
 html,
 body,
 ion-app{
@@ -5510,7 +5611,7 @@ ion-app{
 
 
 /* =====================================================
-21. LOGIN CONGELADO
+23. LOGIN CONGELADO
 SEM PUXAR / SEM CORTAR O CARD
 ===================================================== */
 
@@ -5518,17 +5619,26 @@ ion-content:has(.core-login-info-box){
     --overflow:hidden !important;
 }
 
+
 ion-content:has(.core-login-info-box)::part(scroll){
     overflow:hidden !important;
-    overscroll-behavior:none !important;
 
-    height:100% !important;
-    min-height:100% !important;
+    overscroll-behavior:
+        none !important;
+
+    height:
+        100% !important;
+
+    min-height:
+        100% !important;
 }
 
-/* NÃO força mais min-height na caixa do login */
+
 ion-content:has(.core-login-info-box)
 .core-login-info-box{
-    min-height:0 !important;
-    height:auto !important;
+    min-height:
+        0 !important;
+
+    height:
+        auto !important;
 }
