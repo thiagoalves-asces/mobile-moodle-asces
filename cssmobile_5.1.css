@@ -5331,29 +5331,46 @@ podemos substituir a imagem nativa por CSS assim:
         ) !important;
 
     width:18px !important;
-    height:20px !important;
+    height:20px !important;/* =====================================================
+17. PONTINHA DO BALÃO DO NEO
+VERSÃO MAIS COMPATÍVEL
+===================================================== */
 
-    background:#0C4E9C !important;
-
-    clip-path:
-        polygon(
-            100% 0,
-            100% 100%,
-            0 50%
-        ) !important;
-
-    -webkit-clip-path:
-        polygon(
-            100% 0,
-            100% 100%,
-            0 50%
-        ) !important;
-
-    z-index:61 !important;
-
-    pointer-events:none !important;
+.core-login-identity-providers{
+    overflow:visible !important;
 }
 
+.core-login-identity-providers::before{
+    content:"" !important;
+
+    position:fixed !important;
+
+    left:82px !important;
+
+    bottom:
+        calc(
+            102px +
+            env(safe-area-inset-bottom)
+        ) !important;
+
+    width:0 !important;
+    height:0 !important;
+
+    border-top:
+        10px solid transparent !important;
+
+    border-bottom:
+        10px solid transparent !important;
+
+    border-right:
+        16px solid #0C4E9C !important;
+
+    z-index:
+        61 !important;
+
+    pointer-events:
+        none !important;
+}
 /* =====================================================
 18. TELAS MAIS BAIXAS
 ===================================================== */
