@@ -5302,6 +5302,7 @@ MONTA DA ESQUERDA PARA A DIREITA
 
 /* =====================================================
 16. BALÃO DO NEO
+PONTINHA INTEGRADA NO PRÓPRIO BALÃO
 ===================================================== */
 
 .core-login-methods::after{
@@ -5311,7 +5312,7 @@ MONTA DA ESQUERDA PARA A DIREITA
     position:fixed !important;
 
     left:
-        94px !important;
+        80px !important;
 
     bottom:
         calc(
@@ -5321,13 +5322,15 @@ MONTA DA ESQUERDA PARA A DIREITA
 
     width:
         min(
-            245px,
-            calc(100vw - 108px)
+            260px,
+            calc(100vw - 94px)
         ) !important;
 
     padding:
         12px
-        14px !important;
+        14px
+        12px
+        28px !important;
 
     box-sizing:
         border-box !important;
@@ -5335,7 +5338,8 @@ MONTA DA ESQUERDA PARA A DIREITA
     white-space:
         pre-line !important;
 
-    color:#264152 !important;
+    color:
+        #264152 !important;
 
     font-size:
         12px !important;
@@ -5346,28 +5350,66 @@ MONTA DA ESQUERDA PARA A DIREITA
     line-height:
         1.45 !important;
 
-    text-align:left !important;
+    text-align:
+        left !important;
+
+
+    /* =========================
+       FUNDO + ÁREA AZUL DA PONTA
+    ========================= */
 
     background:
-        rgba(255,255,255,.97) !important;
+        linear-gradient(
+            to right,
+            #0C4E9C 0,
+            #0C4E9C 14px,
+            rgba(255,255,255,.97) 14px,
+            rgba(255,255,255,.97) 100%
+        ) !important;
+
+
+    /* =========================
+       FORMATO DO BALÃO
+       A ponta faz parte da caixa
+    ========================= */
+
+    clip-path:
+        polygon(
+            14px 0,
+            100% 0,
+            100% 100%,
+            14px 100%,
+
+            14px 72%,
+            0 82%,
+            14px 92%
+        ) !important;
+
+    -webkit-clip-path:
+        polygon(
+            14px 0,
+            100% 0,
+            100% 100%,
+            14px 100%,
+
+            14px 72%,
+            0 82%,
+            14px 92%
+        ) !important;
+
 
     border:
         1px solid
         rgba(12,78,156,.15) !important;
 
-    border-left:
-        4px solid
-        #0C4E9C !important;
-
     border-radius:
-        15px
-        15px
-        15px
-        7px !important;
+        15px !important;
 
-    box-shadow:
-        0 10px 26px
-        rgba(0,0,0,.12) !important;
+    filter:
+        drop-shadow(
+            0 10px 14px
+            rgba(0,0,0,.12)
+        );
 
     z-index:
         59 !important;
@@ -5376,52 +5418,9 @@ MONTA DA ESQUERDA PARA A DIREITA
         none !important;
 }
 
-
 /* =====================================================
-17. PONTINHA DO BALÃO
+17. TELAS MAIS BAIXAS
 ===================================================== */
-
-.core-login-identity-providers::before{
-    content:"" !important;
-
-    position:fixed !important;
-
-    left:
-        80px !important;
-
-    bottom:
-        calc(
-            102px +
-            env(safe-area-inset-bottom)
-        ) !important;
-
-    width:0 !important;
-    height:0 !important;
-
-    border-top:
-        10px solid
-        transparent !important;
-
-    border-bottom:
-        10px solid
-        transparent !important;
-
-    border-right:
-        16px solid
-        #0C4E9C !important;
-
-    z-index:
-        61 !important;
-
-    pointer-events:
-        none !important;
-}
-
-
-/* =====================================================
-18. TELAS MAIS BAIXAS
-===================================================== */
-
 @media(max-height:760px){
 
     .core-login-site img{
@@ -5521,19 +5520,15 @@ MONTA DA ESQUERDA PARA A DIREITA
     }
 }
 
-
 /* =====================================================
-19. REDUÇÃO DE MOVIMENTO
+18. REDUÇÃO DE MOVIMENTO
 ===================================================== */
-
 @media(prefers-reduced-motion:reduce){
-
     .core-login-info-box::before,
     .core-login-info-box::after{
         animation:
             none !important;
     }
-
 
     .core-login-info-box::before{
         transform:
@@ -5541,55 +5536,44 @@ MONTA DA ESQUERDA PARA A DIREITA
     }
 }
 
-
 /* =====================================================
-20. ANIMAÇÕES
+19. ANIMAÇÕES
 ===================================================== */
-
 @keyframes ascesLoginBarLoad{
-
     from{
         transform:
             scaleX(0);
     }
-
     to{
         transform:
             scaleX(1);
     }
 }
 
-
 @keyframes ascesNeoLoginWave{
-
     0%,
     40%,
     100%{
         transform:
             rotate(0deg);
     }
-
     10%{
         transform:
             rotate(-3deg);
     }
-
     20%{
         transform:
             rotate(3deg);
     }
-
     30%{
         transform:
             rotate(-3deg);
     }
 }
 
-
 /* =====================================================
-21. BACKGROUND DO LOGIN
+20. BACKGROUND DO LOGIN
 ===================================================== */
-
 ion-content:has(.core-login-info-box){
     --background:
         url("https://moodle.asces.edu.br/pluginfile.php/1/theme_moove/loginbgimg/1786656082/Backgroud_Moodle_5.1.png")
@@ -5597,11 +5581,9 @@ ion-content:has(.core-login-info-box){
         no-repeat !important;
 }
 
-
 /* =====================================================
-22. SAFE AREA INFERIOR
+21. SAFE AREA INFERIOR
 ===================================================== */
-
 html,
 body,
 ion-app{
@@ -5609,12 +5591,10 @@ ion-app{
         #0C4E9C !important;
 }
 
-
 /* =====================================================
-23. LOGIN CONGELADO
+22. LOGIN CONGELADO
 SEM PUXAR / SEM CORTAR O CARD
 ===================================================== */
-
 ion-content:has(.core-login-info-box){
     --overflow:hidden !important;
 }
@@ -5622,13 +5602,10 @@ ion-content:has(.core-login-info-box){
 
 ion-content:has(.core-login-info-box)::part(scroll){
     overflow:hidden !important;
-
     overscroll-behavior:
         none !important;
-
     height:
         100% !important;
-
     min-height:
         100% !important;
 }
@@ -5638,7 +5615,6 @@ ion-content:has(.core-login-info-box)
 .core-login-info-box{
     min-height:
         0 !important;
-
     height:
         auto !important;
 }
