@@ -5975,3 +5975,20 @@ ion-app{
             13px !important;
     }
 }
+
+/* =====================================================
+🧪 TESTE — TELA RECONectar
+===================================================== */
+
+/* some "Mais formas de autenticação" */
+page-core-login-reconnect
+.core-login-methods
+> ion-accordion-group{
+    display:none !important;
+}
+
+/* marca o bloco principal só para confirmar o seletor */
+page-core-login-reconnect
+.core-login-info-box{
+    outline:4px solid lime !important;
+}
