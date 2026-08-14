@@ -5328,13 +5328,9 @@ ARREDONDADO + FAIXA AZUL 6PX + SETA MAIS DELICADA
         14px
         12px
         24px !important;
-
     box-sizing:border-box !important;
-
     white-space:pre-line !important;
-
     color:#264152 !important;
-
     font-size:12px !important;
     font-weight:650 !important;
     line-height:1.45 !important;
@@ -5345,15 +5341,15 @@ ARREDONDADO + FAIXA AZUL 6PX + SETA MAIS DELICADA
         linear-gradient(
             to right,
             #0C4E9C 0,
-            #0C4E9C 6px,
-            rgba(255,255,255,.97) 6px,
+            #0C4E9C 8px,
+            rgba(255,255,255,.97) 8px,
             rgba(255,255,255,.97) 100%
         ) !important;
 
     /* borda fina */
-    border:
-        1px solid
-        rgba(12,78,156,.14) !important;
+   border:
+    1px solid
+    rgba(255,255,255,.75) !important;
 
     /* cantos arredondados iguais */
     border-radius:
@@ -5367,9 +5363,9 @@ ARREDONDADO + FAIXA AZUL 6PX + SETA MAIS DELICADA
             100% 100%,
             18px 100%,
             6px 100%,
-            6px 93%,
+            6px 92%,
             0 87%,
-            6px 81%,
+            6px 82%,
             6px 18%,
             10px 6%,
             18px 0
@@ -5382,20 +5378,18 @@ ARREDONDADO + FAIXA AZUL 6PX + SETA MAIS DELICADA
             100% 100%,
             18px 100%,
             6px 100%,
-            6px 93%,
+            6px 92%,
             0 87%,
-            6px 81%,
+            6px 82%,
             6px 18%,
             10px 6%,
             18px 0
         ) !important;
-
     filter:
         drop-shadow(
             0 8px 14px
             rgba(0,0,0,.12)
         );
-
     z-index:59 !important;
     pointer-events:none !important;
 }
