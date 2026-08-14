@@ -5301,124 +5301,101 @@ MONTA DA ESQUERDA PARA A DIREITA
 
 /* =====================================================
 16. BALÃO DO NEO
-ARREDONDADO + FAIXA AZUL + SETA BAIXA
+ARREDONDADO + FAIXA AZUL 6PX + SETA MAIS DELICADA
 ===================================================== */
 .core-login-methods::after{
     content:
         "Olá! 👋 Sou o Neo.\A Esqueceu sua senha?\A Toque no (?) acima e fale com nosso suporte pelo WhatsApp." !important;
+
     position:fixed !important;
-    left:80px !important;
+
+    left:82px !important;
+
     bottom:
         calc(
             94px +
             env(safe-area-inset-bottom)
         ) !important;
+
     width:
         min(
-            260px,
-            calc(100vw - 94px)
+            258px,
+            calc(100vw - 96px)
         ) !important;
+
     padding:
         12px
         14px
         12px
-        31px !important;
+        24px !important;
+
     box-sizing:border-box !important;
+
     white-space:pre-line !important;
+
     color:#264152 !important;
+
     font-size:12px !important;
     font-weight:650 !important;
     line-height:1.45 !important;
     text-align:left !important;
 
-    /* ================================================
-       FUNDO
-       18px de destaque azul na lateral
-    ================================================= */
+    /* faixa azul só na esquerda */
     background:
         linear-gradient(
             to right,
             #0C4E9C 0,
-            #0C4E9C 22px,
-            rgba(255,255,255,.97) 18px,
+            #0C4E9C 6px,
+            rgba(255,255,255,.97) 6px,
             rgba(255,255,255,.97) 100%
         ) !important;
 
-    /* ================================================
-       FORMATO DO BALÃO
-       Cantos suavizados + seta mais baixa
-    ================================================= */
+    /* borda fina */
+    border:
+        1px solid
+        rgba(12,78,156,.14) !important;
+
+    /* cantos arredondados iguais */
+    border-radius:
+        18px !important;
+
+    /* forma do balão com seta mais baixa e mais estreita */
     clip-path:
         polygon(
-            /* SUPERIOR ESQUERDO ARREDONDADO */
-            26px 0,
-            22px 1%,
-            19px 4%,
-            18px 9%,
-
-            /* LATERAL ESQUERDA */
-            18px 72%,
-
-            /* SETA */
-            18px 78%,
-            0 88%,
-            18px 96%,
-
-            /* INFERIOR ESQUERDO ARREDONDADO */
-            18px 97%,
-            20px 99%,
-            26px 100%,
-
-            /* INFERIOR DIREITO */
-            94% 100%,
-            98% 98%,
-            100% 93%,
-
-            /* SUPERIOR DIREITO */
-            100% 7%,
-            98% 2%,
-            94% 0
+            18px 0,
+            100% 0,
+            100% 100%,
+            18px 100%,
+            6px 100%,
+            6px 93%,
+            0 87%,
+            6px 81%,
+            6px 18%,
+            10px 6%,
+            18px 0
         ) !important;
 
     -webkit-clip-path:
         polygon(
-            26px 0,
-            22px 1%,
-            19px 4%,
-            18px 9%,
-
-            18px 72%,
-
-            18px 78%,
-            0 88%,
-            18px 96%,
-
-            18px 97%,
-            20px 99%,
-            26px 100%,
-
-            94% 100%,
-            98% 98%,
-            100% 93%,
-
-            100% 7%,
-            98% 2%,
-            94% 0
+            18px 0,
+            100% 0,
+            100% 100%,
+            18px 100%,
+            6px 100%,
+            6px 93%,
+            0 87%,
+            6px 81%,
+            6px 18%,
+            10px 6%,
+            18px 0
         ) !important;
 
-    /* ================================================
-       ACABAMENTO
-    ================================================= */
-    border:
-        3px solid
-        rgba(12,78,156,.18) !important;
-    border-radius:
-        18px !important;
     filter:
         drop-shadow(
             0 8px 14px
             rgba(0,0,0,.12)
         );
+
     z-index:59 !important;
     pointer-events:none !important;
 }
