@@ -5302,96 +5302,130 @@ MONTA DA ESQUERDA PARA A DIREITA
 
 /* =====================================================
 16. BALÃO DO NEO
-PONTINHA INTEGRADA NO PRÓPRIO BALÃO
+PONTINHA BAIXA + DESTAQUE AZUL LATERAL
 ===================================================== */
+
 .core-login-methods::after{
     content:
         "Olá! 👋 Sou o Neo.\A Esqueceu sua senha?\A Toque no (?) acima e fale com nosso suporte pelo WhatsApp." !important;
+
     position:fixed !important;
-    left:
-        80px !important;
+
+    left:80px !important;
+
     bottom:
         calc(
             94px +
             env(safe-area-inset-bottom)
         ) !important;
+
     width:
         min(
             260px,
             calc(100vw - 94px)
         ) !important;
+
     padding:
         12px
         14px
         12px
-        28px !important;
+        30px !important;
+
     box-sizing:
         border-box !important;
+
     white-space:
         pre-line !important;
-    color:
-        #264152 !important;
+
+    color:#264152 !important;
+
     font-size:
         12px !important;
+
     font-weight:
         650 !important;
+
     line-height:
         1.45 !important;
+
     text-align:
         left !important;
-     
+
+
     /* =========================
-       FUNDO + ÁREA AZUL DA PONTA
+       FUNDO DO BALÃO
+       Faixa azul lateral
     ========================= */
+
     background:
         linear-gradient(
             to right,
             #0C4E9C 0,
             #0C4E9C 18px,
-              border-radius:
-        15px !important;
-            rgba(255,255,255,.97) 14px,
+            rgba(255,255,255,.97) 18px,
             rgba(255,255,255,.97) 100%
         ) !important;
 
+
     /* =========================
-       FORMATO DO BALÃO
-       A ponta faz parte da caixa
+       FORMATO
+       Cantos suavizados + seta baixa
     ========================= */
+
     clip-path:
         polygon(
-            14px 0,
-            100% 0,
-            100% 100%,
-            10px 100%,
-            10px 78%,
-            0 88%,
-            10px 98%
+            /* canto superior esquerdo */
+            18px 0,
+            98% 0,
+            100% 5%,
+
+            /* canto superior direito */
+            100% 95%,
+            98% 100%,
+
+            /* base */
+            18px 100%,
+
+            /* seta mais baixa */
+            18px 96%,
+            0 87%,
+            18px 78%
         ) !important;
 
     -webkit-clip-path:
         polygon(
-            14px 0,
-            100% 0,
-            100% 100%,
-            14px 100%,
-            14px 78%,
-            0 88%,
-            14px 98%
+            18px 0,
+            98% 0,
+            100% 5%,
+            100% 95%,
+            98% 100%,
+            18px 100%,
+            18px 96%,
+            0 87%,
+            18px 78%
         ) !important;
+
+
+    /* =========================
+       ACABAMENTO
+    ========================= */
 
     border:
         1px solid
-        rgba(12,78,156,.15) !important;
+        rgba(12,78,156,.18) !important;
+
     border-radius:
-        15px !important;
+        18px !important;
+
     filter:
         drop-shadow(
             0 10px 14px
             rgba(0,0,0,.12)
         );
+
     z-index:
         59 !important;
+
     pointer-events:
         none !important;
 }
