@@ -5347,7 +5347,9 @@ PONTINHA INTEGRADA NO PRÓPRIO BALÃO
         linear-gradient(
             to right,
             #0C4E9C 0,
-            #0C4E9C 24px,
+            #0C4E9C 18px,
+              border-radius:
+        15px !important;
             rgba(255,255,255,.97) 14px,
             rgba(255,255,255,.97) 100%
         ) !important;
