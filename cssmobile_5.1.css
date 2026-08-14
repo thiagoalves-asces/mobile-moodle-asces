@@ -5566,3 +5566,412 @@ ion-content:has(.core-login-info-box)
     height:
         auto !important;
 }
+
+/* =====================================================
+🔄 RECONEXÃO ASCES-UNITA
+MOODLE APP
+===================================================== */
+
+
+/* =====================================================
+01. BACKGROUND
+MESMO LOGIN INSTITUCIONAL
+===================================================== */
+
+ion-content:has(.core-login-user){
+    --background:
+        url("https://moodle.asces.edu.br/pluginfile.php/1/theme_moove/loginbgimg/1786656082/Backgroud_Moodle_5.1.png")
+        right center / cover
+        no-repeat !important;
+
+    --overflow:hidden !important;
+}
+
+
+/* =====================================================
+02. CONTEÚDO CENTRAL
+===================================================== */
+
+ion-content:has(.core-login-user)
+.list-item-limited-width{
+    width:100% !important;
+
+    max-width:
+        430px !important;
+
+    margin:
+        0 auto !important;
+
+    padding:
+        20px 12px
+        30px !important;
+
+    box-sizing:
+        border-box !important;
+}
+
+
+/* =====================================================
+03. BLOCO SITE + USUÁRIO
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-info-box{
+    width:
+        calc(100% - 12px) !important;
+
+    margin:
+        10px auto
+        18px !important;
+
+    padding:
+        20px
+        18px !important;
+
+    box-sizing:
+        border-box !important;
+
+    background:
+        rgba(255,255,255,.58) !important;
+
+    backdrop-filter:
+        blur(18px)
+        saturate(135%) !important;
+
+    -webkit-backdrop-filter:
+        blur(18px)
+        saturate(135%) !important;
+
+    border:
+        1px solid
+        rgba(255,255,255,.74) !important;
+
+    border-radius:
+        22px !important;
+
+    box-shadow:
+        0 14px 34px
+        rgba(12,78,156,.12) !important;
+}
+
+
+/* =====================================================
+04. NÃO REPETE O BRANDING CRIADO NO LOGIN
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-site::after{
+    content:none !important;
+}
+
+
+/* =====================================================
+05. LOGO COMPACTA
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-site img{
+    content:
+        url("https://raw.githubusercontent.com/thiagoalves-asces/mobile-moodle-asces/refs/heads/main/0C4E9C%20(logo%20pequena).png") !important;
+
+    display:block !important;
+
+    width:auto !important;
+
+    max-width:
+        90px !important;
+
+    max-height:
+        72px !important;
+
+    margin:
+        0 auto
+        8px !important;
+
+    object-fit:
+        contain !important;
+}
+
+
+/* =====================================================
+06. URL DO SITE
+DISCRETA
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-siteurl{
+    display:block !important;
+
+    margin:
+        5px auto
+        16px !important;
+
+    color:
+        #64748B !important;
+
+    font-size:
+        12px !important;
+
+    font-weight:
+        600 !important;
+
+    text-align:
+        center !important;
+
+    opacity:
+        .8 !important;
+}
+
+
+/* =====================================================
+07. USUÁRIO
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-user{
+    display:flex !important;
+
+    flex-direction:
+        column !important;
+
+    align-items:
+        center !important;
+
+    justify-content:
+        center !important;
+
+    margin:
+        6px auto
+        0 !important;
+
+    text-align:
+        center !important;
+}
+
+
+/* =====================================================
+08. AVATAR
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-user
+core-user-avatar{
+    display:block !important;
+
+    margin:
+        0 auto
+        10px !important;
+}
+
+
+/* =====================================================
+09. NOME DO USUÁRIO
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-fullname{
+    margin:
+        8px 0
+        0 !important;
+
+    color:
+        #0C4E9C !important;
+
+    font-size:
+        17px !important;
+
+    font-weight:
+        800 !important;
+
+    line-height:
+        1.25 !important;
+
+    text-align:
+        center !important;
+}
+
+
+/* =====================================================
+10. ÁREA DO LOGIN
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-methods{
+    width:
+        calc(100% - 12px) !important;
+
+    max-width:
+        400px !important;
+
+    margin:
+        0 auto !important;
+
+    padding:
+        16px !important;
+
+    box-sizing:
+        border-box !important;
+
+    background:
+        rgba(255,255,255,.58) !important;
+
+    backdrop-filter:
+        blur(18px)
+        saturate(135%) !important;
+
+    -webkit-backdrop-filter:
+        blur(18px)
+        saturate(135%) !important;
+
+    border:
+        1px solid
+        rgba(255,255,255,.74) !important;
+
+    border-radius:
+        20px !important;
+
+    box-shadow:
+        0 12px 30px
+        rgba(12,78,156,.11) !important;
+}
+
+
+/* =====================================================
+11. REMOVE SLOGAN E BALÃO DO LOGIN ORIGINAL
+NESTA TELA
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-methods::before,
+ion-content:has(.core-login-user)
+.core-login-methods::after{
+    content:none !important;
+    display:none !important;
+}
+
+
+/* =====================================================
+12. GOOGLE
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-oauth-provider{
+    --background:#FFFFFF !important;
+
+    --background-hover:#F8FBFE !important;
+    --background-focused:#F8FBFE !important;
+    --background-activated:#EEF5FB !important;
+
+    --color:#212529 !important;
+
+    --border-color:#C9D8E6 !important;
+    --border-width:1px !important;
+    --border-style:solid !important;
+    --border-radius:14px !important;
+
+    width:
+        100% !important;
+
+    min-height:
+        56px !important;
+
+    margin:
+        0 !important;
+
+    box-shadow:
+        0 6px 18px
+        rgba(12,78,156,.08) !important;
+
+    font-size:
+        14px !important;
+
+    font-weight:
+        700 !important;
+
+    text-transform:
+        none !important;
+}
+
+
+/* =====================================================
+13. ESCONDE "MAIS FORMAS DE AUTENTICAÇÃO"
+SELETOR CONFIRMADO NO TEMPLATE DE RECONEXÃO
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-methods
+> ion-accordion-group{
+    display:none !important;
+}
+
+
+/* =====================================================
+14. NÃO MOSTRA FORMULÁRIO USUÁRIO/SENHA
+SE FOR RENDERIZADO
+===================================================== */
+
+ion-content:has(.core-login-user)
+.core-login-form{
+    display:none !important;
+}
+
+
+/* =====================================================
+15. SAFE AREA INFERIOR
+===================================================== */
+
+html,
+body,
+ion-app{
+    background:
+        #0C4E9C !important;
+}
+
+
+/* =====================================================
+16. TELAS MAIS BAIXAS
+===================================================== */
+
+@media(max-height:760px){
+
+    ion-content:has(.core-login-user)
+    .list-item-limited-width{
+        padding-top:
+            8px !important;
+    }
+
+
+    ion-content:has(.core-login-user)
+    .core-login-info-box{
+        padding:
+            14px
+            16px !important;
+
+        margin-bottom:
+            12px !important;
+    }
+
+
+    ion-content:has(.core-login-user)
+    .core-login-site img{
+        max-width:
+            72px !important;
+
+        max-height:
+            58px !important;
+    }
+
+
+    ion-content:has(.core-login-user)
+    .core-login-fullname{
+        font-size:
+            15px !important;
+    }
+
+
+    ion-content:has(.core-login-user)
+    .core-login-methods{
+        padding:
+            13px !important;
+    }
+}
