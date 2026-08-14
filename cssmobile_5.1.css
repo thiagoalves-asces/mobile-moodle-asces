@@ -5992,3 +5992,13 @@ page-core-login-reconnect
 .core-login-info-box{
     outline:4px solid lime !important;
 }
+
+
+/* =====================================================
+TESTE — ESCONDE O ACCORDION INTEIRO
+DA TELA DE RECONEXÃO
+===================================================== */
+
+.core-login-methods ion-accordion-group{
+    display:none !important;
+}
