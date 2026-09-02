@@ -4294,69 +4294,94 @@ Acessar / Voltar do Web.
 }
 
 
+/* =====================================================
+APP — MONITORIA / EXTENSÃO
+HEADER COM BOTÃO
+===================================================== */
+.asces-banner.asces-extensao-recurso
+.asces-banner-header{
+    display:flex !important;
+
+    flex-direction:row !important;
+
+    align-items:center !important;
+
+    justify-content:space-between !important;
+
+    gap:12px !important;
+
+    width:100% !important;
+
+    min-width:0 !important;
+}
+
+/* Área esquerda: ícone + título */
+.asces-banner.asces-extensao-recurso
+.asces-banner-left{
+    display:flex !important;
+
+    align-items:center !important;
+
+    gap:10px !important;
+
+    flex:1 1 auto !important;
+
+    min-width:0 !important;
+}
+
 
 /* =====================================================
-APP — BOTÃO MONITORIA / EXTENSÃO / ESPECIAIS
-VERSÃO FINAL
+BOTÃO — MESMO ASPECTO DO CARROSSEL
 ===================================================== */
+.asces-banner.asces-extensao-recurso
 .asces-extensao-button{
-     display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:40px;
+    display:inline-flex !important;
+
+    align-items:center !important;
+    justify-content:center !important;
+
+    flex:0 0 auto !important;
+
+    min-height:40px !important;
+
+    margin:0 !important;
+
     padding:
         9px
-        17px;
+        17px !important;
+
     border:
         1px solid
-        rgba(255,255,255,.32);
+        rgba(255,255,255,.32) !important;
+
     border-radius:
-        30px;
+        30px !important;
+
     background:
-        rgba(255,255,255,.16);
+        rgba(255,255,255,.16) !important;
+
     color:#fff !important;
+
+    text-decoration:none !important;
+
     font-size:
-        12px;
+        12px !important;
+
     font-weight:
-        700;
+        700 !important;
+
+    line-height:
+        1 !important;
+
+    white-space:
+        nowrap !important;
+
     backdrop-filter:
-        blur(8px);
-}
+        blur(8px) !important;
 
-/* =====================================================
-ÍCONES
-===================================================== */
-.asces-extensao-button svg{
-    width:18px !important;
-    height:18px !important;
-    flex:0 0 18px !important;
-    fill:none !important;
-    stroke:#FFFFFF !important;
-    color:#FFFFFF !important;
-    opacity:.96 !important;
-}
+    -webkit-backdrop-filter:
+        blur(8px) !important;
 
-/* =====================================================
-TOQUE / PRESS
-===================================================== */
-.asces-extensao-button:active{
-    transform:
-        scale(.96) !important;
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,.30) 0%,
-            rgba(255,255,255,.19) 100%
-        ) !important;
-    opacity:.94 !important;
-}
-
-/* =====================================================
-ESTADO DESABILITADO
-===================================================== */
-.asces-extensao-button[aria-disabled="true"]{
-    opacity:.48 !important;
-    pointer-events:none !important;
     box-shadow:none !important;
 }
 
@@ -4372,6 +4397,7 @@ ESTADO DESABILITADO
 
     max-width:100%;
 }
+
 
 
 /* =====================================================
