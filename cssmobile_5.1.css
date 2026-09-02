@@ -4294,6 +4294,39 @@ Acessar / Voltar do Web.
 }
 
 
+
+/* =====================================================
+Extra - BOTÃO MONITORIA/EXTENSÃO/ESPECIAIS (teste)
+===================================================== */
+
+.asces-extensao-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 20px;
+    border-radius:28px;
+    background:
+    rgba(255,255,255,.16);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:
+    1px solid rgba(255,255,255,.28);
+    color:#fff !important;
+    text-decoration:none !important;
+    font-size:.95rem;
+    font-weight:500;
+    line-height:1;
+    box-shadow:
+    0 6px 18px rgba(0,0,0,.16),
+    inset 0 1px 0 rgba(255,255,255,.18);
+    transition:.2s ease;
+}
+
+.asces-extensao-button{
+        padding:9px 15px;
+        font-size:.85rem;
+    }
+
 /* =====================================================
 06.12 SEGURANÇA DE LARGURA
 ===================================================== */
