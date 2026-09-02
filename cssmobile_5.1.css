@@ -4299,139 +4299,65 @@ Acessar / Voltar do Web.
 APP — BOTÃO MONITORIA / EXTENSÃO / ESPECIAIS
 VERSÃO FINAL
 ===================================================== */
-
 .asces-extensao-button{
-    display:inline-flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    min-height:40px !important;
-
-    padding:9px 16px !important;
-
-    border-radius:22px !important;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,.23) 0%,
-            rgba(255,255,255,.14) 100%
-        ) !important;
-
+     display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:40px;
+    padding:
+        9px
+        17px;
     border:
-        1px solid rgba(255,255,255,.30) !important;
-
-    color:#FFFFFF !important;
-
-    text-decoration:none !important;
-
-    font-size:.88rem !important;
-    font-weight:600 !important;
-    line-height:1 !important;
-
-    gap:8px !important;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,.14),
-        inset 0 1px 0 rgba(255,255,255,.20) !important;
-
-    -webkit-backdrop-filter:
-        blur(6px) !important;
-
+        1px solid
+        rgba(255,255,255,.32);
+    border-radius:
+        30px;
+    background:
+        rgba(255,255,255,.16);
+    color:#fff !important;
+    font-size:
+        12px;
+    font-weight:
+        700;
     backdrop-filter:
-        blur(6px) !important;
-
-    transition:
-        transform .16s ease,
-        background .16s ease,
-        opacity .16s ease !important;
-
-    -webkit-tap-highlight-color:
-        transparent !important;
+        blur(8px);
 }
-
 
 /* =====================================================
 ÍCONES
 ===================================================== */
-
 .asces-extensao-button svg{
     width:18px !important;
     height:18px !important;
-
     flex:0 0 18px !important;
-
     fill:none !important;
     stroke:#FFFFFF !important;
-
     color:#FFFFFF !important;
-
     opacity:.96 !important;
 }
-
 
 /* =====================================================
 TOQUE / PRESS
 ===================================================== */
-
 .asces-extensao-button:active{
     transform:
         scale(.96) !important;
-
     background:
         linear-gradient(
             180deg,
             rgba(255,255,255,.30) 0%,
             rgba(255,255,255,.19) 100%
         ) !important;
-
     opacity:.94 !important;
 }
-
 
 /* =====================================================
 ESTADO DESABILITADO
 ===================================================== */
-
 .asces-extensao-button[aria-disabled="true"]{
     opacity:.48 !important;
-
     pointer-events:none !important;
-
     box-shadow:none !important;
-}
-
-
-/* =====================================================
-TELAS MUITO ESTREITAS
-===================================================== */
-
-@media (max-width:390px){
-
-    .asces-extensao-button{
-        min-height:38px !important;
-
-        padding:
-            8px 13px !important;
-
-        font-size:
-            .84rem !important;
-
-        gap:
-            7px !important;
-    }
-
-    .asces-extensao-button svg{
-        width:
-            17px !important;
-
-        height:
-            17px !important;
-
-        flex-basis:
-            17px !important;
-    }
-
 }
 
 /* =====================================================
