@@ -4296,36 +4296,143 @@ Acessar / Voltar do Web.
 
 
 /* =====================================================
-Extra - BOTÃO MONITORIA/EXTENSÃO/ESPECIAIS (teste)
+APP — BOTÃO MONITORIA / EXTENSÃO / ESPECIAIS
+VERSÃO FINAL
 ===================================================== */
 
 .asces-extensao-button{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:10px 20px;
-    border-radius:28px;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    min-height:40px !important;
+
+    padding:9px 16px !important;
+
+    border-radius:22px !important;
+
     background:
-    rgba(255,255,255,.16);
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.23) 0%,
+            rgba(255,255,255,.14) 100%
+        ) !important;
+
     border:
-    1px solid rgba(255,255,255,.28);
-    color:#fff !important;
+        1px solid rgba(255,255,255,.30) !important;
+
+    color:#FFFFFF !important;
+
     text-decoration:none !important;
-    font-size:.95rem;
-    font-weight:500;
-    line-height:1;
+
+    font-size:.88rem !important;
+    font-weight:600 !important;
+    line-height:1 !important;
+
+    gap:8px !important;
+
     box-shadow:
-    0 6px 18px rgba(0,0,0,.16),
-    inset 0 1px 0 rgba(255,255,255,.18);
-    transition:.2s ease;
+        0 4px 12px rgba(0,0,0,.14),
+        inset 0 1px 0 rgba(255,255,255,.20) !important;
+
+    -webkit-backdrop-filter:
+        blur(6px) !important;
+
+    backdrop-filter:
+        blur(6px) !important;
+
+    transition:
+        transform .16s ease,
+        background .16s ease,
+        opacity .16s ease !important;
+
+    -webkit-tap-highlight-color:
+        transparent !important;
 }
 
-.asces-extensao-button{
-        padding:9px 15px;
-        font-size:.85rem;
+
+/* =====================================================
+ÍCONES
+===================================================== */
+
+.asces-extensao-button svg{
+    width:18px !important;
+    height:18px !important;
+
+    flex:0 0 18px !important;
+
+    fill:none !important;
+    stroke:#FFFFFF !important;
+
+    color:#FFFFFF !important;
+
+    opacity:.96 !important;
+}
+
+
+/* =====================================================
+TOQUE / PRESS
+===================================================== */
+
+.asces-extensao-button:active{
+    transform:
+        scale(.96) !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.30) 0%,
+            rgba(255,255,255,.19) 100%
+        ) !important;
+
+    opacity:.94 !important;
+}
+
+
+/* =====================================================
+ESTADO DESABILITADO
+===================================================== */
+
+.asces-extensao-button[aria-disabled="true"]{
+    opacity:.48 !important;
+
+    pointer-events:none !important;
+
+    box-shadow:none !important;
+}
+
+
+/* =====================================================
+TELAS MUITO ESTREITAS
+===================================================== */
+
+@media (max-width:390px){
+
+    .asces-extensao-button{
+        min-height:38px !important;
+
+        padding:
+            8px 13px !important;
+
+        font-size:
+            .84rem !important;
+
+        gap:
+            7px !important;
     }
+
+    .asces-extensao-button svg{
+        width:
+            17px !important;
+
+        height:
+            17px !important;
+
+        flex-basis:
+            17px !important;
+    }
+
+}
 
 /* =====================================================
 06.12 SEGURANÇA DE LARGURA
